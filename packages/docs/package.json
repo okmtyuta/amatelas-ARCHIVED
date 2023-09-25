@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build:server": "pnpm --filter @amatelas/server build",
-    "build": "pnpm build:server && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
