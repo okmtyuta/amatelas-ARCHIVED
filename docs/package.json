@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@okmtyuta/amui": "^0.0.3",
+    "@okmtyuta/amui": "^0.9.8",
     "@types/node": "^20.5.9",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",

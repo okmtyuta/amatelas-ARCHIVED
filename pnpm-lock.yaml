@@ -43,8 +43,8 @@ importers:
   docs:
     dependencies:
       '@okmtyuta/amui':
-        specifier: ^0.0.3
-        version: link:../packages/ui
+        specifier: ^0.9.8
+        version: link:..
       '@types/node':
         specifier: ^20.5.9
         version: 20.6.5

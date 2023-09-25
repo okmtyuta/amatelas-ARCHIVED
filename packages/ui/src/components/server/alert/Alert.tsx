@@ -12,10 +12,10 @@ import {
 type AlertVariant = 'info' | 'error' | 'warning' | 'success'
 type DefaultDivProps = ComponentProps<'div'>
 
-interface AlertProps extends DefaultDivProps {
+type AlertProps = {
   variant?: AlertVariant
   label?: string
-}
+} & DefaultDivProps
 
 const getVariantClass = (variant?: AlertVariant) => {
   if (variant) {

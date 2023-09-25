@@ -9,11 +9,11 @@ type Color = 'text' | 'danger' | 'info' | 'success' | 'warning'
 
 type DefaultSpanProps = ComponentProps<'span'>
 
-interface ChipProps extends DefaultSpanProps {
+type ChipProps = {
   variant?: Variant
   color?: Color
   shade?: boolean
-}
+} & DefaultSpanProps
 
 const getVariantClass = (variant?: Variant) => {
   if (variant) {
@@ -44,12 +44,7 @@ export const Chip = ({ variant, color, shade, ...props }: ChipProps) => {
   return (
     <span
       {...props}
-      className={clsx(
-        styles['chip'],
-        variantClass,
-        colorClass,
-        shadeClass
-      )}
+      className={clsx(styles['chip'], variantClass, colorClass, shadeClass)}
     >
       <span className={styles['text']}>{props.children}</span>
     </span>

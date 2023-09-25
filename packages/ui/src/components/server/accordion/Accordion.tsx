@@ -5,18 +5,17 @@ import { ExpandMoreSVG } from '@root/svg/ExpandMoreSVG'
 
 type DefaultDetailsProps = ComponentProps<'details'>
 
-interface AccordionProps extends DefaultDetailsProps {
+type AccordionProps = {
   summary: ReactNode
   classNames?: {
     root?: string
     summary?: string
     content?: string
   }
-}
+} & DefaultDetailsProps
 
 export const Accordion = ({
   summary,
-  children,
   classNames,
   ...props
 }: AccordionProps) => {
@@ -31,7 +30,7 @@ export const Accordion = ({
           className={clsx(styles['expand-more-svg'], classNames?.content)}
         />
       </summary>
-      <div>{children}</div>
+      <div>{props.children}</div>
     </details>
   )
 }

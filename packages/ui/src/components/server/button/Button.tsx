@@ -9,11 +9,11 @@ type Color = 'text' | 'danger' | 'info' | 'success' | 'warning'
 
 type DefaultButtonProps = ComponentProps<'button'>
 
-interface ButtonProps extends DefaultButtonProps {
+type ButtonProps = {
   variant?: Variant
   color?: Color
   shade?: boolean
-}
+} & DefaultButtonProps
 
 const getTextAreaVariantClass = (variant?: Variant) => {
   if (variant) {
@@ -45,12 +45,7 @@ export const Button = ({ variant, color, shade, ...props }: ButtonProps) => {
   return (
     <button
       {...props}
-      className={clsx(
-        styles['button'],
-        variantClass,
-        colorClass,
-        shadeClass
-      )}
+      className={clsx(styles['button'], variantClass, colorClass, shadeClass)}
     >
       {props.children}
     </button>

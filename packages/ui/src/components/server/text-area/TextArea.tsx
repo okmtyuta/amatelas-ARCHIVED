@@ -8,11 +8,11 @@ import { ComponentProps, ReactNode } from 'react'
 type Variant = 'outlined' | 'filled' | 'standard'
 
 type DefaultTextAreaProps = ComponentProps<'textarea'>
-interface TextFiledProps extends DefaultTextAreaProps {
+type TextFiledProps = {
   variant?: Variant
   helper?: ReactNode
   markdownable?: boolean
-}
+} & DefaultTextAreaProps
 
 const getTextAreaVariantClass = (variant?: Variant) => {
   if (variant) {

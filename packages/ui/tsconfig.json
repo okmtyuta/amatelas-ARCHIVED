@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "declarationDir": "lib/types",
-    "outDir": "lib",
+    "declarationDir": "ui/types",
+    "outDir": "ui",
     "declarationMap": true,
     "baseUrl": ".",
     "paths": {

@@ -1,7 +1,7 @@
 {
-  "name": "@okmtyuta/amatelas",
+  "name": "@okmtyuta/amui",
   "private": false,
-  "version": "0.9.4",
+  "version": "0.9.8",
   "type": "module",
   "author": "okmtyuta",
   "license": "MIT",
@@ -13,42 +13,17 @@
     "lib"
   ],
   "exports": {
-    "./server": {
-      "require": "./lib/server/index.umd.cjs",
-      "import": "./lib/server/index.js",
-      "types": "./lib/server/types/index.d.ts"
+    "./ui": {
+      "import": "./lib/ui/index.js",
+      "types": "./lib/ui/types/index.d.ts"
     },
-    "./server/index.css": {
-      "import": "./lib/server/index.css",
-      "require": "./lib/server/index.css"
+    "./ui/server": {
+      "import": "./lib/ui/server",
+      "types": "./lib/ui/types/server.d.ts"
     },
-    "./markdown": {
-      "require": "./lib/markdown/index.umd.cjs",
-      "import": "./lib/markdown/index.js",
-      "types": "./lib/markdown/types/index.d.ts"
-    },
-    "./markdown/index.css": {
-      "import": "./lib/markdown/index.css",
-      "require": "./lib/markdown/index.css"
-    },
-    "./client": {
-      "require": "./lib/client/index.umd.cjs",
-      "import": "./lib/client/index.js",
-      "types": "./lib/client/types/index.d.ts"
-    },
-    "./lab": {
-      "require": "./lib/lab/index.umd.cjs",
-      "import": "./lib/lab/index.js",
-      "types": "./lib/lab/types/index.d.ts"
-    },
-    "./lab/index.css": {
-      "require": "./lib/lab/index.css",
-      "import": "./lib/lab/index.css"
-    },
-    "./tools": {
-      "require": "./lib/tools/index.umd.cjs",
-      "import": "./lib/tools/index.js",
-      "types": "./lib/tools/types/index.d.ts"
+    "./ui/style.css": {
+      "import": "./lib/ui/style.css",
+      "require": "./lib/ui/style.css"
     }
   },
   "scripts": {

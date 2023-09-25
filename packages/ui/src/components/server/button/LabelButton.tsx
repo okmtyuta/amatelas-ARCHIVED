@@ -10,11 +10,11 @@ type Color = 'text' | 'danger' | 'info' | 'success' | 'warning'
 
 type DefaultDivProps = ComponentProps<'div'>
 
-interface LabelButtonProps extends DefaultDivProps {
+type LabelButtonProps =  {
   variant?: Variant
   color?: Color
   shade?: boolean
-}
+} & DefaultDivProps
 
 const getTextAreaVariantClass = (variant?: Variant) => {
   if (variant) {

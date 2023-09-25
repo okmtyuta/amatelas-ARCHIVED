@@ -8,11 +8,11 @@ type Variant = 'outlined' | 'filled' | 'standard'
 type TextfieldType = 'text' | 'password'
 
 type DefaultInputProps = ComponentProps<'input'>
-interface TextFiledProps extends DefaultInputProps {
+type TextFiledProps = {
   variant?: Variant
   type?: TextfieldType
   helper?: string
-}
+} & DefaultInputProps
 
 const getTextFieldVariantClass = (variant?: Variant) => {
   if (variant) {

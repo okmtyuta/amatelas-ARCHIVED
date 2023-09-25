@@ -12,7 +12,7 @@ export default defineConfig({
   },
   build: {
     // cssCodeSplit: true,
-    outDir: 'lib',
+    outDir: 'ui',
     lib: {
       entry: {
         index: resolve(__dirname, 'src/index.ts'),
