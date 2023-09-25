@@ -1,0 +1,43 @@
+@use './variant/shared/use-text-area.scss' as *;
+@use './variant/filled-text-area/filled-text-area.module.scss' as *;
+@use './variant//outlined-text-area/outlined-text-area.module.scss' as *;
+@use './variant/standard-text-area/standard-text-area.module.scss' as *;
+@use "@theme/css/font/font.scss" as *;
+@use '@theme/css/color/color.scss' as *;
+
+.base-text-area {
+  @include use-text-area();
+}
+.standard-text-area {
+  @include use-standard-text-area();
+}
+.filled-text-area {
+  @include use-filled-text-area();
+}
+.outlined-text-area {
+  @include use-outlined-text-area();
+}
+.text-area {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 100%;
+}
+.helper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.user-helper {
+  color: $accents5;
+  @include use-caption-font-size();
+  padding: 0 12px;
+}
+.markdownable {
+  display: flex;
+  color: $accents5;
+  @include use-caption-font-size();
+  padding: 0 12px;
+  gap: 4px;
+  align-items: center;
+}

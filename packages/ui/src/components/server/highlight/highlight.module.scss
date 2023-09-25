@@ -1,0 +1,36 @@
+@use '@theme/css/color/color.scss' as *;
+
+@mixin use-highlight($color: $danger) {
+  color: $color;
+  background-color: rgba($color: $color, $alpha: 0.12);
+}
+
+.highlight {
+  padding: 0px 4px;
+  border-radius: 4px;
+}
+
+.danger {
+  @include use-highlight($danger);
+}
+.info {
+  @include use-highlight($info);
+}
+.success {
+  @include use-highlight($success);
+}
+.warning {
+  @include use-highlight($warning);
+}
+.text {
+  @include use-highlight($text);
+}
+.primary {
+  @include use-highlight($primary);
+}
+.secondary {
+  @include use-highlight($secondary);
+}
+.tertiary {
+  @include use-highlight($tertiary);
+}

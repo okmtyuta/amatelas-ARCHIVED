@@ -1,0 +1,44 @@
+@use '@theme/css/color/color.scss' as *;
+@use '../shared/use-focus-underline.scss' as *;
+
+@mixin use-filled-text-area() {
+  $blur-outline-color: $accents4;
+  $focus-outline-color: $suoh;
+  $focus-color: $suoh;
+  $blur-color: $accents3;
+
+  $placeholder-transition-time: 0.2s;
+
+  background-color: $accents2;
+
+  @include use-focus-underline();
+
+  min-height: 108px;
+
+  .input {
+    padding: 4px 12px;
+    height: 76%;
+    bottom: 0;
+    z-index: 100;
+    border-bottom: $blur-outline-color solid 1px;
+  }
+
+  .input:placeholder-shown + .placeholder {
+    z-index: 0;
+  }
+
+  .input:focus {
+    border-bottom: $blur-outline-color solid 1px;
+  }
+
+  .input:focus + .placeholder {
+    top: 2px;
+    z-index: 200;
+  }
+
+  .placeholder {
+    transition: all $placeholder-transition-time;
+    top: 2px;
+    z-index: 200;
+  }
+}

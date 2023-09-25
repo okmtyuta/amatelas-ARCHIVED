@@ -1,0 +1,19 @@
+@use '@layer/layer.scss' as layer;
+
+.fixed {
+  position: -webkit-fixed;
+  position: fixed;
+  z-index: layer.$mid;
+}
+.position-top {
+  top: 0;
+}
+.position-bottom {
+  bottom: 0;
+}
+.position-left {
+  left: 0;
+}
+.position-right {
+  right: 0;
+}

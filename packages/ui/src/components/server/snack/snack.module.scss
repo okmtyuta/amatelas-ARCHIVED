@@ -1,0 +1,74 @@
+@use '@theme/css/color/color.scss' as *;
+@use '@theme/css/padding/padding.scss' as *;
+@use '@theme/css/margin/margin.scss' as *;
+@use '@layer/layer.scss' as layer;
+
+.snack {
+  @include use-lg-padding();
+  gap: 12px;
+  width: 300px;
+  display: flex;
+  color: white;
+  fill: white;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: layer.$mid;
+  border-radius: 4px;
+}
+
+// .position-top {
+//   top: 12px;
+//   left: 12px;
+// }
+// .position-bottom {
+//   bottom: 12px;
+//   left: 12px;
+// }
+// .position-left {
+//   left: 0;
+// }
+// .position-right {
+//   right: 0;
+// }
+
+.snack-icon {
+  flex-shrink: 0;
+}
+
+.snack:has(.input:checked) {
+  display: none;
+}
+
+.close {
+}
+.close-icon {
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.label {
+  display: flex;
+  gap: 12px;
+  @include use-md-margin-bottom();
+}
+.label-content {
+  font-weight: bold;
+}
+
+.info {
+  background-color: $info;
+}
+.warning {
+  background-color: $warning;
+}
+.success {
+  background-color: $success;
+}
+.error {
+  background-color: $danger;
+}
+
+.input {
+  display: none;
+}

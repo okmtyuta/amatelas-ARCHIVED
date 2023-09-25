@@ -1,0 +1,7 @@
+.paragraph {
+  line-height: 1.7;
+  &:not(.no-margin).margin {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}

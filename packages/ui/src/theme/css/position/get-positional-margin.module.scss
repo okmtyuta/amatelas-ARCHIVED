@@ -1,4 +1,4 @@
-@use '@theme/position/positional-margin.scss' as *;
+@use '@theme/css/position/positional-margin.scss' as *;
 
 .xs-positional-margin {
   @include use-xs-positional-margin();

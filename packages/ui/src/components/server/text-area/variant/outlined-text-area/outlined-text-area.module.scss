@@ -1,0 +1,96 @@
+@use '@theme/css/color/color.scss' as *;
+@use '@theme/css/margin/margin.scss' as *;
+
+// Anatomy
+// - placeholder            : 300
+// - placeholder-background : 200
+// - input                  : 100
+
+@mixin use-outlined-text-area() {
+  $blur-outline-color: $accents4;
+  $focus-outline-color: $suoh;
+  $focus-color: $suoh;
+  $blur-color: $accents3;
+
+  $placeholder-z-index: 300;
+  $placeholder-background-z-index: 200;
+  $input-z-index: 100;
+
+  $placeholder-background-transition-time-if-focus: 0.1s;
+  $placeholder-background-transition-time-if-blur: 0.5s;
+  $placeholder-transition-time: 0.2s;
+
+  $placeholder-top: -12px;
+
+  min-height: 90px;
+  @include use-sm-margin-y();
+
+  // inputのスタイル
+  .input {
+    padding: 8px 12px;
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    z-index: $input-z-index;
+    border: $blur-outline-color solid 1px;
+    border-radius: 4px;
+  }
+
+  // focusされたときのinputのスタイル
+  .input:focus {
+    border: $focus-outline-color solid 1px;
+    outline: none;
+    border-radius: 4px;
+  }
+
+  // 入力されていないときのplaceholderのスタイル
+  .input:placeholder-shown ~ .placeholder {
+  }
+
+  // focusされているときのplaceholderのスタイル
+  .input:focus ~ .placeholder {
+    top: $placeholder-top;
+  }
+
+  .placeholder {
+    top: $placeholder-top;
+    z-index: $placeholder-z-index;
+    transition: all $placeholder-transition-time;
+  }
+
+  .placeholder-background {
+    color: transparent;
+    position: absolute;
+    transform-origin: 0;
+    transform: scale(0.75);
+    top: $placeholder-top;
+    left: 0;
+    margin: 0 10px;
+    padding: 0 2px;
+    z-index: $placeholder-background-z-index;
+    pointer-events: none;
+  }
+
+  // 入力がないときのplaceholder-backgroundのスタイル
+  .input:placeholder-shown ~ .placeholder-background {
+    background-color: transparent;
+
+    // if blur
+    transition: all $placeholder-background-transition-time-if-blur;
+  }
+
+  // 入力があるときのplaceholder-backgroundのスタイル
+  .input:not(:placeholder-shown) ~ .placeholder-background {
+    background-color: white;
+  }
+
+  // focusされているときのplaceholder-backgroundのスタイル
+  .input:focus ~ .placeholder-background {
+    background-color: white;
+
+    // if focus
+    transition: all $placeholder-background-transition-time-if-focus;
+  }
+}
