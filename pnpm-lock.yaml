@@ -43,8 +43,8 @@ importers:
   docs:
     dependencies:
       '@okmtyuta/amui':
-        specifier: ^0.9.8
-        version: 0.9.8(react-dom@18.2.0)(react@18.2.0)
+        specifier: ^0.10.0
+        version: link:../packages/ui
       '@types/node':
         specifier: ^20.5.9
         version: 20.6.5
@@ -508,16 +508,6 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
-
-  /@okmtyuta/amui@0.9.8(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-1oEVZ58PIgdo+k89G3LslPwCjbao6ycqV4tMkTsj2Mrkg/SArcPuQxrMqHeFOCxWizr+V+CCqjEmowN3zTKgdQ==}
-    peerDependencies:
-      react: ^18.2.0
-      react-dom: ^18.2.0
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: false
 
   /@rushstack/eslint-patch@1.4.0:
     resolution: {integrity: sha512-cEjvTPU32OM9lUFegJagO0mRnIn+rbqrG89vV8/xLnLFX0DoR0r1oy5IlTga71Q7uT3Qus7qm7wgeiMT/+Irlg==}

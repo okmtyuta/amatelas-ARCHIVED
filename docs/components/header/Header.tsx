@@ -1,4 +1,4 @@
-import { Sticky, Typography } from '@okmtyuta/amui/ui'
+import { Sticky, Typography } from '@okmtyuta/amui'
 import styles from './header.module.scss'
 
 export const Header = () => {
