@@ -52,13 +52,9 @@
     }
   },
   "scripts": {
-    "build:tools--prod": "pnpm --filter @amatelas/tools build--prod",
-    "build:tools": "pnpm --filter @amatelas/tools build",
     "build:server": "pnpm --filter @amatelas/server build",
-    "build:markdown": "pnpm --filter @amatelas/markdown build",
     "build:client": "pnpm --filter @amatelas/client build",
-    "build:lab": "pnpm --filter @amatelas/lab build",
-    "build:docs": "pnpm --filter @amatelas/docs build",
+    "build:docs": "pnpm --filter @okmtyuta/amui-docs build",
     "dev:tools": "pnpm --filter @amatelas/tools dev",
     "dev:server": "pnpm --filter @amatelas/server dev",
     "dev:markdown": "pnpm --filter @amatelas/markdown dev",
