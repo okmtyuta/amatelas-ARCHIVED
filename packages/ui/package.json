@@ -1,35 +1,35 @@
 {
-  "name": "@amui/ui",
+  "name": "@okmtyuta/amui",
   "private": false,
   "version": "0.0.3",
   "type": "module",
   "author": "okmtyuta",
   "license": "MIT",
-  "main": "./lib/index.js",
+  "main": "./ui/index.js",
   "repository": {
     "type": "git",
     "url": "https:/github.com/okmtyuta/amatelas"
   },
   "files": [
-    "lib",
-    "lib/index.css"
+    "ui",
+    "ui/index.css"
   ],
   "exports": {
     ".": {
-      "import": "./lib/index",
-      "types": "./lib/types/index.d.ts"
+      "import": "./ui/index",
+      "types": "./ui/types/index.d.ts"
     },
     "./server": {
-      "import": "./lib/server",
-      "types": "./lib/types/server.d.ts"
+      "import": "./ui/server",
+      "types": "./ui/types/server.d.ts"
     },
     "./client": {
-      "import": "./lib/client",
-      "types": "./lib/types/client.d.ts"
+      "import": "./ui/client",
+      "types": "./ui/types/client.d.ts"
     },
     "./style.css": {
-      "import": "./lib/style.css",
-      "require": "./lib/style.css"
+      "import": "./ui/style.css",
+      "require": "./ui/style.css"
     }
   },
   "scripts": {

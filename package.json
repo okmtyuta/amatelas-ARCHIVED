@@ -1,5 +1,5 @@
 {
-  "name": "@okmtyuta/amui",
+  "name": "amui",
   "private": false,
   "version": "0.9.8",
   "type": "module",
@@ -27,17 +27,12 @@
     }
   },
   "scripts": {
-    "build:server": "pnpm --filter @amatelas/server build",
-    "build:client": "pnpm --filter @amatelas/client build",
+    "build:amui": "pnpm --filter @okmtyuta/amui build",
     "build:docs": "pnpm --filter @okmtyuta/amui-docs build",
-    "dev:tools": "pnpm --filter @amatelas/tools dev",
     "dev:server": "pnpm --filter @amatelas/server dev",
-    "dev:markdown": "pnpm --filter @amatelas/markdown dev",
-    "dev:client": "pnpm --filter @amatelas/client dev",
-    "dev:lab": "pnpm --filter @amatelas/lab dev",
     "dev:docs": "pnpm --filter @amatelas/docs dev",
-    "build": "pnpm build:tools && pnpm build:server && pnpm build:client && pnpm build:markdown && pnpm build:lab && pnpm build:docs",
-    "build--prod": "pnpm build:tools--prod && pnpm build:server && pnpm build:client && pnpm build:markdown && pnpm build:lab && pnpm build:docs",
+  
+
     "preview": "pnpm --filter @amatelas/docs dev",
     "collect": "./collect.zsh",
     "format": "prettier --write ./",

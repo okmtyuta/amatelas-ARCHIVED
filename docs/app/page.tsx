@@ -1,6 +1,6 @@
-import { Heading, Accordion, Progress, Alert } from '@okmtyuta/amui/ui'
+import { Heading, Accordion, Progress, Alert } from '@okmtyuta/amui'
 import './reset.css'
-import '@okmtyuta/amui/ui/style.css'
+import '@okmtyuta/amui/style.css'
 
 const Page = () => {
   return (
