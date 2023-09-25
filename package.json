@@ -27,9 +27,9 @@
     }
   },
   "scripts": {
-    "build:ui": "pnpm --filter @okmtyuta/amatelas build",
+    "build:amatelas": "pnpm --filter @okmtyuta/amatelas build",
     "build:docs": "pnpm --filter @okmtyuta/amatelas-docs build",
-    "build": "pnpm build:ui && pnpm build:docs",
+    "build": "pnpm build:amatelas && pnpm build:docs",
     "dev:server": "pnpm --filter @amatelas/server dev",
     "dev:docs": "pnpm --filter @amatelas/docs dev",
     "preview": "pnpm --filter @amatelas/docs dev",
