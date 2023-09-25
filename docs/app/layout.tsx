@@ -1,6 +1,6 @@
 import { Footer } from '@/components/footer/Footer'
 import { Header } from '@/components/header/Header'
-import { Frame } from '@okmtyuta/amui'
+import { Frame } from '@okmtyuta/amui/ui'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
