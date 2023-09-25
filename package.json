@@ -27,8 +27,9 @@
     }
   },
   "scripts": {
-    "build:amui": "pnpm --filter @okmtyuta/amui build",
+    "build:ui": "pnpm --filter @okmtyuta/amui build",
     "build:docs": "pnpm --filter @okmtyuta/amui-docs build",
+    "build": "pnpm build:ui && pnpm build:docs",
     "dev:server": "pnpm --filter @amatelas/server dev",
     "dev:docs": "pnpm --filter @amatelas/docs dev",
   

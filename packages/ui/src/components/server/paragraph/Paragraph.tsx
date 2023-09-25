@@ -1,12 +1,12 @@
 import styles from './paragraph.module.scss'
-import { Typography } from '../typography/Typography'
+
 import { clsx } from 'clsx'
 import { ComponentProps } from 'react'
 
-type TypographyProps = ComponentProps<typeof Typography>
+type DefaultParagraphProps = ComponentProps<'p'>
 type ParagraphProps = {
   noMargin?: boolean
-} & TypographyProps
+} & DefaultParagraphProps
 
 const getNoMarginClass = (noMargin?: boolean) => {
   if (noMargin) {
@@ -16,20 +16,14 @@ const getNoMarginClass = (noMargin?: boolean) => {
   return styles['margin']
 }
 
-export const Paragraph = ({
-  children,
-  className,
-  noMargin,
-  ...props
-}: ParagraphProps) => {
+export const Paragraph = ({ noMargin, ...props }: ParagraphProps) => {
   const noMarginClass = getNoMarginClass(noMargin)
   return (
-    <Typography
+    <p
       {...props}
-      className={clsx(styles['paragraph'], noMarginClass, className)}
-      tag="p"
+      className={clsx(styles['paragraph'], noMarginClass, props.className)}
     >
-      {children}
-    </Typography>
+      {props.children}
+    </p>
   )
 }

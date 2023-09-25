@@ -1,15 +1,13 @@
 import styles from './frame.module.scss'
 import { ComponentProps } from 'react'
 import { clsx } from 'clsx'
-import { Typography } from '../typography/Typography'
-
-type TypographyProps = ComponentProps<typeof Typography>
 
 type FrameWidth = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
+type DefaultDivProps = ComponentProps<'div'>
 type FrameProps = {
   width?: FrameWidth
-} & TypographyProps
+} & DefaultDivProps
 
 const getWidthClass = (width?: FrameWidth) => {
   if (width) {
@@ -19,15 +17,14 @@ const getWidthClass = (width?: FrameWidth) => {
   return styles['md']
 }
 
-export const Frame = ({ children, className, width, ...props }: FrameProps) => {
+export const Frame = ({ width, ...props }: FrameProps) => {
   const widthClass = getWidthClass(width)
   return (
-    <Typography
+    <div
       {...props}
-      tag="div"
-      className={clsx(styles['frame'], widthClass, className)}
+      className={clsx(styles['frame'], widthClass, props.className)}
     >
-      {children}
-    </Typography>
+      {props.children}
+    </div>
   )
 }
