@@ -7,7 +7,7 @@ type Margin = 'xs' | 'md' | 'xl'
 
 type DefaultListProps = ComponentProps<'ul'>
 type ListProps = {
-  ordered?: boolean
+  // ordered?: boolean
   gap?: Gap
   margin?: Margin
 } & DefaultListProps
@@ -30,7 +30,7 @@ const getMarginClass = (margin?: Margin) => {
   return styles['margin-md']
 }
 
-export const List = ({ ordered, gap, margin, ...props }: ListProps) => {
+export const List = ({ gap, margin, ...props }: ListProps) => {
   const gapClass = getGapClass(gap)
   const marginClass = getMarginClass(margin)
   // TODO: ol

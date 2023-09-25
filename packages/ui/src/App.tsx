@@ -10,9 +10,11 @@ export const App = () => {
     <div>
       <Accordion summary="summary">これはさまりです。</Accordion>
       <Alert label="INFO">ALLLL</Alert>
-      <Link external href='https://me.okmtyuta.jp'>this is linkt</Link>
-      <TextField placeholder='text'/>
-      <Typography color='danger'>typography</Typography>
+      <Link external href="https://me.okmtyuta.jp">
+        this is linkt
+      </Link>
+      <TextField placeholder="text" />
+      <Typography color="danger">typography</Typography>
     </div>
   )
 }

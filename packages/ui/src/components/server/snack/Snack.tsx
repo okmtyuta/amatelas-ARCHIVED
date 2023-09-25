@@ -17,7 +17,7 @@ type SnackPosition = 'top' | 'bottom' | 'left' | 'right'
 type DefaultDivProps = ComponentProps<'div'>
 type SnackProps = {
   variant?: SnackVariant
-  label?: string
+  // label?: string
   position?: SnackPosition
 } & DefaultDivProps
 
@@ -68,7 +68,7 @@ const getPositionClass = (position?: SnackPosition) => {
   return styles['position-top']
 }
 
-export const Snack = ({ variant, label, position, ...props }: SnackProps) => {
+export const Snack = ({ variant, position, ...props }: SnackProps) => {
   const variantClass = getVariantClass(variant)
   const snackIcon = getSnackIcon(variant)
 

@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
-import { resolve, join } from 'path'
+import { resolve } from 'path'
 
 export default defineConfig({
   resolve: {

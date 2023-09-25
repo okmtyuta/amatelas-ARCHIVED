@@ -3,12 +3,11 @@ import styles from './link.module.scss'
 import { clsx } from 'clsx'
 import { NorthEastSVG } from '@root/svg'
 
-
 type LinkProps<T extends ElementType> = {
   tag?: T
   underlined?: boolean
   external?: boolean
-} & Omit<ComponentPropsWithoutRef<T>, 'tag'> 
+} & Omit<ComponentPropsWithoutRef<T>, 'tag'>
 
 const getUnderlineClass = (underlined?: boolean) => {
   if (underlined) {

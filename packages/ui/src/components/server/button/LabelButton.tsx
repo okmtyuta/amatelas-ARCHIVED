@@ -10,7 +10,7 @@ type Color = 'text' | 'danger' | 'info' | 'success' | 'warning'
 
 type DefaultDivProps = ComponentProps<'div'>
 
-type LabelButtonProps =  {
+type LabelButtonProps = {
   variant?: Variant
   color?: Color
   shade?: boolean
@@ -51,12 +51,7 @@ export const LabelButton = ({
   return (
     <div
       {...props}
-      className={clsx(
-        styles['button'],
-        variantClass,
-        colorClass,
-        shadeClass
-      )}
+      className={clsx(styles['button'], variantClass, colorClass, shadeClass)}
     >
       {props.children}
     </div>

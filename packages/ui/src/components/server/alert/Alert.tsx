@@ -1,6 +1,6 @@
 import { clsx } from 'clsx'
 import styles from './alert.module.scss'
-import { ComponentProps, useId } from 'react'
+import { ComponentProps } from 'react'
 import {
   CheckedCircleSVG,
   CloseSVG,
@@ -54,8 +54,8 @@ const getInputId = (inputId?: string) => {
     return inputId
   }
 
-  // TODO: 一位じゃないので変更が必要
-  return useId()
+  // TODO: useID?
+  return crypto.randomUUID()
 }
 
 export const Alert = ({ variant, label, ...props }: AlertProps) => {

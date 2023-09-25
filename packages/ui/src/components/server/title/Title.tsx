@@ -12,7 +12,7 @@ interface Author {
 type DefaultHeadingProps = ComponentProps<'h1'>
 type TitleProps = {
   posted?: string
-  modified?: string
+  // modified?: string
   authors?: Author[]
 } & DefaultHeadingProps
 
@@ -41,7 +41,7 @@ const Authors = (props: AuthorsProps) => {
   )
 }
 
-export const Title = ({ posted, modified, authors, ...props }: TitleProps) => {
+export const Title = ({ posted, authors, ...props }: TitleProps) => {
   return (
     <div className={styles['title']}>
       {posted != null && <div className={styles.posted}>{posted}</div>}
