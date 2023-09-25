@@ -40,11 +40,11 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
 
-  packages/docs:
+  docs:
     dependencies:
       '@okmtyuta/amui':
         specifier: ^0.0.3
-        version: link:../ui
+        version: link:../packages/ui
       '@types/node':
         specifier: ^20.5.9
         version: 20.6.5
