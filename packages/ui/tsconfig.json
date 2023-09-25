@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "declarationDir": "lib/types",
+    "outDir": "lib",
+    "declarationMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@root/*": ["src/*"],
+      "@theme/*": ["src/theme/*"]
+    }
+  },
+  "extends": "../../tsconfig.json",
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

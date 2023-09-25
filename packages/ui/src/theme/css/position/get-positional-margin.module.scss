@@ -1,0 +1,134 @@
+@use '@theme/position/positional-margin.scss' as *;
+
+.xs-positional-margin {
+  @include use-xs-positional-margin();
+}
+.sm-positional-margin {
+  @include use-sm-positional-margin();
+}
+.md-positional-margin {
+  @include use-md-positional-margin();
+}
+.lg-positional-margin {
+  @include use-lg-positional-margin();
+}
+.xl-positional-margin {
+  @include use-xl-positional-margin();
+}
+.none-positional-margin {
+  @include use-none-positional-margin();
+}
+
+.xs-positional-margin-x {
+  @include use-xs-positional-margin-x();
+}
+.sm-positional-margin-x {
+  @include use-sm-positional-margin-x();
+}
+.md-positional-margin-x {
+  @include use-md-positional-margin-x();
+}
+.lg-positional-margin-x {
+  @include use-lg-positional-margin-x();
+}
+.xl-positional-margin-x {
+  @include use-xl-positional-margin-x();
+}
+.none-positional-margin-x {
+  @include use-none-positional-margin-x();
+}
+
+.xs-positional-margin-y {
+  @include use-xs-positional-margin-y();
+}
+.sm-positional-margin-y {
+  @include use-sm-positional-margin-y();
+}
+.md-positional-margin-y {
+  @include use-md-positional-margin-y();
+}
+.lg-positional-margin-y {
+  @include use-lg-positional-margin-y();
+}
+.xl-positional-margin-y {
+  @include use-xl-positional-margin-y();
+}
+.none-positional-margin-y {
+  @include use-none-positional-margin-y();
+}
+
+.xs-positional-margin-top {
+  @include use-xs-positional-margin-top();
+}
+.sm-positional-margin-top {
+  @include use-sm-positional-margin-top();
+}
+.md-positional-margin-top {
+  @include use-md-positional-margin-top();
+}
+.lg-positional-margin-top {
+  @include use-lg-positional-margin-top();
+}
+.xl-positional-margin-top {
+  @include use-xl-positional-margin-top();
+}
+.none-positional-margin-top {
+  @include use-none-positional-margin-top();
+}
+
+.xs-positional-margin-left {
+  @include use-xs-positional-margin-left();
+}
+.sm-positional-margin-left {
+  @include use-sm-positional-margin-left();
+}
+.md-positional-margin-left {
+  @include use-md-positional-margin-left();
+}
+.lg-positional-margin-left {
+  @include use-lg-positional-margin-left();
+}
+.xl-positional-margin-left {
+  @include use-xl-positional-margin-left();
+}
+.none-positional-margin-left {
+  @include use-none-positional-margin-left();
+}
+
+.xs-positional-margin-bottom {
+  @include use-xs-positional-margin-bottom();
+}
+.sm-positional-margin-bottom {
+  @include use-sm-positional-margin-bottom();
+}
+.md-positional-margin-bottom {
+  @include use-md-positional-margin-bottom();
+}
+.lg-positional-margin-bottom {
+  @include use-lg-positional-margin-bottom();
+}
+.xl-positional-margin-bottom {
+  @include use-xl-positional-margin-bottom();
+}
+.none-positional-margin-bottom {
+  @include use-none-positional-margin-bottom();
+}
+
+.xs-positional-margin-right {
+  @include use-xs-positional-margin-right();
+}
+.sm-positional-margin-right {
+  @include use-sm-positional-margin-right();
+}
+.md-positional-margin-right {
+  @include use-md-positional-margin-right();
+}
+.lg-positional-margin-right {
+  @include use-lg-positional-margin-right();
+}
+.xl-positional-margin-right {
+  @include use-xl-positional-margin-right();
+}
+.none-positional-margin-right {
+  @include use-none-positional-margin-right();
+}

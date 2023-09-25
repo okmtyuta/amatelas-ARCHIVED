@@ -1,0 +1,50 @@
+@use '@theme/css/color/color.scss' as color;
+
+.list {
+  text-align: -webkit-match-parent;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.margin-xs {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.margin-md {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.margin-xl {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.gap-xs {
+  gap: 2px;
+}
+.gap-md {
+  gap: 6px;
+}
+.gap-xl {
+  gap: 10px;
+}
+
+.unordered {
+  list-style: disc;
+}
+.ordered {
+  list-style: decimal;
+}
+
+.ordered > .list-item {
+}
+
+.unordered > .list-item {
+  &::marker {
+    color: color.$accents3;
+  }
+}
+.list-item {
+  text-align: -webkit-match-parent;
+}

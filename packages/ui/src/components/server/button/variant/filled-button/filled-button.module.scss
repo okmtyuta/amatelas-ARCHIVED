@@ -1,0 +1,13 @@
+@use '@theme/css/color/color.scss' as *;
+@use '@theme/css/animation/use-ripple.scss' as *;
+
+@mixin use-filled-button($color: $suoh) {
+  border: none;
+  color: white;
+  background-color: $color;
+  @include use-ripple(white);
+
+  &:hover {
+    background-color: lighten($color, 4);
+  }
+}

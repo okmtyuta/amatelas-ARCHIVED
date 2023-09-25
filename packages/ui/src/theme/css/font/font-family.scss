@@ -1,0 +1,17 @@
+$anton: 'Anton', sans-serif;
+$frederica: 'Fredericka the Great', cursive;
+$inconsolata: 'Inconsolata', monospace;
+$noto-sans: 'Noto Sans', sans-serif;
+$noto-sans-jp: 'Noto Sans JP', sans-serif;
+$noto-serif: 'Noto Serif', serif;
+$noto-serif-jp: 'Noto Serif JP', serif;
+
+$font-family: (
+  anton: $anton,
+  frederica: $frederica,
+  inconsolata: $inconsolata,
+  noto-sans: $noto-sans,
+  noto-sans-jp: $noto-sans-jp,
+  noto-serif: $noto-serif,
+  noto-serif-jp: $noto-serif-jp
+);

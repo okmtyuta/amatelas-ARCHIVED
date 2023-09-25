@@ -1,0 +1,89 @@
+{
+  "name": "@okmtyuta/amatelas",
+  "private": false,
+  "version": "0.9.4",
+  "type": "module",
+  "author": "okmtyuta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/okmtyuta/amatelas"
+  },
+  "files": [
+    "lib"
+  ],
+  "exports": {
+    "./server": {
+      "require": "./lib/server/index.umd.cjs",
+      "import": "./lib/server/index.js",
+      "types": "./lib/server/types/index.d.ts"
+    },
+    "./server/index.css": {
+      "import": "./lib/server/index.css",
+      "require": "./lib/server/index.css"
+    },
+    "./markdown": {
+      "require": "./lib/markdown/index.umd.cjs",
+      "import": "./lib/markdown/index.js",
+      "types": "./lib/markdown/types/index.d.ts"
+    },
+    "./markdown/index.css": {
+      "import": "./lib/markdown/index.css",
+      "require": "./lib/markdown/index.css"
+    },
+    "./client": {
+      "require": "./lib/client/index.umd.cjs",
+      "import": "./lib/client/index.js",
+      "types": "./lib/client/types/index.d.ts"
+    },
+    "./lab": {
+      "require": "./lib/lab/index.umd.cjs",
+      "import": "./lib/lab/index.js",
+      "types": "./lib/lab/types/index.d.ts"
+    },
+    "./lab/index.css": {
+      "require": "./lib/lab/index.css",
+      "import": "./lib/lab/index.css"
+    },
+    "./tools": {
+      "require": "./lib/tools/index.umd.cjs",
+      "import": "./lib/tools/index.js",
+      "types": "./lib/tools/types/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build:tools--prod": "pnpm --filter @amatelas/tools build--prod",
+    "build:tools": "pnpm --filter @amatelas/tools build",
+    "build:server": "pnpm --filter @amatelas/server build",
+    "build:markdown": "pnpm --filter @amatelas/markdown build",
+    "build:client": "pnpm --filter @amatelas/client build",
+    "build:lab": "pnpm --filter @amatelas/lab build",
+    "build:docs": "pnpm --filter @amatelas/docs build",
+    "dev:tools": "pnpm --filter @amatelas/tools dev",
+    "dev:server": "pnpm --filter @amatelas/server dev",
+    "dev:markdown": "pnpm --filter @amatelas/markdown dev",
+    "dev:client": "pnpm --filter @amatelas/client dev",
+    "dev:lab": "pnpm --filter @amatelas/lab dev",
+    "dev:docs": "pnpm --filter @amatelas/docs dev",
+    "build": "pnpm build:tools && pnpm build:server && pnpm build:client && pnpm build:markdown && pnpm build:lab && pnpm build:docs",
+    "build--prod": "pnpm build:tools--prod && pnpm build:server && pnpm build:client && pnpm build:markdown && pnpm build:lab && pnpm build:docs",
+    "preview": "pnpm --filter @amatelas/docs dev",
+    "collect": "./collect.zsh",
+    "format": "prettier --write ./",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "eslint": "^8.49.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "eslint-plugin-storybook": "^0.6.14",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  }
+}

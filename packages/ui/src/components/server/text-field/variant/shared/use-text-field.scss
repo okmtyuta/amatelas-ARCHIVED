@@ -1,0 +1,72 @@
+@use '@theme/css/color/color.scss' as color;
+@use '@theme/css/font/index.scss' as font;
+
+$blur-outline-color: color.$accents4;
+$focus-outline-color: color.$suoh;
+$focus-color: color.$suoh;
+$blur-color: color.$accents3;
+$transition-time: 0.3s;
+
+@mixin use-text-field() {
+  position: relative;
+  height: 50px;
+  width: 100%;
+
+  // default input
+  .input {
+    position: absolute;
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 16px;
+    border-radius: 0;
+    width: 100%;
+    padding: 0 12px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    left: 0;
+    box-sizing: border-box;
+  }
+
+  // input if focused
+  .input:focus {
+    border: none;
+    outline: none;
+    border-radius: 0;
+  }
+
+  // default placeholder
+  .placeholder {
+    position: absolute;
+    color: $focus-color;
+    transition: all $transition-time;
+    transform-origin: 0;
+    transform: scale(0.75);
+    margin: 0 10px;
+    padding: 0 2px;
+    pointer-events: none;
+  }
+
+  // placeholder if input
+  .input:placeholder-shown + .placeholder {
+    position: absolute;
+    color: $blur-color;
+    transition: all $transition-time;
+    font-size: 16px;
+    transform: scale(1);
+    top: 16px;
+    left: 0%;
+    margin: 0 10px;
+    padding: 0 2px;
+  }
+
+  // placeholder if focused
+  .input:focus + .placeholder {
+    position: absolute;
+    color: $focus-color;
+    transition: all $transition-time;
+    transform-origin: 0;
+    transform: scale(0.75);
+    left: 0;
+  }
+}

@@ -1,0 +1,32 @@
+@use '@theme/css/color/color.scss' as color;
+@use '@theme/css/font/index.scss' as font;
+
+.avatar {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  flex-shrink: 0;
+}
+.avatar-image {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: color.$accents3 solid 1px;
+
+  // 一時的です。
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar-name {
+  @include font.use-body1-font-size();
+}
+.avatar-account {
+  @include font.use-caption-font-size();
+  color: color.$accents6;
+}
+.avatar-info {
+  display: inline-flex;
+  flex-direction: column;
+}

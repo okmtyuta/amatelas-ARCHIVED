@@ -1,0 +1,79 @@
+@use '@theme/css/color/color.scss' as *;
+@use '@theme/css/effect/use-shade' as *;
+
+@use './variant/standard-button/standard-button.module.scss' as *;
+@use './variant/outlined-button/outlined-button.module.scss' as *;
+@use './variant/filled-button/filled-button.module.scss' as *;
+
+.button {
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  padding: 8px 20px;
+  border-radius: 4px;
+  user-select: none;
+  display: inline-block;
+}
+
+.button:disabled {
+  color: $text;
+  background-color: rgba($text, 0.12);
+  border: none;
+  cursor: default;
+}
+
+.shade {
+  @include use-shade();
+}
+
+.standard-button:not(:disabled) {
+  &.text {
+    @include use-standard-button($text);
+  }
+  &.info {
+    @include use-standard-button($info);
+  }
+  &.danger {
+    @include use-standard-button($danger);
+  }
+  &.warning {
+    @include use-standard-button($warning);
+  }
+  &.success {
+    @include use-standard-button($success);
+  }
+}
+.outlined-button:not(:disabled) {
+  &.text {
+    @include use-outlined-button($text);
+  }
+  &.info {
+    @include use-outlined-button($info);
+  }
+  &.danger {
+    @include use-outlined-button($danger);
+  }
+  &.warning {
+    @include use-outlined-button($warning);
+  }
+  &.success {
+    @include use-outlined-button($success);
+  }
+}
+.filled-button {
+  &.text {
+    @include use-filled-button($text);
+  }
+  &.info {
+    @include use-filled-button($info);
+  }
+  &.danger {
+    @include use-filled-button($danger);
+  }
+  &.warning {
+    @include use-filled-button($warning);
+  }
+  &.success {
+    @include use-filled-button($success);
+  }
+}

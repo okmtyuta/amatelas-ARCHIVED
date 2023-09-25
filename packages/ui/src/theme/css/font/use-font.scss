@@ -1,0 +1,88 @@
+@use './responsive-font-size.scss' as responsive-font-size;
+@use './responsive-font.scss' as responsive-font;
+
+@mixin use-title-font-size {
+  @include responsive-font-size.responsive-font-size(title);
+}
+@mixin use-heading1-font-size {
+  @include responsive-font-size.responsive-font-size(heading1);
+}
+@mixin use-heading2-font-size {
+  @include responsive-font-size.responsive-font-size(heading2);
+}
+@mixin use-heading3-font-size {
+  @include responsive-font-size.responsive-font-size(heading3);
+}
+@mixin use-heading4-font-size {
+  @include responsive-font-size.responsive-font-size(heading4);
+}
+@mixin use-heading5-font-size {
+  @include responsive-font-size.responsive-font-size(heading5);
+}
+@mixin use-heading6-font-size {
+  @include responsive-font-size.responsive-font-size(heading6);
+}
+@mixin use-subtitle1-font-size {
+  @include responsive-font-size.responsive-font-size(subtitle1);
+}
+@mixin use-subtitle2-font-size {
+  @include responsive-font-size.responsive-font-size(subtitle2);
+}
+@mixin use-body1-font-size {
+  @include responsive-font-size.responsive-font-size(body1);
+}
+@mixin use-body2-font-size {
+  @include responsive-font-size.responsive-font-size(body2);
+}
+@mixin use-button-font-size {
+  @include responsive-font-size.responsive-font-size(button);
+}
+@mixin use-caption-font-size {
+  @include responsive-font-size.responsive-font-size(caption);
+}
+@mixin use-overline-font-size {
+  @include responsive-font-size.responsive-font-size(overline);
+}
+
+@mixin use-title-font {
+  @include responsive-font.responsive-font(title);
+}
+@mixin use-heading1-font {
+  @include responsive-font.responsive-font(heading1);
+}
+@mixin use-heading2-font {
+  @include responsive-font.responsive-font(heading2);
+}
+@mixin use-heading3-font {
+  @include responsive-font.responsive-font(heading3);
+}
+@mixin use-heading4-font {
+  @include responsive-font.responsive-font(heading4);
+}
+@mixin use-heading5-font {
+  @include responsive-font.responsive-font(heading5);
+}
+@mixin use-heading6-font {
+  @include responsive-font.responsive-font(heading6);
+}
+@mixin use-subtitle1-font {
+  @include responsive-font.responsive-font(subtitle1);
+}
+@mixin use-subtitle2-font {
+  @include responsive-font.responsive-font(subtitle2);
+}
+@mixin use-body1-font {
+  @include responsive-font.responsive-font(body1);
+}
+@mixin use-body2-font {
+  @include responsive-font.responsive-font(body2);
+}
+@mixin use-button-font {
+  @include responsive-font.responsive-font(button);
+}
+@mixin use-caption-font {
+  @include responsive-font.responsive-font(caption);
+}
+@mixin use-overline-font {
+  @include responsive-font.responsive-font(overline);
+}

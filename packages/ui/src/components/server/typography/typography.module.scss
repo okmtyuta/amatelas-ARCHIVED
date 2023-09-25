@@ -1,0 +1,139 @@
+@use '@theme/css/font/index.scss' as font;
+@use '@theme/css/color/index.scss' as color;
+
+.font-family-sans-serif {
+  @include font.use-sans-serif();
+}
+.font-family-serif {
+  @include font.use-serif();
+}
+.font-family-sans-serif-jp {
+  @include font.use-sans-serif-jp();
+}
+.font-family-serif-jp {
+  @include font.use-serif-jp();
+}
+.font-family-anton {
+  @include font.use-anton();
+}
+.font-family-frederica {
+  @include font.use-frederica();
+}
+.font-family-inconsolata {
+  @include font.use-inconsolata();
+}
+
+.color-text {
+  @include color.use-text-color();
+}
+.color-success {
+  @include color.use-success-color();
+}
+.color-warning {
+  @include color.use-warning-color();
+}
+.color-danger {
+  @include color.use-danger-color();
+}
+.color-info {
+  @include color.use-info-color();
+}
+.color-primary {
+  @include color.use-primary-color();
+}
+
+.font-size-title {
+  @include font.responsive-font-size(title);
+}
+.font-size-heading1 {
+  @include font.responsive-font-size(heading1);
+}
+.font-size-heading2 {
+  @include font.responsive-font-size(heading2);
+}
+.font-size-heading3 {
+  @include font.responsive-font-size(heading3);
+}
+.font-size-heading4 {
+  @include font.responsive-font-size(heading4);
+}
+.font-size-heading5 {
+  @include font.responsive-font-size(heading5);
+}
+.font-size-heading6 {
+  @include font.responsive-font-size(heading6);
+}
+.font-size-subtitle1 {
+  @include font.responsive-font-size(subtitle1);
+}
+.font-size-subtitle2 {
+  @include font.responsive-font-size(subtitle2);
+}
+.font-size-body1 {
+  @include font.responsive-font-size(body1);
+}
+.font-size-body2 {
+  @include font.responsive-font-size(body2);
+}
+.font-size-button {
+  @include font.responsive-font-size(button);
+}
+.font-size-caption {
+  @include font.responsive-font-size(caption);
+}
+.font-size-overline {
+  @include font.responsive-font-size(overline);
+}
+
+.font-weight-title {
+  @include font.use-font-weight(title);
+}
+.font-weight-heading1 {
+  @include font.use-font-weight(heading1);
+}
+.font-weight-heading2 {
+  @include font.use-font-weight(heading2);
+}
+.font-weight-heading3 {
+  @include font.use-font-weight(heading3);
+}
+.font-weight-heading4 {
+  @include font.use-font-weight(heading4);
+}
+.font-weight-heading5 {
+  @include font.use-font-weight(heading5);
+}
+.font-weight-heading6 {
+  @include font.use-font-weight(heading6);
+}
+.font-weight-subtitle1 {
+  @include font.use-font-weight(subtitle1);
+}
+.font-weight-subtitle2 {
+  @include font.use-font-weight(subtitle2);
+}
+.font-weight-body1 {
+  @include font.use-font-weight(body1);
+}
+.font-weight-body2 {
+  @include font.use-font-weight(body2);
+}
+.font-weight-button {
+  @include font.use-font-weight(button);
+}
+.font-weight-caption {
+  @include font.use-font-weight(caption);
+}
+.font-weight-overline {
+  @include font.use-font-weight(overline);
+}
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.font-style-italic {
+  font-style: italic;
+}
+.font-style-oblique {
+  font-style: oblique;
+}

@@ -1,0 +1,89 @@
+@use '@theme/css/color/color.scss' as *;
+
+.message {
+  display: grid;
+  grid-template: 'icon content';
+  gap: 12px;
+  align-items: stretch;
+  padding: 12px;
+  border-radius: 4px;
+  justify-content: start;
+
+  margin-top: 12px;
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+.icon {
+  grid-area: icon;
+  width: 30px;
+}
+.icon-svg {
+  width: 30px;
+}
+.content {
+  grid-area: content;
+}
+
+.monochrome {
+  &.error {
+    border: solid 1px $text;
+    color: $text;
+  }
+  &.info {
+    border: solid 1px $text;
+    color: $text;
+  }
+  &.success {
+    border: solid 1px $text;
+    color: $text;
+  }
+  &.warning {
+    border: solid 1px $text;
+    color: $text;
+  }
+
+  .error-icon {
+    fill: $text;
+  }
+  .info-icon {
+    fill: $text;
+  }
+  .success-icon {
+    fill: $text;
+  }
+  .warning-icon {
+    fill: $text;
+  }
+}
+.colorful {
+  &.error {
+    border: solid 1px $danger;
+    color: $danger;
+  }
+  &.info {
+    border: solid 1px $info;
+    color: $info;
+  }
+  &.success {
+    border: solid 1px $success;
+    color: $success;
+  }
+  &.warning {
+    border: solid 1px $warning;
+    color: $warning;
+  }
+
+  .error-icon {
+    fill: $danger;
+  }
+  .info-icon {
+    fill: $info;
+  }
+  .success-icon {
+    fill: $success;
+  }
+  .warning-icon {
+    fill: $warning;
+  }
+}

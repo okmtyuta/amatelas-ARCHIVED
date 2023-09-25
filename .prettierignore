@@ -1,0 +1,16 @@
+packages/client/client
+packages/server/server
+packages/docs/docs
+packages/tools/tools
+packages/lab/lab
+packages/markdown/markdown
+
+# themes are formatted at tools module. Hence themes in any other modules is not required to be formatted
+packages/**/theme
+
+lib
+
+pnpm-locl.yaml
+pnpm-workspace.yaml
+*/**/pnpm-locl.yaml
+*/**/pnpm-workspace.yaml

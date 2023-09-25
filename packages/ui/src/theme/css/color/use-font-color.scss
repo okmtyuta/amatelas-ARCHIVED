@@ -1,0 +1,32 @@
+@use './color.scss' as color;
+
+@mixin use-font-color($color) {
+  color: $color;
+  text-decoration-color: $color;
+  fill: $color;
+}
+
+@mixin use-text-color() {
+  @include use-font-color(color.$text);
+}
+@mixin use-danger-color() {
+  @include use-font-color(color.$danger);
+}
+@mixin use-warning-color() {
+  @include use-font-color(color.$warning);
+}
+@mixin use-info-color() {
+  @include use-font-color(color.$info);
+}
+@mixin use-success-color() {
+  @include use-font-color(color.$success);
+}
+@mixin use-primary-color() {
+  @include use-font-color(color.$primary);
+}
+@mixin use-secondary-color() {
+  @include use-font-color(color.$secondary);
+}
+@mixin use-tertiary-color() {
+  @include use-font-color(color.$tertiary);
+}

@@ -1,0 +1,34 @@
+@use '@theme/css/color/color.scss' as color;
+@use '@theme/css/font/index.scss' as font;
+@use '@theme/css/margin/margin.scss' as *;
+@use '@layer/layer.scss' as layer;
+@use '../shared/use-focus-underline.scss' as *;
+
+@mixin use-filled-text-field() {
+  $blur-outline-color: color.$accents4;
+  $focus-outline-color: color.$suoh;
+  $focus-color: color.$suoh;
+  $blur-color: color.$accents3;
+  $transition-time: 0.3s;
+  background-color: color.$accents2;
+  $base-z-index: layer.$earth;
+
+  @include use-focus-underline();
+  @include use-lg-margin-y();
+
+  .input {
+    height: 70%;
+    bottom: 0;
+    z-index: $base-z-index;
+    border-bottom: $blur-outline-color solid 1px;
+  }
+
+  .input:focus {
+    border-bottom: $blur-outline-color solid 1px;
+  }
+
+  .input:focus + .placeholder,
+  .input:not(:placeholder-shown) + .placeholder {
+    top: 2px;
+  }
+}

@@ -1,0 +1,16 @@
+@use '@theme/css/padding/padding.scss' as *;
+
+.accordion {
+  border-bottom: black solid 1px;
+
+  @include use-md-padding-y();
+}
+.summary,
+.summary::-webkit-details-marker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordion[open] .expand-more-svg {
+  transform: rotate(180deg);
+}

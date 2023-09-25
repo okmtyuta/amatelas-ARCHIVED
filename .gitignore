@@ -1,0 +1,13 @@
+/lib/
+/node_modules/
+packages/client/client
+packages/docs/docs
+packages/lab/lab
+packages/server/server
+packages/tools/tools
+packages/markdown/markdown
+
+.idea
+.DS_Store
+
+packages/**/lib

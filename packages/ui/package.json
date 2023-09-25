@@ -1,0 +1,66 @@
+{
+  "name": "@okmtyuta/amui",
+  "private": false,
+  "version": "0.0.2",
+  "type": "module",
+  "author": "okmtyuta",
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https:/github.com/okmtyuta/amatelas"
+  },
+  "files": [
+    "lib",
+    "lib/index.css"
+  ],
+  "exports": {
+    ".": {
+      "import": "./lib/index",
+      "types": "./lib/types/index.d.ts"
+    },
+    "./server": {
+      "import": "./lib/server",
+      "types": "./lib/types/server.d.ts"
+    },
+    "./client": {
+      "import": "./lib/client",
+      "types": "./lib/types/client.d.ts"
+    },
+    "./style.css": {
+      "import": "./lib/style.css",
+      "require": "./lib/style.css"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc && tsc-alias",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/katex": "^0.16.2",
+    "@types/node": "^20.5.9",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.66.1",
+    "tsc-alias": "^1.8.7",
+    "typed-css-modules": "^0.7.2",
+    "typed-scss-modules": "^7.1.4",
+    "vite": "^4.4.5",
+    "vitest": "^0.34.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "clsx": "^2.0.0"
+  }
+}

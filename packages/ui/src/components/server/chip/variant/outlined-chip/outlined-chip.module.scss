@@ -1,0 +1,14 @@
+@use '@theme/css/color/color.scss' as *;
+@use '@theme/css/animation/use-ripple.scss' as *;
+
+@mixin use-outlined-chip($color: $text) {
+  border: 1px solid $color;
+  color: $color;
+  background-color: transparent;
+
+  // @include use-ripple($color);
+
+  &:hover {
+    background-color: rgba($color, 0.08);
+  }
+}

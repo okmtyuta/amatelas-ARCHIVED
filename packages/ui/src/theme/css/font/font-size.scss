@@ -1,0 +1,87 @@
+$title-size: (
+  'pc': 48px,
+  'tab': 42px,
+  'sp': 42px
+);
+$heading1-size: (
+  'pc': 42px,
+  'tab': 36px,
+  'sp': 36px
+);
+$heading2-size: (
+  'pc': 36px,
+  'tab': 32px,
+  'sp': 32px
+);
+$heading3-size: (
+  'pc': 32px,
+  'tab': 28px,
+  'sp': 28px
+);
+$heading4-size: (
+  'pc': 28px,
+  'tab': 24px,
+  'sp': 24px
+);
+$heading5-size: (
+  'pc': 24px,
+  'tab': 20px,
+  'sp': 20px
+);
+$heading6-size: (
+  'pc': 20px,
+  'tab': 16px,
+  'sp': 16px
+);
+$subtitle1-size: (
+  'pc': 16px,
+  'tab': 16px,
+  'sp': 16px
+);
+$subtitle2-size: (
+  'pc': 14px,
+  'tab': 14px,
+  'sp': 14px
+);
+$body1-size: (
+  'pc': 16px,
+  'tab': 16px,
+  'sp': 16px
+);
+$body2-size: (
+  'pc': 14px,
+  'tab': 14px,
+  'sp': 14px
+);
+$button-size: (
+  'pc': 14px,
+  'tab': 14px,
+  'sp': 14px
+);
+$caption-size: (
+  'pc': 12px,
+  'tab': 12px,
+  'sp': 12px
+);
+$overline-size: (
+  'pc': 10px,
+  'tab': 10px,
+  'sp': 10px
+);
+
+$font-size: (
+  'title': $title-size,
+  'heading1': $heading1-size,
+  'heading2': $heading2-size,
+  'heading3': $heading3-size,
+  'heading4': $heading4-size,
+  'heading5': $heading5-size,
+  'heading6': $heading6-size,
+  'subtitle1': $subtitle1-size,
+  'subtitle2': $subtitle2-size,
+  'body1': $body1-size,
+  'body2': $body2-size,
+  'button': $button-size,
+  'caption': $caption-size,
+  'overline': $overline-size
+);

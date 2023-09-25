@@ -1,0 +1,16 @@
+// 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+$xs-margin: 2px;
+$sm-margin: 4px;
+$md-margin: 8px;
+$lg-margin: 16px;
+$xl-margin: 32px;
+$none-margin: 0px;
+
+$margin-type: (
+  xs: $xs-margin,
+  sm: $sm-margin,
+  md: $md-margin,
+  lg: $lg-margin,
+  xl: $xl-margin,
+  none: $none-margin
+);

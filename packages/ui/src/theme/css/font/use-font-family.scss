@@ -1,0 +1,36 @@
+@use './font-family.scss' as font-family;
+
+@mixin use-anton() {
+  font-family: font-family.$anton;
+}
+@mixin use-frederica() {
+  font-family: font-family.$frederica;
+}
+@mixin use-inconsolata() {
+  font-family: font-family.$inconsolata;
+}
+@mixin use-noto-sans() {
+  font-family: font-family.$noto-sans;
+}
+@mixin use-noto-sans-jp() {
+  font-family: font-family.$noto-sans-jp;
+}
+@mixin use-noto-serif() {
+  font-family: font-family.$noto-serif;
+}
+@mixin use-noto-serif-jp() {
+  font-family: font-family.$noto-serif-jp;
+}
+
+@mixin use-sans-serif() {
+  font-family: font-family.$noto-sans;
+}
+@mixin use-sans-serif-jp() {
+  font-family: font-family.$noto-sans-jp;
+}
+@mixin use-serif() {
+  font-family: font-family.$noto-serif;
+}
+@mixin use-serif-jp() {
+  font-family: font-family.$noto-serif-jp;
+}

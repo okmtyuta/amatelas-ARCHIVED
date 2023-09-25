@@ -1,0 +1,25 @@
+@use './variant/shared/use-text-field.scss' as *;
+@use './variant/filled-text-field/filled-text-field.module.scss' as *;
+@use './variant//outlined-text-field/outlined-text-field.module.scss' as *;
+@use './variant/standard-text-field/standard-text-field.module.scss' as *;
+
+@use '@theme/css/color/color.scss' as color;
+@use '@theme/css/font/index.scss' as font;
+
+.text-field {
+  @include use-text-field();
+}
+.standard-text-field {
+  @include use-standard-text-field();
+}
+.filled-text-field {
+  @include use-filled-text-field();
+}
+.outlined-text-field {
+  @include use-outlined-text-field();
+}
+.helper {
+  color: color.$accents5;
+  padding: 0 12px;
+  @include font.use-caption-font-size();
+}

@@ -1,0 +1,13 @@
+@use '@theme/css/color/color.scss' as *;
+@use '@theme/css/animation/use-ripple.scss' as *;
+
+@mixin use-outlined-button($color: $suoh) {
+  color: $color;
+  border: $color solid 1px;
+  background-color: inherit;
+  @include use-ripple($color);
+
+  &:hover {
+    background-color: rgba($color, 0.08);
+  }
+}
