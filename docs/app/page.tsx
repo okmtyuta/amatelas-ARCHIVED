@@ -1,8 +1,20 @@
-import { Heading, Accordion, Progress, Alert } from '@okmtyuta/amatelas'
+import { Heading, Accordion, Progress, Alert, Fixed } from '@okmtyuta/amatelas'
 
 const Page = () => {
   return (
     <>
+      <Fixed positionalMargin={{ left: 'none', right: 'none' }}>
+        <Alert label="INFO">New components available!</Alert>
+        <Alert variant="error" label="ERROR">
+          INCOMPATIBLE USER ID!!
+        </Alert>
+        <Alert variant="success" label="おめでとう！">
+          The React Framework for the Web Used by some of the world's largest
+          companies, Next.js enables you to create full-stack Web applications
+          by extending the latest React features, and integrating powerful
+          Rust-based JavaScript tooling for the fastest builds.
+        </Alert>
+      </Fixed>
       <Heading>Recently Added</Heading>
 
       <Heading type="h3">Accordion</Heading>

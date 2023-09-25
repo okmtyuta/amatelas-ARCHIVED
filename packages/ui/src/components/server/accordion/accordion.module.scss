@@ -2,14 +2,15 @@
 
 .accordion {
   border-bottom: black solid 1px;
-
   @include use-md-padding-y();
 }
-.summary,
-.summary::-webkit-details-marker {
+.summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.summary::-webkit-details-marker {
+  display: none;
 }
 .accordion[open] .expand-more-svg {
   transform: rotate(180deg);

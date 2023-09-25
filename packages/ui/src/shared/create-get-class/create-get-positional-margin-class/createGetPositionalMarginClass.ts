@@ -20,7 +20,7 @@ const isPositionalMarginSize = (
   ) {
     return true
   }
-
+  
   return false
 }
 const isXYMargin = (
@@ -45,7 +45,6 @@ const isDirectionalPositionalMargin = (
   ) {
     return true
   }
-
   return false
 }
 
@@ -85,12 +84,12 @@ export const createGetPositionalMarginClass = (
       if (positionalMargin.left) {
         classes.push(styles[`${positionalMargin.left}-positional-margin-left`])
       }
-      if (positionalMargin.bottom) {
+      if (positionalMargin.right) {
         classes.push(
           styles[`${positionalMargin.right}-positional-margin-right`]
         )
       }
-      if (positionalMargin.right) {
+      if (positionalMargin.bottom) {
         classes.push(
           styles[`${positionalMargin.bottom}-positional-margin-bottom`]
         )
