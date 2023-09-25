@@ -22,7 +22,7 @@ importers:
         specifier: ^6.7.2
         version: 6.7.2(eslint@8.50.0)(typescript@5.2.2)
       eslint:
-        specifier: ^8.49.0
+        specifier: ^8.50.0
         version: 8.50.0
       eslint-plugin-react-hooks:
         specifier: ^4.6.0
@@ -42,9 +42,9 @@ importers:
 
   docs:
     dependencies:
-      '@okmtyuta/amui':
+      '@okmtyuta/amatelas':
         specifier: ^0.10.0
-        version: link:../packages/ui
+        version: 0.10.0(react-dom@18.2.0)(react@18.2.0)
       '@types/node':
         specifier: ^20.5.9
         version: 20.6.5
@@ -508,6 +508,18 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
+
+  /@okmtyuta/amatelas@0.10.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-rvslbb4nWC2RuP6+z9NMnUOB4uBFs7CRBUOxeOGvuea5IDLGw59FvqrRgQi2GpknyaidKath4scY/jiIkPOibA==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.2.0
+      react-dom: ^18.2.0
+    dependencies:
+      clsx: 2.0.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /@rushstack/eslint-patch@1.4.0:
     resolution: {integrity: sha512-cEjvTPU32OM9lUFegJagO0mRnIn+rbqrG89vV8/xLnLFX0DoR0r1oy5IlTga71Q7uT3Qus7qm7wgeiMT/+Irlg==}

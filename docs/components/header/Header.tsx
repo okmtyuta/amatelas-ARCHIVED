@@ -1,4 +1,4 @@
-import { Sticky, Typography } from '@okmtyuta/amui'
+import { Sticky, Typography } from '@okmtyuta/amatelas'
 import styles from './header.module.scss'
 
 export const Header = () => {
@@ -6,7 +6,7 @@ export const Header = () => {
     <Sticky position="top" className={styles['header']}>
       <div className={styles['header-content']}>
         <Typography color="primary" fontFamily="anton">
-          AmUI
+          amatelas
         </Typography>
       </div>
     </Sticky>

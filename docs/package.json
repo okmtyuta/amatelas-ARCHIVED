@@ -1,16 +1,16 @@
 {
-  "name": "@okmtyuta/amui-docs",
+  "name": "@okmtyuta/amatelas-docs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build:amui": "pnpm --filter @okmtyuta/amui build",
+    "build:amatelas": "pnpm --filter @okmtyuta/amatelas build",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@okmtyuta/amui": "^0.10.0",
+    "@okmtyuta/amatelas": "workspace:^",
     "@types/node": "^20.5.9",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
@@ -22,6 +22,6 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "@okmtyuta/amui": "workspace:^"
+    "@okmtyuta/amatelas": "workspace:^"
   }
 }

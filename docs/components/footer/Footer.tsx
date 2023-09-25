@@ -1,4 +1,4 @@
-import { Space, Typography } from '@okmtyuta/amui'
+import { Space, Typography } from '@okmtyuta/amatelas'
 import styles from './footer.module.scss'
 
 export const Footer = () => {

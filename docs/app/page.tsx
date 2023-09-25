@@ -1,4 +1,4 @@
-import { Heading, Accordion, Progress, Alert } from '@okmtyuta/amui'
+import { Heading, Accordion, Progress, Alert } from '@okmtyuta/amatelas'
 
 const Page = () => {
   return (

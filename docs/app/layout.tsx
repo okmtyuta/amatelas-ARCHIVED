@@ -3,9 +3,9 @@ import { Inter } from 'next/font/google'
 
 import { Footer } from '@/components/footer/Footer'
 import { Header } from '@/components/header/Header'
-import { Frame } from '@okmtyuta/amui'
-import '@okmtyuta/amui/style.css'
-import "./reset.css"
+import { Frame } from '@okmtyuta/amatelas'
+import '@okmtyuta/amatelas/style.css'
+import './reset.css'
 
 const inter = Inter({ subsets: ['latin'] })
 

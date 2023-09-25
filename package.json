@@ -1,5 +1,5 @@
 {
-  "name": "amui",
+  "name": "amatelas",
   "private": false,
   "version": "0.0.0",
   "type": "module",
@@ -27,13 +27,11 @@
     }
   },
   "scripts": {
-    "build:ui": "pnpm --filter @okmtyuta/amui build",
-    "build:docs": "pnpm --filter @okmtyuta/amui-docs build",
+    "build:ui": "pnpm --filter @okmtyuta/amatelas build",
+    "build:docs": "pnpm --filter @okmtyuta/amatelas-docs build",
     "build": "pnpm build:ui && pnpm build:docs",
     "dev:server": "pnpm --filter @amatelas/server dev",
     "dev:docs": "pnpm --filter @amatelas/docs dev",
-  
-
     "preview": "pnpm --filter @amatelas/docs dev",
     "collect": "./collect.zsh",
     "format": "prettier --write ./",
@@ -46,7 +44,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "@typescript-eslint/parser": "^6.7.2",
-    "eslint": "^8.49.0",
+    "eslint": "^8.50.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.6.14",
