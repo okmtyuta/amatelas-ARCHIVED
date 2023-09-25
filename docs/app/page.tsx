@@ -1,4 +1,4 @@
-import { Frame, Heading, Accordion, Progress, Alert } from '@okmtyuta/amui'
+import { Heading, Accordion, Progress, Alert } from '@okmtyuta/amui'
 import './reset.css'
 import '@okmtyuta/amui/style.css'
 
