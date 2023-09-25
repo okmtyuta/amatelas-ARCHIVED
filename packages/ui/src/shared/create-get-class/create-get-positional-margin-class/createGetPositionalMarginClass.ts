@@ -20,7 +20,7 @@ const isPositionalMarginSize = (
   ) {
     return true
   }
-  
+
   return false
 }
 const isXYMargin = (

@@ -9,7 +9,7 @@ const Page = () => {
           INCOMPATIBLE USER ID!!
         </Alert>
         <Alert variant="success" label="おめでとう！">
-          The React Framework for the Web Used by some of the world's largest
+          The React Framework for the Web Used by some of the worlds largest
           companies, Next.js enables you to create full-stack Web applications
           by extending the latest React features, and integrating powerful
           Rust-based JavaScript tooling for the fastest builds.
