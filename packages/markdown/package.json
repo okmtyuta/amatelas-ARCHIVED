@@ -1,0 +1,55 @@
+{
+  "name": "@okmtyuta/amatelas-markdown",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "author": "okmtyuta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/okmtyuta/amatelas"
+  },
+  "files": [
+    "markdown",
+    "markdown/index.css"
+  ],
+  "exports": {
+    ".": {
+      "require": "./markdown/index.umd.cjs",
+      "import": "./markdown/index.js",
+      "types": "./markdown/types/index.d.ts"
+    },
+    "./index.css": {
+      "import": "./markdown/index.css",
+      "require": "./markdown/index.css"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@okmtyuta/amatelas": "workspace:^"
+  },
+  "peerDependencies": {
+    "katex": "^0.16.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^8.0.7",
+    "rehype-katex": "^6.0.3",
+    "remark-gfm": "^3.0.1",
+    "remark-math": "^5.1.1",
+    "unist-util-visit": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/katex": "^0.16.2",
+    "@types/node": "^20.5.9",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "sass": "^1.66.1",
+    "vite": "^4.4.5"
+  }
+}

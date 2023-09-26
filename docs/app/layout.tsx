@@ -6,6 +6,7 @@ import { Header } from '@/components/header/Header'
 import { Frame } from '@okmtyuta/amatelas'
 import '@okmtyuta/amatelas/style.css'
 import './reset.css'
+import './katex.css'
 
 const inter = Inter({ subsets: ['latin'] })
 

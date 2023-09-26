@@ -1,4 +1,6 @@
 import { Heading, Accordion, Progress, Alert, Fixed } from '@okmtyuta/amatelas'
+import { Markdown } from '@okmtyuta/amatelas-markdown'
+import 'katex/dist/katex.min.css'
 
 const Page = () => {
   return (
@@ -15,6 +17,7 @@ const Page = () => {
           Rust-based JavaScript tooling for the fastest builds.
         </Alert>
       </Fixed>
+
       <Heading>Recently Added</Heading>
 
       <Heading type="h3">Accordion</Heading>
@@ -43,6 +46,9 @@ const Page = () => {
       </Alert>
 
       <Heading type="h3">Skeleton (Experimental)</Heading>
+      <Markdown>
+        This is Markdown Text: *italic*, **bold**, math: $a + b = c$
+      </Markdown>
     </>
   )
 }

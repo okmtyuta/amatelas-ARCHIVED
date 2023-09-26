@@ -1,4 +1,5 @@
 packages/ui/ui
+packages/markdown/markdown
 
 # themes are formatted at tools module. Hence themes in any other modules is not required to be formatted
 packages/**/theme
