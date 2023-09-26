@@ -30,8 +30,8 @@
     "build:amatelas": "pnpm --filter @okmtyuta/amatelas build",
     "build:docs": "pnpm --filter @okmtyuta/amatelas-docs build",
     "build:markdown": "pnpm --filter @okmtyuta/amatelas-markdown build",
-
     "build": "pnpm build:amatelas && pnpm build:markdown && pnpm build:docs",
+    "build:storybook": "pnpm --filter @okmtyuta/amatelas-storybook build-storybook",
     "dev:server": "pnpm --filter @amatelas/server dev",
     "dev:docs": "pnpm --filter @okmtyuta/amatelas-docs dev",
     "preview": "pnpm --filter @amatelas/docs dev",
@@ -44,8 +44,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.7.2",
-    "@typescript-eslint/parser": "^6.7.2",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
     "eslint": "^8.50.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
