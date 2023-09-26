@@ -1,5 +1,6 @@
 packages/ui/ui
 packages/markdown/markdown
+storybook/storybook-static
 
 # themes are formatted at tools module. Hence themes in any other modules is not required to be formatted
 packages/**/theme
@@ -7,7 +8,7 @@ packages/**/theme
 .next
 .vscode
 
-pnpm-locl.yaml
+pnpm-lock.yaml
 pnpm-workspace.yaml
 */**/pnpm-locl.yaml
 */**/pnpm-workspace.yaml

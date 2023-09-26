@@ -15,5 +15,14 @@ jobs:
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
 
-      - name: Build
-        run: pnpm build
+      - name: Build Amatelas
+        run: pnpm build:amatelas
+
+      - name: Build Markdown
+        run: pnpm build:markdown
+
+      - name: Build Docs
+        run: pnpm build:docs
+
+      - name: Build Storybook
+        run: pnpm build:storybook

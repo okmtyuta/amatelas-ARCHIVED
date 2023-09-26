@@ -1,7 +1,7 @@
 export { Accordion } from './components/server/accordion'
 export { Alert } from './components/server/alert'
 export { Avatar } from './components/server/avatar'
-export { Blockquote } from './components/server/block-quote'
+export { Blockquote } from './components/server/blockquote'
 export { Button, LabelButton } from './components/server/button'
 export { Chip } from './components/server/chip'
 export { Fixed } from './components/server/fixed'

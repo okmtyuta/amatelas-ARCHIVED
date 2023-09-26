@@ -1,4 +1,4 @@
-pre-push: format lint build
+pre-push: format lint build-all
 
 lint:
 	pnpm lint
@@ -6,8 +6,8 @@ lint:
 format:
 	pnpm format
 
-build:
-	pnpm build
+build-all:
+	pnpm build:all
 
 auto-push:
 	git add .

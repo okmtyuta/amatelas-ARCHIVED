@@ -9,29 +9,14 @@
     "type": "git",
     "url": "https://github.com/okmtyuta/amatelas"
   },
-  "files": [
-    "lib"
-  ],
-  "exports": {
-    "./ui": {
-      "import": "./lib/ui/index.js",
-      "types": "./lib/ui/types/index.d.ts"
-    },
-    "./ui/server": {
-      "import": "./lib/ui/server",
-      "types": "./lib/ui/types/server.d.ts"
-    },
-    "./ui/style.css": {
-      "import": "./lib/ui/style.css",
-      "require": "./lib/ui/style.css"
-    }
-  },
   "scripts": {
     "build:amatelas": "pnpm --filter @okmtyuta/amatelas build",
     "build:docs": "pnpm --filter @okmtyuta/amatelas-docs build",
     "build:markdown": "pnpm --filter @okmtyuta/amatelas-markdown build",
-    "build": "pnpm build:amatelas && pnpm build:markdown && pnpm build:docs",
     "build:storybook": "pnpm --filter @okmtyuta/amatelas-storybook build-storybook",
+    "build": "pnpm build:amatelas && pnpm build:markdown && pnpm build:docs",
+    "build:all": "pnpm build:amatelas && pnpm build:markdown && pnpm build:docs && pnpm build:storybook",
+    "storybook": "pnpm --filter @okmtyuta/amatelas-storybook storybook",
     "dev:server": "pnpm --filter @amatelas/server dev",
     "dev:docs": "pnpm --filter @okmtyuta/amatelas-docs dev",
     "preview": "pnpm --filter @amatelas/docs dev",
@@ -39,7 +24,7 @@
     "format": "prettier --write ./",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
-  "peerDependencies": {
+  "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
