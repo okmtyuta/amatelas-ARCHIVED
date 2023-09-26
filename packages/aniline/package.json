@@ -1,0 +1,48 @@
+{
+  "name": "@okmtyuta/aniline",
+  "private": false,
+  "version": "0.0.1",
+  "type": "module",
+  "author": "okmtyuta",
+  "license": "MIT",
+  "main": "./aniline/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https:/github.com/okmtyuta/amatelas"
+  },
+  "files": [
+    "aniline",
+    "aniline/index.css"
+  ],
+  "exports": {
+    ".": {
+      "import": "./aniline/index",
+      "types": "./aniline/types/index.d.ts"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc && tsc-alias",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^20.7.0",
+    "@types/react": "^18.2.22",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react-swc": "^3.4.0",
+    "tsc-alias": "^1.8.8",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.5"
+  },
+  "dependencies": {
+    "@okmtyuta/amatelas": "workspace:^",
+    "@types/styled-components": "^5.1.28",
+    "styled-components": "^6.0.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

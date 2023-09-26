@@ -1,7 +1,7 @@
 {
   "name": "@okmtyuta/amatelas-markdown",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "author": "okmtyuta",
   "license": "MIT",
@@ -51,5 +51,8 @@
     "@vitejs/plugin-react-swc": "^3.3.2",
     "sass": "^1.66.1",
     "vite": "^4.4.5"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

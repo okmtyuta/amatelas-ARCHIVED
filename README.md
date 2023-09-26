@@ -1,3 +1,2 @@
-# **!pull-request-basedを徹底すること!**
-
-- Document: https://docs.amatelas.dev
+- Docs: https://docs.amatelas.dev
+- Storybook: https://storybook.amatelas.dev
