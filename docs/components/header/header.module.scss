@@ -1,5 +1,5 @@
 .header {
-  height: 48px;
+  height: 64px;
   background-color: white;
   border-bottom: solid 1px rgba(0, 0, 0, 0.12);
 }
@@ -14,4 +14,20 @@
 .github-svg {
   width: 48px;
   height: 48px;
+}
+.github-logo-svg-exterior {
+  width: 36px;
+}
+.github-logo-svg {
+  width: 100%;
+}
+.storybook-logo-svg-exterior {
+  width: 32px;
+}
+.storybook-logo-svg {
+  width: 100%;
+}
+.links {
+  display: flex;
+  gap: 12px;
 }

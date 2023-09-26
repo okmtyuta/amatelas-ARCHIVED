@@ -1,4 +1,4 @@
-import { Space, Typography } from '@okmtyuta/amatelas'
+import { Space, Typography, Link } from '@okmtyuta/amatelas'
 import styles from './footer.module.scss'
 
 export const Footer = () => {
@@ -7,7 +7,7 @@ export const Footer = () => {
       Designed by
       <Space />
       <Typography color="primary" fontFamily="anton">
-        okmtyuta
+        <Link href="/">okmtyuta</Link>
       </Typography>
     </footer>
   )
