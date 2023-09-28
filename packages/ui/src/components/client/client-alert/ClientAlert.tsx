@@ -1,6 +1,4 @@
-import { clsx } from 'clsx'
-import styles from './client-alert.module.scss'
-import { ComponentProps, MouseEventHandler } from 'react'
+import { ComponentProps, MouseEventHandler, useState } from 'react'
 import {
   CheckedCircleSVG,
   CloseSVG,
@@ -9,81 +7,154 @@ import {
   WarningSVG
 } from '@root/svg'
 
+import { css, styled } from 'styled-components'
+import { color } from '@root/theme/js/color'
+
 type ClientAlertVariant = 'info' | 'error' | 'warning' | 'success'
 type DefaultDivProps = ComponentProps<'div'>
 
 type ClientAlertProps = {
   variant?: ClientAlertVariant
   label?: string
-  onDeleteClick?: MouseEventHandler<SVGSVGElement>
+  onDelete?: MouseEventHandler<SVGSVGElement>
 } & DefaultDivProps
 
-const getVariantClass = (variant?: ClientAlertVariant) => {
-  if (variant) {
-    return styles[variant]
-  }
+const AlertExterior = styled.div<{
+  $variant?: ClientAlertVariant
+  $hidden?: boolean
+}>`
+  ${(props) => {
+    if (props.$hidden) {
+      return css`
+        display: none;
+      `
+    }
 
-  return styles['info']
+    return css`
+      display: flex;
+    `
+  }}
+  padding: 16px;
+
+  color: white;
+  fill: white;
+  justify-content: space-between;
+  ${(props) => {
+    switch (props.$variant) {
+      case 'warning':
+        return css`
+          background-color: ${color.warning};
+        `
+      case 'info':
+        return css`
+          background-color: ${color.info};
+        `
+      case 'error':
+        return css`
+          background-color: ${color.danger};
+        `
+      default:
+        return css`
+          background-color: ${color.info};
+        `
+    }
+  }}
+`
+const AlertLabel = styled.div`
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+  background-color: #17a2b8;
+`
+const AlertLabelContent = styled.span`
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+`
+const AlertClose = styled.span`
+  flex-shrink: 0;
+`
+const AlertCloseLabel = styled.label`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+
+  &:hover {
+    border-radius: 50%;
+    background-color: blue;
+  }
+`
+const AlertCloseIcon = styled(CloseSVG)`
+  cursor: pointer;
+  user-select: none;
+`
+const AlertSuccessSVG = styled(CheckedCircleSVG)`
+  flex-shrink: 0;
+`
+const AlertWarningSVG = styled(WarningSVG)`
+  flex-shrink: 0;
+`
+const AlertErrorSVG = styled(ErrorSVG)`
+  flex-shrink: 0;
+`
+const AlertInfoSVG = styled(InfoSVG)`
+  flex-shrink: 0;
+`
+
+const getAlertVariant = (variant?: ClientAlertVariant) => {
+  if (variant) {
+    return variant
+  }
+  return 'info'
 }
 const getAlertIcon = (variant?: ClientAlertVariant) => {
-  const getAlertVariant = (variant?: ClientAlertVariant) => {
-    if (variant) {
-      return variant
-    }
-    return 'info'
+  switch (variant) {
+    case 'error':
+      return <AlertErrorSVG />
+    case 'success':
+      return <AlertSuccessSVG />
+    case 'warning':
+      return <AlertWarningSVG />
+    default:
+      return <AlertInfoSVG />
   }
-
-  const alertVariant = getAlertVariant(variant)
-  const iconClass = styles[`${alertVariant}-icon`]
-
-  if (variant === 'success') {
-    return (
-      <CheckedCircleSVG className={clsx(styles['label-icon'], iconClass)} />
-    )
-  }
-  if (variant === 'warning') {
-    return <WarningSVG className={clsx(styles['label-icon'], iconClass)} />
-  }
-  if (variant === 'error') {
-    return <ErrorSVG className={clsx(styles['label-icon'], iconClass)} />
-  }
-
-  return <InfoSVG className={clsx(styles['label-icon'], iconClass)} />
-}
-const getInputId = (inputId?: string) => {
-  if (inputId) {
-    return inputId
-  }
-
-  // TODO: useID?
-  return crypto.randomUUID()
 }
 
 export const ClientAlert = ({
   variant,
   label,
-  onDeleteClick,
+  onDelete,
   ...props
 }: ClientAlertProps) => {
-  const variantClass = getVariantClass(variant)
+  const v = getAlertVariant(variant)
   const alertIcon = getAlertIcon(variant)
-  const inputId = getInputId(props.id)
+  const [hidden, setHidden] = useState<boolean>(false)
 
   return (
-    <div {...props} className={clsx(styles['alert'], variantClass)}>
-      <input className={styles['input']} type="checkbox" id={inputId} />
+    <AlertExterior $hidden={hidden} $variant={v}>
       <div>
-        <div className={styles['label']}>
+        <AlertLabel>
           {alertIcon}
-          <span className={styles['label-content']}>{label}</span>
-        </div>
+          <AlertLabelContent>{label}</AlertLabelContent>
+        </AlertLabel>
         <div>{props.children}</div>
       </div>
-      <span className={styles['close']}>
-        <label className={styles['close-label']} htmlFor={inputId}>
-          <CloseSVG onClick={onDeleteClick} className={styles['close-icon']} />
-        </label>
-      </span>
-    </div>
+
+      <AlertClose>
+        <AlertCloseLabel>
+          <AlertCloseIcon
+            onClick={(e) => {
+              setHidden(true)
+              if (onDelete) {
+                onDelete(e)
+              }
+            }}
+          />
+        </AlertCloseLabel>
+      </AlertClose>
+    </AlertExterior>
   )
 }

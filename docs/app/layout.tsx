@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 
 import { Footer } from '@/components/footer/Footer'
 import { Header } from '@/components/header/Header'
-import { Frame } from '@okmtyuta/amatelas'
+import { Frame } from '@okmtyuta/amatelas/server'
 import '@okmtyuta/amatelas/style.css'
 import './reset.css'
 import './katex.css'

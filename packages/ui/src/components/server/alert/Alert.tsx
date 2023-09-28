@@ -1,6 +1,6 @@
 import { clsx } from 'clsx'
 import styles from './alert.module.scss'
-import { ComponentProps } from 'react'
+import { ComponentProps, MouseEventHandler } from 'react'
 import {
   CheckedCircleSVG,
   CloseSVG,
@@ -15,6 +15,7 @@ type DefaultDivProps = ComponentProps<'div'>
 type AlertProps = {
   variant?: AlertVariant
   label?: string
+  onDelete?: MouseEventHandler<SVGSVGElement>
 } & DefaultDivProps
 
 const getVariantClass = (variant?: AlertVariant) => {
@@ -58,7 +59,7 @@ const getInputId = (inputId?: string) => {
   return crypto.randomUUID()
 }
 
-export const Alert = ({ variant, label, ...props }: AlertProps) => {
+export const Alert = ({ variant, label, onDelete, ...props }: AlertProps) => {
   const variantClass = getVariantClass(variant)
   const alertIcon = getAlertIcon(variant)
   const inputId = getInputId(props.id)
@@ -75,7 +76,7 @@ export const Alert = ({ variant, label, ...props }: AlertProps) => {
       </div>
       <span className={styles['close']}>
         <label className={styles['close-label']} htmlFor={inputId}>
-          <CloseSVG className={styles['close-icon']} />
+          <CloseSVG onClick={onDelete} className={styles['close-icon']} />
         </label>
       </span>
     </div>

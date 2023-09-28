@@ -5,7 +5,10 @@ import remarkGfm from 'remark-gfm'
 import { messageRemarkPlugin } from './plugin/messagePlugin'
 import { components } from './components/components'
 
-export const Markdown = ({ children }: { children: string }) => {
+export const Markdown = ({ children }: { children?: string }) => {
+  if (!children) {
+    return <></>
+  }
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm, remarkMath, messageRemarkPlugin]}

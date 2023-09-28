@@ -24,7 +24,7 @@ export const Typing = ({ children, speed = 50 }: TypewriterProps) => {
     const timerId = showChar()
 
     return () => clearTimeout(timerId)
-  }, [])
+  }, [children, speed])
 
   return <div>{text}</div>
 }

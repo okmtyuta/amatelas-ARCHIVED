@@ -1,4 +1,4 @@
-import { Space, Typography, Link } from '@okmtyuta/amatelas'
+import { Space, Typography, Link } from '@okmtyuta/amatelas/server'
 import styles from './footer.module.scss'
 
 export const Footer = () => {

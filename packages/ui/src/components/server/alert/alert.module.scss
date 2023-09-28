@@ -4,7 +4,6 @@
 
 .alert {
   @include use-lg-padding();
-  position: sticky;
   display: flex;
   color: white;
   fill: white;
@@ -30,6 +29,8 @@
 }
 .label-content {
   font-weight: bold;
+  display: inline-flex;
+  align-items: center;
 }
 
 .close-label {

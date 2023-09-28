@@ -1,1 +1,1 @@
-export {ClientAlert} from "./components/client/client-alert"
+export { ClientAlert } from './components/client/client-alert'

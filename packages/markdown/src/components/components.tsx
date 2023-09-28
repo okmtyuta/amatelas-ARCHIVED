@@ -71,7 +71,7 @@ const li = ({ children }: { children: ReactNode }) => {
 // const hr = () => {
 //   return <Horizon />
 // }
-const blockBlockquote = ({ children }: { children: ReactNode }) => {
+const blockquote = ({ children }: { children: ReactNode }) => {
   return <Blockquote>{children}</Blockquote>
 }
 const message = ({
@@ -110,7 +110,7 @@ export const components = {
   ul,
   li,
   // hr,
-  blockBlockquote,
+  blockquote,
   message,
   textDanger,
   textInfo

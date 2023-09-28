@@ -1,15 +1,9 @@
-import { ClientAlert } from './client'
-import { Heading, Accordion, Progress, Alert, Fixed, Frame } from './index'
+import { Heading, Accordion, Progress, Alert, Frame } from './index'
 
 export const App = () => {
   return (
     <>
       <Frame>
-        <Fixed>
-          <ClientAlert onDeleteClick={() => {}} label="INFO">
-            New components available!
-          </ClientAlert>
-        </Fixed>
         <Heading>Recently Added</Heading>
 
         <Heading type="h3">Accordion</Heading>
