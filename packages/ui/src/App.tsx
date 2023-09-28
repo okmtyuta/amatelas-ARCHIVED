@@ -1,3 +1,4 @@
+import { ClientAlert } from './client'
 import { Heading, Accordion, Progress, Alert, Fixed, Frame } from './index'
 
 export const App = () => {
@@ -5,7 +6,9 @@ export const App = () => {
     <>
       <Frame>
         <Fixed>
-          <Alert label="INFO">New components available!</Alert>
+          <ClientAlert onDeleteClick={() => {}} label="INFO">
+            New components available!
+          </ClientAlert>
         </Fixed>
         <Heading>Recently Added</Heading>
 
