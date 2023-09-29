@@ -11,5 +11,5 @@ packages/**/theme
 
 pnpm-lock.yaml
 pnpm-workspace.yaml
-*/**/pnpm-locl.yaml
+*/**/pnpm-lock.yaml
 */**/pnpm-workspace.yaml
