@@ -13,7 +13,7 @@ jobs:
           version: 8.7.6
 
       - name: Install dependencies
-        run: pnpm i
+        run: pnpm i --no-frozen-lockfile
 
       - name: Lint
         run: pnpm lint
