@@ -1,6 +1,6 @@
 import { SVGBaseProps } from './types/SVGBaseProps'
 
-interface CloseProps extends SVGBaseProps {}
+export type CloseProps = SVGBaseProps
 
 export const CloseSVG = ({ ...props }: CloseProps) => {
   return (

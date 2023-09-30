@@ -1,6 +1,6 @@
 import { SVGBaseProps } from './types/SVGBaseProps'
 
-interface WarningProps extends SVGBaseProps {}
+export type WarningProps = SVGBaseProps
 
 export const WarningSVG = ({ ...props }: WarningProps) => {
   return (

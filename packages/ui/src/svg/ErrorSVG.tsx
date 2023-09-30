@@ -1,6 +1,6 @@
 import { SVGBaseProps } from './types/SVGBaseProps'
 
-interface ErrorProps extends SVGBaseProps {}
+export type ErrorProps = SVGBaseProps
 
 export const ErrorSVG = ({ ...props }: ErrorProps) => {
   return (

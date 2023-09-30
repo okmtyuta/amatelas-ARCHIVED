@@ -1,84 +1,83 @@
 import { clsx } from 'clsx'
-import styles from './alert.module.scss'
 import { ComponentProps, MouseEventHandler } from 'react'
 import {
-  CheckedCircleSVG,
-  CloseSVG,
-  ErrorSVG,
-  InfoSVG,
-  WarningSVG
-} from '@root/svg'
+  AlertClose,
+  AlertCloseCheckbox,
+  AlertCloseLabel,
+  AlertCloseSVG,
+  AlertExterior,
+  AlertHeader,
+  AlertSummary,
+  AlertSummaryText
+} from './alert-parts'
+import {
+  getVariantClass,
+  getAlertSVG,
+  getCloseCheckboxId
+} from './alert-property-getter'
 
-type AlertVariant = 'info' | 'error' | 'warning' | 'success'
+export type AlertVariant = 'info' | 'error' | 'warning' | 'success'
+type AlertClassNames = {
+  exterior?: string
+  header?: string
+  summary?: string
+  summaryText?: string
+  alertSVG?: string
+  close?: string
+  closeCheckbox?: string
+  closeLabel?: string
+  closeSVG?: string
+}
 type DefaultDivProps = ComponentProps<'div'>
-
 type AlertProps = {
   variant?: AlertVariant
-  label?: string
+  summary?: string
   onDelete?: MouseEventHandler<SVGSVGElement>
+  classNames?: AlertClassNames
 } & DefaultDivProps
 
-const getVariantClass = (variant?: AlertVariant) => {
-  if (variant) {
-    return styles[variant]
-  }
-
-  return styles['info']
-}
-const getAlertIcon = (variant?: AlertVariant) => {
-  const getAlertVariant = (variant?: AlertVariant) => {
-    if (variant) {
-      return variant
-    }
-    return 'info'
-  }
-
-  const alertVariant = getAlertVariant(variant)
-  const iconClass = styles[`${alertVariant}-icon`]
-
-  if (variant === 'success') {
-    return (
-      <CheckedCircleSVG className={clsx(styles['label-icon'], iconClass)} />
-    )
-  }
-  if (variant === 'warning') {
-    return <WarningSVG className={clsx(styles['label-icon'], iconClass)} />
-  }
-  if (variant === 'error') {
-    return <ErrorSVG className={clsx(styles['label-icon'], iconClass)} />
-  }
-
-  return <InfoSVG className={clsx(styles['label-icon'], iconClass)} />
-}
-const getInputId = (inputId?: string) => {
-  if (inputId) {
-    return inputId
-  }
-
-  // TODO: useID?
-  return crypto.randomUUID()
-}
-
-export const Alert = ({ variant, label, onDelete, ...props }: AlertProps) => {
-  const variantClass = getVariantClass(variant)
-  const alertIcon = getAlertIcon(variant)
-  const inputId = getInputId(props.id)
+export const Alert = ({
+  variant,
+  summary,
+  onDelete,
+  classNames,
+  ...props
+}: AlertProps) => {
+  const _variantClass = getVariantClass(variant)
+  const _alertSVG = getAlertSVG({ variant, className: classNames?.alertSVG })
+  const _id = getCloseCheckboxId(props.id)
 
   return (
-    <div {...props} className={clsx(styles['alert'], variantClass)}>
-      <input className={styles['input']} type="checkbox" id={inputId} />
-      <div>
-        <div className={styles['label']}>
-          {alertIcon}
-          <span className={styles['label-content']}>{label}</span>
-        </div>
-        <div>{props.children}</div>
-      </div>
-      <span className={styles['close']}>
-        <label className={styles['close-label']} htmlFor={inputId}>
-          <CloseSVG onClick={onDelete} className={styles['close-icon']} />
-        </label>
-      </span>
-    </div>
+    <AlertExterior
+      {...props}
+      className={clsx(_variantClass, classNames?.exterior)}
+    >
+      <AlertCloseCheckbox
+        className={clsx(classNames?.closeCheckbox)}
+        id={_id}
+      />
+
+      <AlertHeader className={clsx(classNames?.header)}>
+        <AlertSummary>
+          {_alertSVG}
+          <AlertSummaryText className={clsx(classNames?.summaryText)}>
+            {summary}
+          </AlertSummaryText>
+        </AlertSummary>
+        <AlertClose className={clsx(classNames?.close)}>
+          <AlertCloseLabel
+            className={clsx(classNames?.closeLabel)}
+            htmlFor={_id}
+          >
+            <AlertCloseSVG
+              className={clsx(classNames?.closeSVG)}
+              onClick={onDelete}
+            />
+          </AlertCloseLabel>
+        </AlertClose>
+      </AlertHeader>
+
+      {props.children}
+    </AlertExterior>
   )
 }

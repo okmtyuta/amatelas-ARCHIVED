@@ -4,10 +4,8 @@
 
 .alert {
   @include use-lg-padding();
-  display: flex;
   color: white;
   fill: white;
-  justify-content: space-between;
 }
 
 .alert:has(.input:checked) {
@@ -17,17 +15,17 @@
 .close {
   flex-shrink: 0;
 }
-.close-icon {
+.close-svg {
   cursor: pointer;
   user-select: none;
 }
 
-.label {
+.summary {
   display: flex;
   gap: 12px;
   @include use-md-margin-bottom();
 }
-.label-content {
+.summary-text {
   font-weight: bold;
   display: inline-flex;
   align-items: center;
@@ -37,8 +35,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  padding: 4px;
+  transform: translate(4px, -4px);
   cursor: pointer;
 }
 
@@ -73,4 +71,9 @@
 
 .input {
   display: none;
+}
+
+.alert-head {
+  display: flex;
+  justify-content: space-between;
 }

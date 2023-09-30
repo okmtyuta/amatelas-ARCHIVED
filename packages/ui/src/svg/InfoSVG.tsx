@@ -1,6 +1,6 @@
 import { SVGBaseProps } from './types/SVGBaseProps'
 
-interface InfoProps extends SVGBaseProps {}
+export type InfoProps = SVGBaseProps
 
 export const InfoSVG = ({ ...props }: InfoProps) => {
   return (

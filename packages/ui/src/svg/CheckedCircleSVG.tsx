@@ -1,6 +1,6 @@
 import { SVGBaseProps } from './types/SVGBaseProps'
 
-interface CheckedCircleProps extends SVGBaseProps {}
+export type CheckedCircleProps = SVGBaseProps
 
 export const CheckedCircleSVG = ({ ...props }: CheckedCircleProps) => {
   return (
