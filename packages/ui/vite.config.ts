@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import { resolve } from 'path'
+import pkg from './package.json'
 
 export default defineConfig({
   resolve: {
@@ -21,13 +22,13 @@ export default defineConfig({
       }
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'styled-components'],
-      output: {
-        globals: {
-          react: 'React',
-          ReactDOM: 'react-dom'
-        }
-      }
+      external: Object.keys(pkg.peerDependencies)
+      // output: {
+      //   globals: {
+      //     react: 'React',
+      //     "react-dom": "ReactDOM",
+      //   }
+      // }
     }
   },
   plugins: [react()]

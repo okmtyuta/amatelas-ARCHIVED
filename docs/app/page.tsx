@@ -6,7 +6,6 @@ import {
   List,
   ListItem
 } from '@okmtyuta/amatelas/server'
-import 'katex/dist/katex.min.css'
 
 const Page = () => {
   return (

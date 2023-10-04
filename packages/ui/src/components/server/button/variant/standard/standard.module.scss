@@ -1,11 +1,10 @@
 @use '@theme/css/color/color.scss' as *;
 @use '@theme/css/animation/use-ripple.scss' as *;
 
-@mixin use-standard-button($color: $suoh) {
+@mixin use-standard($color: $suoh) {
   border: none;
   color: $color;
   background-color: inherit;
-  @include use-ripple($color);
 
   &:hover {
     background-color: rgba($color, 0.08);

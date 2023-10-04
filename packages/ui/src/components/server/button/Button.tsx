@@ -2,32 +2,37 @@
 
 import { clsx } from 'clsx'
 import styles from './button.module.scss'
-import { ComponentProps } from 'react'
+import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react'
+import { Progress } from '../progress'
 
 type Variant = 'standard' | 'outlined' | 'filled'
 type Color = 'text' | 'danger' | 'info' | 'success' | 'warning'
 
-type DefaultButtonProps = ComponentProps<'button'>
-
-type ButtonProps = {
+export type ButtonProps<T extends ElementType> = {
+  tag?: T
   variant?: Variant
   color?: Color
   shade?: boolean
-} & DefaultButtonProps
+  loading?: boolean
+  spinner?: ReactNode
+  classNames?: {
+    exterior?: string
+  }
+} & Omit<ComponentPropsWithoutRef<T>, 'button'>
 
-const getTextAreaVariantClass = (variant?: Variant) => {
+const getVariant = (variant?: Variant) => {
   if (variant) {
-    return styles[`${variant}-button`]
+    return variant
   }
 
-  return styles['outlined-button']
+  return 'outlined'
 }
-const getColorClass = (color?: Color) => {
+const getColor = (color?: Color) => {
   if (color) {
-    return styles[`${color}`]
+    return color
   }
 
-  return styles['text']
+  return 'text'
 }
 const getShadeClass = (shade?: boolean) => {
   if (shade) {
@@ -36,18 +41,47 @@ const getShadeClass = (shade?: boolean) => {
 
   return ''
 }
+const getSpinner = (color: Color, variant: Variant, spinner?: ReactNode) => {
+  if (spinner) {
+    return spinner
+  }
 
-export const Button = ({ variant, color, shade, ...props }: ButtonProps) => {
-  const variantClass = getTextAreaVariantClass(variant)
-  const colorClass = getColorClass(color)
-  const shadeClass = getShadeClass(shade)
+  if (variant === 'filled') {
+    return <Progress size="xs" color="white" />
+  }
+
+  return <Progress size="xs" color={color} />
+}
+
+export const Button = <T extends ElementType = 'button'>({
+  tag,
+  variant,
+  color,
+  shade,
+  loading,
+  spinner,
+  classNames,
+  ...props
+}: ButtonProps<T>) => {
+  const Tag = tag ?? 'button'
+  const _variant = getVariant(variant)
+  const _color = getColor(color)
+  const _shadeClass = getShadeClass(shade)
+  const _spinner = getSpinner(_color, _variant, spinner)
 
   return (
-    <button
+    <Tag
       {...props}
-      className={clsx(styles['button'], variantClass, colorClass, shadeClass)}
+      className={clsx(
+        styles['button'],
+        styles[_variant],
+        styles[_color],
+        _shadeClass,
+        classNames?.exterior
+      )}
     >
+      {loading ? _spinner : <></>}
       {props.children}
-    </button>
+    </Tag>
   )
 }

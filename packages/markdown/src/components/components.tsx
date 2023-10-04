@@ -13,42 +13,42 @@ import {
 
 const h1 = ({ children }: { children: ReactNode }) => {
   return (
-    <Heading type="h1">
+    <Heading as="h1">
       <Typography fontFamily="sans-serif-jp">{children}</Typography>
     </Heading>
   )
 }
 const h2 = ({ children }: { children: ReactNode }) => {
   return (
-    <Heading type="h2">
+    <Heading as="h2">
       <Typography fontFamily="sans-serif-jp">{children}</Typography>
     </Heading>
   )
 }
 const h3 = ({ children }: { children: ReactNode }) => {
   return (
-    <Heading type="h3">
+    <Heading as="h3">
       <Typography fontFamily="sans-serif-jp">{children}</Typography>
     </Heading>
   )
 }
 const h4 = ({ children }: { children: ReactNode }) => {
   return (
-    <Heading type="h4">
+    <Heading as="h4">
       <Typography fontFamily="sans-serif-jp">{children}</Typography>
     </Heading>
   )
 }
 const h5 = ({ children }: { children: ReactNode }) => {
   return (
-    <Heading type="h5">
+    <Heading as="h5">
       <Typography fontFamily="sans-serif-jp">{children}</Typography>
     </Heading>
   )
 }
 const h6 = ({ children }: { children: ReactNode }) => {
   return (
-    <Heading type="h6">
+    <Heading as="h6">
       <Typography fontFamily="sans-serif-jp">{children}</Typography>
     </Heading>
   )

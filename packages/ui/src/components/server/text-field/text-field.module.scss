@@ -18,6 +18,7 @@
 .outlined-text-field {
   @include use-outlined-text-field();
 }
+
 .helper {
   color: color.$accents5;
   padding: 0 12px;

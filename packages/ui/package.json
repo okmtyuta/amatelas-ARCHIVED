@@ -1,7 +1,7 @@
 {
   "name": "@okmtyuta/amatelas",
   "private": false,
-  "version": "0.11.3",
+  "version": "0.11.6",
   "type": "module",
   "author": "okmtyuta",
   "license": "MIT",
@@ -12,19 +12,19 @@
   },
   "files": [
     "ui",
-    "ui/index.css"
+    "ui/style.css"
   ],
   "exports": {
     ".": {
-      "import": "./ui/index",
+      "import": "./ui/index.js",
       "types": "./ui/types/index.d.ts"
     },
     "./server": {
-      "import": "./ui/server",
+      "import": "./ui/server.js",
       "types": "./ui/types/server.d.ts"
     },
     "./client": {
-      "import": "./ui/client",
+      "import": "./ui/client.js",
       "types": "./ui/types/client.d.ts"
     },
     "./style.css": {
@@ -39,11 +39,13 @@
     "preview": "vite preview"
   },
   "peerDependencies": {
+    "clsx": "^2.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.0.8"
   },
   "devDependencies": {
-    "@types/katex": "^0.16.3",
+    "@okmtyuta/awesome-css": "^0.0.0",
     "@types/node": "^20.7.1",
     "@types/react": "^18.2.23",
     "@types/react-dom": "^18.2.8",
@@ -58,11 +60,16 @@
     "vite": "^4.4.9",
     "vitest": "^0.34.5"
   },
+  "dependencies": {
+    "clsx": "^2.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.0.8"
+  },
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
-    "clsx": "^2.0.0",
-    "styled-components": "^6.0.8"
-  }
+  "sideEffects": [
+    "*.css"
+  ]
 }

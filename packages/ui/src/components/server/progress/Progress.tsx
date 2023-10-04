@@ -4,27 +4,55 @@ import { ComponentProps } from 'react'
 import styles from './progress.module.scss'
 import { clsx } from 'clsx'
 
-type ProgressVariant = 'info' | 'danger' | 'warning' | 'success'
-
+type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+type Color = 'info' | 'danger' | 'warning' | 'success' | 'text' | 'white'
 type DefaultSpanProps = ComponentProps<'span'>
 type ProgressProps = {
-  variant?: ProgressVariant
+  color?: Color
+  size?: Size
+  classNames?: {
+    exterior?: string
+    circle?: string
+  }
 } & DefaultSpanProps
 
-const getProgressVariantClass = (variant?: ProgressVariant) => {
-  if (variant) {
-    return styles[variant]
+const getColor = (color?: Color) => {
+  if (color) {
+    return color
   }
 
-  return styles['info']
+  return 'text'
+}
+const getSize = (size?: Size) => {
+  if (size) {
+    return size
+  }
+
+  return 'md'
 }
 
-export const Progress = ({ variant, ...props }: ProgressProps) => {
-  const progressVariantClass = getProgressVariantClass(variant)
-
+export const Progress = ({
+  color,
+  size,
+  classNames,
+  ...props
+}: ProgressProps) => {
+  const _color = getColor(color)
+  const _size = getSize(size)
   return (
-    <span {...props} className={clsx(styles['progress'], progressVariantClass)}>
-      <svg className={styles['svg']} viewBox="22 22 44 44">
+    <span
+      {...props}
+      className={clsx(
+        styles['progress'],
+        styles[_color],
+        styles[_size],
+        classNames?.exterior
+      )}
+    >
+      <svg
+        className={clsx(styles['svg'], classNames?.circle)}
+        viewBox="22 22 44 44"
+      >
         <circle
           className={styles['circle']}
           cx="44"
@@ -32,7 +60,7 @@ export const Progress = ({ variant, ...props }: ProgressProps) => {
           r="20.2"
           fill="none"
           strokeWidth="3.6"
-        ></circle>
+        />
       </svg>
     </span>
   )

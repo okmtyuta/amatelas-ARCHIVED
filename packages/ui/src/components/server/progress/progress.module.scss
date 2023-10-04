@@ -1,8 +1,26 @@
 @use '@theme/css/color/color.scss' as *;
 
 .progress {
-  width: 40px;
-  height: 40px;
+  &.xs {
+    width: 16px;
+    height: 16px;
+  }
+  &.sm {
+    width: 24px;
+    height: 24px;
+  }
+  &.md {
+    width: 30px;
+    height: 30px;
+  }
+  &.lg {
+    width: 36px;
+    height: 36px;
+  }
+  &.xl {
+    width: 48px;
+    height: 48px;
+  }
   display: inline-block;
   animation: 1.4s linear 0s infinite normal none running rotate-animation;
   &.info {
@@ -16,6 +34,12 @@
   }
   &.warning {
     color: $warning;
+  }
+  &.text {
+    color: $text;
+  }
+  &.white {
+    color: white;
   }
 }
 

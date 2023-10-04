@@ -1,3 +1,7 @@
-.color-red {
-  color: red;
+* {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
+    'Hiragino Sans', Meiryo, sans-serif;
+}
+.flex {
+  display: flex;
 }

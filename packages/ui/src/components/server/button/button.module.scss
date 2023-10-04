@@ -1,77 +1,82 @@
 @use '@theme/css/color/color.scss' as *;
 @use '@theme/css/effect/use-shade' as *;
 
-@use './variant/standard-button/standard-button.module.scss' as *;
-@use './variant/outlined-button/outlined-button.module.scss' as *;
-@use './variant/filled-button/filled-button.module.scss' as *;
+@use './variant/standard/standard.module.scss' as *;
+@use './variant/outlined/outlined.module.scss' as *;
+@use './variant/filled/filled.module.scss' as *;
 
 .button {
   outline: none;
   position: relative;
   overflow: hidden;
-  padding: 8px 20px;
+  width: 100%;
+  padding: 12px 20px;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-sizing: border-box;
 }
 
 .button:disabled {
   color: $text;
   background-color: rgba($text, 0.12);
-  border: none;
-  cursor: default;
+  cursor: not-allowed;
 }
 
 .shade {
   @include use-shade();
 }
 
-.standard-button:not(:disabled) {
+.standard:not(:disabled) {
   &.text {
-    @include use-standard-button($text);
+    @include use-standard($text);
   }
   &.info {
-    @include use-standard-button($info);
+    @include use-standard($info);
   }
   &.danger {
-    @include use-standard-button($danger);
+    @include use-standard($danger);
   }
   &.warning {
-    @include use-standard-button($warning);
+    @include use-standard($warning);
   }
   &.success {
-    @include use-standard-button($success);
+    @include use-standard($success);
   }
 }
-.outlined-button:not(:disabled) {
+.outlined:not(:disabled) {
   &.text {
-    @include use-outlined-button($text);
+    @include use-outlined($text);
   }
   &.info {
-    @include use-outlined-button($info);
+    @include use-outlined($info);
   }
   &.danger {
-    @include use-outlined-button($danger);
+    @include use-outlined($danger);
   }
   &.warning {
-    @include use-outlined-button($warning);
+    @include use-outlined($warning);
   }
   &.success {
-    @include use-outlined-button($success);
+    @include use-outlined($success);
   }
 }
-.filled-button {
+.filled {
   &.text {
-    @include use-filled-button($text);
+    @include use-filled($text);
   }
   &.info {
-    @include use-filled-button($info);
+    @include use-filled($info);
   }
   &.danger {
-    @include use-filled-button($danger);
+    @include use-filled($danger);
   }
   &.warning {
-    @include use-filled-button($warning);
+    @include use-filled($warning);
   }
   &.success {
-    @include use-filled-button($success);
+    @include use-filled($success);
   }
 }

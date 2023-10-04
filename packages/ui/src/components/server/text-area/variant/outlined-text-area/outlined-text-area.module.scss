@@ -45,6 +45,12 @@
     border-radius: 4px;
   }
 
+  // デフォルトのplaceholder
+  .placeholder {
+    margin: 0 10px;
+    padding: 0 2px;
+  }
+
   // 入力されていないときのplaceholderのスタイル
   .input:placeholder-shown ~ .placeholder {
   }
