@@ -109,12 +109,5 @@ export const components = {
   p,
   ul,
   li,
-  // hr,
-  blockquote,
-  message,
-  textDanger,
-  textInfo
-
-  // code
-  //   a
+  blockquote
 }
