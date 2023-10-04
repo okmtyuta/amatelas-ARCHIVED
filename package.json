@@ -13,7 +13,7 @@
     "build:amatelas": "pnpm --filter @okmtyuta/amatelas build",
     "build:docs": "pnpm --filter @okmtyuta/amatelas-docs build",
     "build:markdown": "pnpm --filter @okmtyuta/amatelas-markdown build",
-    "build:storybook": "pnpm --filter @okmtyuta/amatelas-storybook build-storybook",
+    "build:storybook": "pnpm --filter @okmtyuta/amatelas build-storybook",
     "build": "pnpm build:amatelas && pnpm build:markdown && pnpm build:docs",
     "build:all": "pnpm build:amatelas && pnpm build:markdown && pnpm build:docs && pnpm build:storybook",
     "storybook": "pnpm --filter @okmtyuta/amatelas-storybook storybook",
