@@ -9,7 +9,7 @@ import {
   Blockquote,
   Message
   // Horizon,
-} from '@okmtyuta/amatelas'
+} from '@okmtyuta/amatelas/server'
 
 const h1 = ({ children }: { children: ReactNode }) => {
   return (

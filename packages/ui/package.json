@@ -17,15 +17,15 @@
   "exports": {
     ".": {
       "import": "./ui/index.js",
-      "types": "./ui/types/index.d.ts"
+      "types": "./ui/types/src/index.d.ts"
     },
     "./server": {
       "import": "./ui/server.js",
-      "types": "./ui/types/server.d.ts"
+      "types": "./ui/types/src/server.d.ts"
     },
     "./client": {
       "import": "./ui/client.js",
-      "types": "./ui/types/client.d.ts"
+      "types": "./ui/types/src/client.d.ts"
     },
     "./style.css": {
       "import": "./ui/style.css"
