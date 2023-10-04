@@ -6,9 +6,7 @@ import {
   ListItem,
   Paragraph,
   Typography,
-  Blockquote,
-  Message
-  // Horizon,
+  Blockquote
 } from '@okmtyuta/amatelas/server'
 
 const h1 = ({ children }: { children: ReactNode }) => {
