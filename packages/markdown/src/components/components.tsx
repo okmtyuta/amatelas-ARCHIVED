@@ -68,34 +68,9 @@ const ul = ({ children }: { children: ReactNode }) => {
 const li = ({ children }: { children: ReactNode }) => {
   return <ListItem>{children}</ListItem>
 }
-// const hr = () => {
-//   return <Horizon />
-// }
 const blockquote = ({ children }: { children: ReactNode }) => {
   return <Blockquote>{children}</Blockquote>
 }
-const message = ({
-  children,
-  variant
-}: {
-  children: ReactNode
-  variant: 'info' | 'error' | 'warning' | 'success'
-}) => {
-  return <Message variant={variant}>{children}</Message>
-}
-const textDanger = ({ children }: { children: ReactNode }) => {
-  return <Typography color="danger">{children}</Typography>
-}
-const textInfo = ({ children }: { children: ReactNode }) => {
-  return <Typography color="info">{children}</Typography>
-}
-
-// const code = ({ children }: { children: ReactNode }) => {
-//   return <Code>{String(children)}</Code>
-// }
-// const a = ({ children, ...props }: { children: ReactNode }) => {
-//   return <Link {...props}>{children}</Link>
-// }
 
 export const components = {
   h1,
