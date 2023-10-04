@@ -7,9 +7,15 @@
     "paths": {
       "@root/*": ["src/*"],
       "@theme/*": ["src/theme/*"]
-    }
+    },
+    "types": ["vitest/globals"]
   },
   "extends": "../../tsconfig.json",
-  "include": ["src"],
+  "include": [
+    "src",
+    "node_modules/vitest/globals.d.ts",
+    "vite.config.ts",
+    "vitest.setup.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

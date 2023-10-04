@@ -18,7 +18,7 @@ export type ButtonProps<T extends ElementType> = {
   classNames?: {
     exterior?: string
   }
-} & Omit<ComponentPropsWithoutRef<T>, 'button'>
+} & Omit<ComponentPropsWithoutRef<T>, 'tag'>
 
 const getVariant = (variant?: Variant) => {
   if (variant) {
