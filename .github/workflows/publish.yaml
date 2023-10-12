@@ -21,7 +21,7 @@ jobs:
           scope: '@okmtyuta'
           always-auth: true
         env:
-        # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}とするとエラー
+          # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}とするとエラー
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Setup pnpm
@@ -40,5 +40,5 @@ jobs:
           cd packages/ui
           npm publish
         env:
-        # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}とするとエラー
+          # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}とするとエラー
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
