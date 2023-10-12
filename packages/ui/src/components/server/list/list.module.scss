@@ -9,14 +9,17 @@
 .list-item {
   text-align: -webkit-match-parent;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 6px;
+  line-height: 1.7;
 }
 .marker {
   display: inline-flex;
   width: 24px;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  height: 1lh;
 }
 .disc {
   width: 12px;
