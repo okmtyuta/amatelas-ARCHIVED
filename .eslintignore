@@ -1,4 +1,5 @@
 packages/ui/ui
+packages/ui/storybook-static
 packages/markdown/markdown
 packages/aniline/aniline
-storybook/storybook-static
+ma

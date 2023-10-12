@@ -6,6 +6,33 @@
   display: flex;
   flex-direction: column;
 }
+.list-item {
+  text-align: -webkit-match-parent;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.marker {
+  display: inline-flex;
+  width: 24px;
+  align-items: center;
+  justify-content: center;
+}
+.disc {
+  width: 12px;
+  height: 12px;
+  fill: color.$accents3;
+}
+.dangerous {
+  width: 24px;
+  height: 24px;
+  fill: color.$danger;
+}
+.done {
+  width: 24px;
+  height: 24px;
+  fill: color.$success;
+}
 
 .margin-xs {
   margin-top: 4px;
@@ -30,21 +57,18 @@
   gap: 10px;
 }
 
-.unordered {
-  list-style: disc;
-}
-.ordered {
-  list-style: decimal;
-}
+// .unordered {
+//   list-style: disc;
+// }
+// .ordered {
+//   list-style: decimal;
+// }
 
-.ordered > .list-item {
-}
+// .ordered > .list-item {
+// }
 
-.unordered > .list-item {
-  &::marker {
-    color: color.$accents3;
-  }
-}
-.list-item {
-  text-align: -webkit-match-parent;
-}
+// .unordered > .list-item {
+//   &::marker {
+//     color: color.$accents3;
+//   }
+// }
