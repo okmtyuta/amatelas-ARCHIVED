@@ -7,9 +7,7 @@ export const App = () => {
     <>
       <Frame>
         <Heading>Textarea</Heading>
-        <TextArea variant="standard" placeholder="placeholder" />
-        <TextArea variant="filled" />
-        <TextArea variant="outlined" placeholder="placeholder" />
+        <TextArea variant="standard" />
       </Frame>
     </>
   )
