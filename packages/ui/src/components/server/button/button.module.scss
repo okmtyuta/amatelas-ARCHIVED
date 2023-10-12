@@ -23,6 +23,9 @@
   color: $text;
   background-color: rgba($text, 0.12);
   cursor: not-allowed;
+  &.outlined {
+    border: 1px solid $text;
+  }
 }
 
 .shade {
