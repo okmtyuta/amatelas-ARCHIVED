@@ -32,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build client
+      - name: Build ui
         run: pnpm build:amatelas
 
       - name: publish ui
