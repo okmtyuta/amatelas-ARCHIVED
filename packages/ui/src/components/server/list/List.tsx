@@ -1,4 +1,4 @@
-import { ComponentProps, ReactNode } from 'react'
+import { ComponentProps } from 'react'
 import styles from './list.module.scss'
 import { clsx } from 'clsx'
 import { DangerousSVG, DiscSVG, DoneSVG } from '@root/svg'
