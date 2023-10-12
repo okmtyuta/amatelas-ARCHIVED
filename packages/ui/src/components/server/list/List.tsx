@@ -62,7 +62,8 @@ export const List = ({ gap, margin, ...props }: ListProps) => {
         styles['list'],
         styles['unordered'],
         gapClass,
-        marginClass
+        marginClass,
+        props.className
       )}
     >
       {props.children}
