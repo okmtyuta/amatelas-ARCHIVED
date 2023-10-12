@@ -87,7 +87,7 @@ export const ListItem = ({ marker, ...props }: ListItemProps) => {
   return (
     <li {...props} className={styles['list-item']}>
       <span className={styles['marker']}>{_marker}</span>
-      {props.children}
+      <span>{props.children}</span>
     </li>
   )
 }
