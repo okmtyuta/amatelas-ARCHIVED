@@ -1,0 +1,97 @@
+@use '@theme/css/color/color.scss' as *;
+@use '@theme/css/margin/margin.scss' as *;
+@use '@layer/layer.scss' as layer;
+
+// focusしていないときの枠線の色
+$blur-outline-color: $accents4;
+// focusしているときの枠線の色
+$focus-outline-color: $suoh;
+// focusしていないときの文字色
+$blur-color: $accents3;
+// focusしているときの文字色
+$focus-color: $suoh;
+// placeholderのアニメーションにかかる時間
+$transition-time: 0.3s;
+// 基準のz-index
+$base-z-index: layer.$earth;
+// focusしていないときのplaceholderのz-index
+$blur-placeholder-z-index: $base-z-index;
+// inputのz-index
+$input-z-index: calc($base-z-index + 10);
+// placeholderの背景のz-index
+$placeholder-background-z-index: calc($base-z-index + 20);
+// focusしているときのplaceholderのz-index
+$focus-placeholder-z-index: calc($base-z-index + 30);
+
+// 外側
+.text-field {
+  position: relative;
+  height: 52px;
+  border: $blur-outline-color solid 1px;
+  border-radius: 4px;
+}
+// focusしているときは枠の色を変える
+.text-field:has(.input:focus) {
+  border: $focus-outline-color solid 1px;
+}
+// デフォルトのplaceholder
+.placeholder {
+  position: absolute;
+  margin: 0 10px;
+  padding: 0 2px;
+  transform-origin: 0;
+  transition: all $transition-time;
+  pointer-events: none;
+  color: $blur-color;
+  z-index: $blur-placeholder-z-index;
+
+  // placeholderを上下中央寄せする
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+// focusしているときのplaceholder
+.input:focus + .placeholder,
+.input:not(:placeholder-shown) + .placeholder {
+  transform: scale(0.8);
+  top: -0.5lh;
+  transition: all $transition-time;
+  pointer-events: none;
+  color: $focus-color;
+  z-index: $focus-placeholder-z-index;
+}
+// デフォルトのinput
+.input {
+  position: absolute;
+  bottom: 0;
+  padding: 12px;
+  width: 100%;
+  height: 100%;
+  z-index: $input-z-index;
+}
+// focusしているときと文字入力があるときにplaceholderの後ろにある枠線を消すための背景
+// デフォルトは透明
+.placeholder-background {
+  position: absolute;
+  margin: 0 10px;
+  padding: 0 2px;
+  transform-origin: 0;
+  pointer-events: none;
+  color: $blur-color;
+  transform: scale(0.8);
+  top: -1.5px;
+  transition: all $transition-time;
+  pointer-events: none;
+  color: transparent;
+
+  background-color: transparent;
+  height: 2px;
+  z-index: $placeholder-background-z-index;
+}
+// focusしているときと文字入力があるときは背景を白くする
+// TODO: 一律白じゃないほうが望ましい。
+.input:focus ~ .placeholder-background,
+.input:not(:placeholder-shown) ~ .placeholder-background {
+  background-color: white;
+}
