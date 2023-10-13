@@ -1,0 +1,26 @@
+@use '@theme/css/color/color.scss' as *;
+
+.radio-input {
+  display: none;
+}
+.checked {
+  fill: $success;
+}
+.unchecked {
+  fill: $danger;
+}
+.radio-input:checked ~ .unchecked {
+  display: none;
+}
+.radio-input:not(:checked) ~ .checked {
+  display: none;
+}
+.radio {
+  display: inline-flex;
+  gap: 6px;
+  cursor: pointer;
+}
+.marker {
+  display: inline-block;
+  height: 1lh;
+}

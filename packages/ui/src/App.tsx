@@ -5,71 +5,40 @@ import {
   List,
   ListItem,
   Typography,
-  Alert,
-  Button,
-  Progress
+  Alert
 } from './index'
 import '@okmtyuta/awesome-css/reset.css'
 import './app.css'
-import { useState } from 'react'
-
-const _sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
+import { Checkbox, CheckboxGroup } from './components/server/checkbox'
 
 export const App = () => {
-  const [loading, setLoading] = useState(false)
   return (
     <>
       <Frame>
         <Heading>Textarea</Heading>
         <TextArea variant="standard" />
 
+        <CheckboxGroup>
+          <Checkbox
+            onChange={(e) => {
+              console.log(e)
+            }}
+            name="name2"
+          >
+            今日は何もしませんでした。今日は何もしませんでした。
+          </Checkbox>
+          <Checkbox name="name2">
+            今日は何もしませんでした。今日は何もしませんでした。
+          </Checkbox>
+          <Checkbox name="name2">
+            今日は何もしませんでした。今日は何もしませんでした。
+          </Checkbox>
+        </CheckboxGroup>
+
         <List>
           <ListItem marker="dangerous">今日は何もしませんでした。</ListItem>
           <ListItem marker="done">on marker</ListItem>
         </List>
-
-        <Button
-          variant="standard"
-          onClick={async () => {
-            setLoading(true)
-            await _sleep(1000)
-            setLoading(false)
-          }}
-          loading={loading}
-          disabled={loading}
-          color="info"
-          spinner={<Progress size="xs" color="white" />}
-        >
-          SUBMIT
-        </Button>
-        <Button
-          variant="filled"
-          onClick={async () => {
-            setLoading(true)
-            await _sleep(1000)
-            setLoading(false)
-          }}
-          loading={loading}
-          disabled={loading}
-          color="info"
-          spinner={<Progress size="xs" color="white" />}
-        >
-          SUBMIT
-        </Button>
-        <Button
-          variant="outlined"
-          onClick={async () => {
-            setLoading(true)
-            await _sleep(1000)
-            setLoading(false)
-          }}
-          loading={loading}
-          disabled={loading}
-          color="info"
-          spinner={<Progress size="xs" color="white" />}
-        >
-          SUBMIT
-        </Button>
 
         <List>
           <ListItem>: October 2023 - C</ListItem>
