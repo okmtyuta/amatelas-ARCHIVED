@@ -53,7 +53,7 @@
     "styled-components": "^6.0.8"
   },
   "devDependencies": {
-    "@okmtyuta/awesome-css": "^0.0.0",
+    "@okmtyuta/awesome-css": "^0.0.2",
     "@storybook/addon-essentials": "^7.4.6",
     "@storybook/addon-interactions": "^7.4.6",
     "@storybook/addon-links": "^7.4.6",
