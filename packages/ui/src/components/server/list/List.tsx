@@ -1,4 +1,4 @@
-import { ComponentProps } from 'react'
+import { ComponentProps, ReactNode } from 'react'
 import styles from './list.module.scss'
 import { clsx } from 'clsx'
 import { DangerousSVG, DiscSVG, DoneSVG } from '@root/svg'
@@ -16,6 +16,9 @@ type ListProps = {
 } & DefaultListProps
 
 type DefaultListItemProps = ComponentProps<'li'>
+type MarkerListItemProps = DefaultListItemProps & {
+  marker?: ReactNode
+}
 type ListItemProps = DefaultListItemProps & {
   marker?: Marker
 }
@@ -38,23 +41,7 @@ const getMarginClass = (margin?: Margin) => {
 export const List = ({ gap, margin, ...props }: ListProps) => {
   const gapClass = getGapClass(gap)
   const marginClass = getMarginClass(margin)
-  // TODO: ol
-  // if (ordered) {
-  //   return (
-  //     <ol
-  //       {...props}
-  //       className={clsx(
-  //         styles['list'],
-  //         styles['ordered'],
-  //         gapClass,
-  //         marginClass,
-  //         props.className
-  //       )}
-  //     >
-  //       {props.children}
-  //     </ol>
-  //   )
-  // }
+
   return (
     <ul
       {...props}
@@ -68,6 +55,15 @@ export const List = ({ gap, margin, ...props }: ListProps) => {
     >
       {props.children}
     </ul>
+  )
+}
+
+export const MarkerListItem = ({ marker, ...props }: MarkerListItemProps) => {
+  return (
+    <li {...props} className={styles['list-item']}>
+      <span className={styles['marker']}>{marker}</span>
+      <span>{props.children}</span>
+    </li>
   )
 }
 
