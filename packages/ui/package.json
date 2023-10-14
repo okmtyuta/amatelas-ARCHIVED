@@ -15,10 +15,6 @@
     "ui/style.css"
   ],
   "exports": {
-    ".": {
-      "import": "./ui/index.js",
-      "types": "./ui/types/src/index.d.ts"
-    },
     "./server": {
       "import": "./ui/server.js",
       "types": "./ui/types/src/server.d.ts"
@@ -34,7 +30,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && tsc && tsc-alias",
-    "test": "vitest",
+    "test": "vitest --watch=false",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",

@@ -1,10 +1,13 @@
-pre-push: format lint build-all
+pre-push: format lint test build-all
 
 lint:
 	pnpm lint
 
 format:
 	pnpm format
+
+test:
+	pnpm test:amatelas
 
 build-all:
 	pnpm build:all

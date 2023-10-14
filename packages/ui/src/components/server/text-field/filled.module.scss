@@ -1,32 +1,33 @@
 @use '@theme/css/color/color.scss' as *;
+@use '@theme/css/font/font.scss' as *;
 @use '@theme/css/margin/margin.scss' as *;
 @use '@layer/layer.scss' as layer;
 
 // focusしていないときの枠線の色
 $blur-outline-color: $accents4;
 // focusしているときの枠線の色
-$focus-outline-color: $suoh;
+$focus-outline-color: $info;
 // focusしていないときの文字色
-$blur-color: $accents3;
+$blur-color: $accents4;
 // focusしているときの文字色
-$focus-color: $suoh;
+$focus-color: $info;
 // placeholderのアニメーションにかかる時間
 $transition-time: 0.3s;
 // z-indexの基準 = 0
 $base-z-index: layer.$earth;
+$error-underline-z-index: calc($base-z-index + 10);
 
 // 外枠
 .text-field {
   position: relative;
   height: 52px;
   background-color: $accents2;
-  border-bottom: $blur-outline-color solid 1px;
 
   // focusしたときの枠線のアニメーション
   &::after {
-    border-bottom: 1px solid $suoh;
+    border-bottom: 1px solid $focus-outline-color;
     left: 0px;
-    bottom: -1px;
+    bottom: 0px;
     content: '';
     position: absolute;
     right: 0px;
@@ -57,17 +58,6 @@ $base-z-index: layer.$earth;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
 }
-
-// focusしているときおよび文字入力があるときのplaceholder
-.input:focus + .placeholder,
-.input:not(:placeholder-shown) + .placeholder {
-  transform: scale(0.8);
-  top: 0;
-  transition: all $transition-time;
-  pointer-events: none;
-  color: $focus-color;
-}
-
 // デフォルトのinput
 .input {
   position: absolute;
@@ -76,4 +66,33 @@ $base-z-index: layer.$earth;
   width: 100%;
   height: 100%;
   z-index: $base-z-index;
+  border-bottom: $blur-outline-color solid 1px;
+}
+// focusしているときおよび文字入力があるときのplaceholder
+.input:focus + .placeholder,
+.input:not(:placeholder-shown) + .placeholder {
+  transform: scale(0.8);
+  top: 2px;
+  transition: all $transition-time;
+  pointer-events: none;
+}
+.input:not(:placeholder-shown):not(:focus) + .placeholder {
+  color: $blur-color;
+}
+.input:focus + .placeholder {
+  color: $focus-color;
+}
+
+.validate > .input:invalid {
+  border-bottom: $danger solid 1px;
+  z-index: $error-underline-z-index;
+}
+.validate > .input:invalid + .placeholder {
+  color: $danger;
+}
+
+.helper-text {
+  color: $accents5;
+  @include use-caption-font-size();
+  padding: 4px 12px;
 }

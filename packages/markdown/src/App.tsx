@@ -1,4 +1,4 @@
-import { Frame } from '@okmtyuta/amatelas'
+import { Frame } from '@okmtyuta/amatelas/server'
 import { Markdown } from '.'
 
 import '@okmtyuta/amatelas/style.css'

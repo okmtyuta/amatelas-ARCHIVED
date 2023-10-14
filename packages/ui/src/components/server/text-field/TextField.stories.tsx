@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Button } from './Button'
+import { TextField } from './TextFiled'
 import '@okmtyuta/awesome-css/reset.css'
 
-const meta: Meta<typeof Button> = {
-  title: 'server/Button',
-  component: Button
+const meta: Meta<typeof TextField> = {
+  title: 'server/TextField',
+  component: TextField
 }
 
 export default meta
@@ -13,18 +13,18 @@ type Story = StoryObj<typeof meta>
 export const Outlined: Story = {
   args: {
     variant: 'outlined',
-    children: 'outlined'
+    placeholder: 'outlined'
   }
 }
 export const Filled: Story = {
   args: {
     variant: 'filled',
-    children: 'filled'
+    placeholder: 'filled'
   }
 }
 export const Standard: Story = {
   args: {
     variant: 'standard',
-    children: 'standard'
+    placeholder: 'standard'
   }
 }
