@@ -13,7 +13,7 @@ jobs:
           version: 8.8.0
 
       - name: Install dependencies
-        run: pnpm i --frozen-lockfile
+        run: pnpm i --no-frozen-lockfile
 
       - name: Test Amatelas
         run: pnpm test:amatelas

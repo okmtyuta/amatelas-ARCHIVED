@@ -30,7 +30,7 @@ jobs:
           version: 8.7.6
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build ui
         run: pnpm build:amatelas
