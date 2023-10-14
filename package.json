@@ -21,7 +21,6 @@
     "dev:server": "pnpm --filter @amatelas/server dev",
     "dev:docs": "pnpm --filter @okmtyuta/amatelas-docs dev",
     "preview": "pnpm --filter @amatelas/docs dev",
-    "collect": "./collect.zsh",
     "format": "prettier --write ./",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
