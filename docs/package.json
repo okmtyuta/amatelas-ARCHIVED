@@ -14,7 +14,7 @@
   "dependencies": {
     "@okmtyuta/amatelas": "workspace:^",
     "@okmtyuta/amatelas-markdown": "workspace:^",
-    "@okmtyuta/awesome-css": "^0.0.0",
+    "@okmtyuta/awesome-css": "^0.0.2",
     "@types/node": "^20.5.9",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
