@@ -1,18 +1,15 @@
-import { Frame, List, ListItem } from './index'
+import { Frame, Heading, Textarea } from './index'
 import '@okmtyuta/awesome-css/reset.css'
 import './app.css'
-import { demoText } from './demo-text'
 
 export const App = () => {
   return (
     <>
       <Frame className="frame">
-        <List>
-          <ListItem>{demoText.en.long}</ListItem>
-          <ListItem marker="done">
-            基礎的な要素を表現するために使われます。
-          </ListItem>
-        </List>
+        <Heading>Textarea</Heading>
+        <Textarea variant="filled" placeholder="これはテキストエリアです" />
+        <Textarea variant="standard" placeholder="これはテキストエリアです" />
+        <Textarea variant="outlined" placeholder="これはテキストエリアです" />
       </Frame>
     </>
   )
