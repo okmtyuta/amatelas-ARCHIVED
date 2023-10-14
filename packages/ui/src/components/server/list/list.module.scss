@@ -22,7 +22,7 @@
   height: 1lh;
 }
 .disc {
-  height: calc(1lh * 0.5);
+  height: calc(1lh * 0.3);
   fill: color.$accents3;
 }
 .dangerous {
@@ -56,19 +56,3 @@
 .gap-xl {
   gap: 10px;
 }
-
-// .unordered {
-//   list-style: disc;
-// }
-// .ordered {
-//   list-style: decimal;
-// }
-
-// .ordered > .list-item {
-// }
-
-// .unordered > .list-item {
-//   &::marker {
-//     color: color.$accents3;
-//   }
-// }
