@@ -12,7 +12,7 @@ export const App = () => {
         <TextField validate variant="outlined" placeholder="placeholder" />
         <TextField
           validate
-          pattern="\d{3}-\d{4}"
+          // pattern="\d{3}-\d{4}"
           variant="standard"
           placeholder="placeholder"
           helper={

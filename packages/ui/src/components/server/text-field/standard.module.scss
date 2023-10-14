@@ -20,6 +20,7 @@ $error-underline-z-index: calc($base-z-index + 10);
 .text-field {
   position: relative;
   height: 52px;
+  margin-top: 4px;
 
   // focusしたときの枠線のアニメーション
   &::after {
@@ -70,7 +71,7 @@ $error-underline-z-index: calc($base-z-index + 10);
 .input:focus + .placeholder,
 .input:not(:placeholder-shown) + .placeholder {
   transform: scale(0.8);
-  top: 2px;
+  top: -2px;
   transition: all $transition-time;
   pointer-events: none;
 }
