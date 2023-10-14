@@ -1,8 +1,9 @@
 // Refer to https://mui.com/material-ui/react-text-field/
 
-import { ComponentProps } from 'react'
+import { ComponentProps, ReactNode } from 'react'
 import { clsx } from 'clsx'
 
+import '@okmtyuta/awesome-css/reset.css'
 import filled from './filled.module.scss'
 import standard from './standard.module.scss'
 import outlined from './outlined.module.scss'
@@ -14,7 +15,8 @@ type DefaultInputProps = ComponentProps<'input'>
 type TextFiledProps = {
   variant?: Variant
   type?: TextfieldType
-  helper?: string
+  helper?: ReactNode
+  validate?: boolean
 } & DefaultInputProps
 
 const getStyles = (variant?: Variant) => {
@@ -29,18 +31,42 @@ const getStyles = (variant?: Variant) => {
   return standard
 }
 
-export const TextField = ({ variant, ...props }: TextFiledProps) => {
+export const TextField = ({
+  variant,
+  validate,
+  className,
+  helper,
+  ...props
+}: TextFiledProps) => {
   const styles = getStyles(variant)
   return (
-    <div className={clsx(styles['text-field'])}>
-      <input className={clsx(styles['input'])} placeholder=" " type="text" />
-      <label className={styles['placeholder']}>{props.placeholder}</label>
+    <>
+      <div
+        className={clsx({
+          [styles['text-field']]: true,
+          [styles['validate']]: validate
+        })}
+      >
+        <input
+          {...props}
+          className={clsx(styles['input'], className)}
+          placeholder=" "
+          type="text"
+        />
+        <label className={styles['placeholder']}>
+          {props.required ? `${props.placeholder}*` : props.placeholder}
+        </label>
 
-      {variant === 'outlined' ? (
-        <span className={styles['placeholder-background']}>
-          {props.placeholder}
-        </span>
-      ) : null}
-    </div>
+        {variant === 'outlined' ? (
+          <span className={outlined['placeholder-background']}>
+            {props.required ? `${props.placeholder}*` : props.placeholder}
+          </span>
+        ) : null}
+      </div>
+
+      <div className={styles['helper']}>
+        {helper ? <div className={styles['helper-text']}>{helper}</div> : null}
+      </div>
+    </>
   )
 }

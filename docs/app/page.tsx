@@ -34,6 +34,12 @@ const Page = () => {
         </Link>
       </Paragraph>
 
+      <Paragraph>
+        <Link underlined href="/components">
+          Components Docs
+        </Link>
+      </Paragraph>
+
       <Heading>Roadmap</Heading>
       <List>
         <ListItem>Create more useful components</ListItem>
