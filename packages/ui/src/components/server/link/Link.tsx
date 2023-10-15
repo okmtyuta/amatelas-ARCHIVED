@@ -3,33 +3,54 @@ import styles from './link.module.scss'
 import { clsx } from 'clsx'
 import { NorthEastSVG } from '@root/svg'
 
+type Color = 'danger' | 'warning' | 'success' | 'info'
+type Hover = {
+  underline?: boolean
+  color?: Color
+}
+
 type LinkProps<T extends ElementType> = {
   tag?: T
-  underlined?: boolean
+  underline?: boolean
   external?: boolean
+  color?: Color
+  hover?: Hover
 } & Omit<ComponentPropsWithoutRef<T>, 'tag'>
-
-const getUnderlineClass = (underlined?: boolean) => {
-  if (underlined) {
-    return styles['underline']
-  }
-}
 
 export const Link = <T extends ElementType = 'a'>({
   tag,
-  underlined,
+  underline,
   external,
+  color,
+  hover,
   ...props
 }: LinkProps<T>) => {
   const Tag = tag ?? 'a'
-  const underlineClass = getUnderlineClass(underlined)
+
   return (
     <Tag
       {...props}
-      className={clsx(underlineClass, styles['link'], props.className)}
+      className={clsx({
+        [styles['underline']]: underline,
+        [styles['link']]: true,
+        [styles['hover-underline']]: hover?.underline,
+        [styles['color-danger']]: color === 'danger',
+        [styles['color-waring']]: color === 'warning',
+        [styles['color-info']]: color === 'info',
+        [styles['color-success']]: color === 'success',
+        [styles['hover-color-danger']]: hover?.color === 'danger',
+        [styles['hover-color-waring']]: hover?.color === 'warning',
+        [styles['hover-color-info']]: hover?.color === 'info',
+        [styles['hover-color-success']]: hover?.color === 'success',
+        [props.className]: true
+      })}
     >
-      <span>{props.children}</span>{' '}
-      {external ? <NorthEastSVG className={styles['north-east-svg']} /> : null}
+      <span>{props.children}</span>
+      {external ? (
+        <span className={styles['external']}>
+          <NorthEastSVG weight={300} className={styles['north-east-svg']} />
+        </span>
+      ) : null}
     </Tag>
   )
 }
