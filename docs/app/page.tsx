@@ -14,7 +14,7 @@ const Page = () => {
       <Paragraph>
         AmatelasUI is a component library to build the personal pages of
         <Space />
-        <Link underlined href="https://blog.me.okmtyuta.jp">
+        <Link underline href="https://blog.me.okmtyuta.jp">
           @okmtyuta
         </Link>
         .
@@ -29,13 +29,13 @@ const Page = () => {
       </Paragraph>
 
       <Paragraph>
-        <Link underlined href="https://storybook.amatelas.dev">
+        <Link underline href="https://storybook.amatelas.dev">
           Storybook components catalog
         </Link>
       </Paragraph>
 
       <Paragraph>
-        <Link underlined href="/components">
+        <Link underline href="/components">
           Components Docs
         </Link>
       </Paragraph>
