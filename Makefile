@@ -1,4 +1,4 @@
-pre-push: format lint test build-all
+pre-push: format lint test build
 
 lint:
 	pnpm lint
@@ -9,8 +9,8 @@ format:
 test:
 	pnpm test:amatelas
 
-build-all:
-	pnpm build:all
+build:
+	pnpm build
 
 auto-push:
 	git add .
