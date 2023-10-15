@@ -1,7 +1,7 @@
 {
   "name": "@okmtyuta/amatelas-markdown",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "author": "okmtyuta",
   "license": "MIT",
@@ -31,7 +31,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@okmtyuta/amatelas": "workspace:^",
+    "@okmtyuta/amatelas": "0.11.19",
     "katex": "^0.16.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
