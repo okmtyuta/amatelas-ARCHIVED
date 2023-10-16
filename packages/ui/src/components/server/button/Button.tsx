@@ -7,7 +7,16 @@ import { Progress } from '../progress'
 
 type Variant = 'standard' | 'outlined' | 'filled'
 type Color = 'text' | 'danger' | 'info' | 'success' | 'warning'
-type Width = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full' | "auto" | "half" | "quarter"
+type Width =
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | 'full'
+  | 'auto'
+  | 'half'
+  | 'quarter'
 
 export type ButtonProps<T extends ElementType> = {
   as?: T
