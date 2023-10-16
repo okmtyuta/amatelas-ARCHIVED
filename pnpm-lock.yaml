@@ -219,8 +219,8 @@ importers:
   packages/markdown:
     dependencies:
       '@okmtyuta/amatelas':
-        specifier: 0.11.20
-        version: 0.11.20(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.8)
+        specifier: 0.11.22
+        version: link:../amatelas
       katex:
         specifier: ^0.16.8
         version: 0.16.8
@@ -2185,20 +2185,6 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
-
-  /@okmtyuta/amatelas@0.11.20(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.8):
-    resolution: {integrity: sha512-Y+cEjkhrvbRLIzhecOI0fSQB+RBpsuuGHhJ5O8qtf8QQTuTyYAzVCKYz0RFqIGjl0viiL7xWHPeLgvwn+3fv5Q==}
-    peerDependencies:
-      clsx: ^2.0.0
-      react: ^18.2.0
-      react-dom: ^18.2.0
-      styled-components: ^6.0.8
-    dependencies:
-      clsx: 2.0.0
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      styled-components: 6.0.8(react-dom@18.2.0)(react@18.2.0)
-    dev: false
 
   /@okmtyuta/awesome-css@0.0.2(typescript@5.2.2):
     resolution: {integrity: sha512-Jyl184VwFze3GRb23h1tzSD1zd8I7Dq9IHq0it1uKfBySGZAEI8Grwu3OGywzWiTpV6+jxAirbklFKOdC/S+Eg==}
