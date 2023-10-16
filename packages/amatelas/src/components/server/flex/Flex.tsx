@@ -35,7 +35,7 @@ export const Flex = <T extends ElementType = 'button'>({
   align,
   ...props
 }: ButtonProps<T>) => {
-  const _Exterior = as ?? 'button'
+  const _Exterior = as ?? 'div'
 
   return (
     <_Exterior
