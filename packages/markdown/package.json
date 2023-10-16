@@ -31,7 +31,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@okmtyuta/amatelas": "0.11.19",
+    "@okmtyuta/amatelas": "0.11.20",
     "katex": "^0.16.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
