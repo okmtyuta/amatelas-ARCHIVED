@@ -1,6 +1,6 @@
 // Refer to https://mui.com/material-ui/react-text-field/
 
-import { ComponentProps, ReactNode } from 'react'
+import { ComponentProps, ReactNode, useId } from 'react'
 import { clsx } from 'clsx'
 
 import '@okmtyuta/awesome-css/reset.css'
@@ -39,30 +39,32 @@ export const Textarea = ({
   ...props
 }: TextFiledProps) => {
   const styles = getStyles(variant)
+  const _id = useId()
   return (
     <>
-      <div
+      <label
         className={clsx({
           [styles['text-field']]: true,
           [styles['validate']]: validate
         })}
+        htmlFor={_id}
       >
         <textarea
           {...props}
+          id={_id}
           className={clsx(styles['input'], className)}
           placeholder=" "
         />
-        <label className={styles['placeholder']}>
+        <span className={styles['placeholder']}>
           {props.required ? `${props.placeholder}*` : props.placeholder}
-        </label>
+        </span>
 
         {variant === 'outlined' ? (
           <span className={styles['placeholder-background']}>
             {props.required ? `${props.placeholder}*` : props.placeholder}
           </span>
         ) : null}
-        <span className={styles['top-background']} />
-      </div>
+      </label>
 
       <div className={styles['helper']}>
         {helper ? <div className={styles['helper-text']}>{helper}</div> : null}

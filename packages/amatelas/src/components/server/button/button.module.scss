@@ -9,7 +9,6 @@
   outline: none;
   position: relative;
   overflow: hidden;
-  width: 100%;
   padding: 12px 20px;
   border-radius: 4px;
   display: flex;
@@ -17,6 +16,7 @@
   justify-content: center;
   gap: 12px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .button:disabled {
@@ -82,4 +82,31 @@
   &.success {
     @include use-filled($success);
   }
+}
+.xs {
+  width: 64px;
+}
+.sm {
+  width: 128px;
+}
+.md {
+  width: 256px;
+}
+.lg {
+  width: 512px;
+}
+.xl {
+  width: 768px;
+}
+.half {
+  width: 50%;
+}
+.quarter {
+  width: 25%;
+}
+.full {
+  width: 100%;
+}
+.auto {
+  width: auto;
 }

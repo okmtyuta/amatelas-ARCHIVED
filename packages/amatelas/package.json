@@ -1,30 +1,30 @@
 {
   "name": "@okmtyuta/amatelas",
   "private": false,
-  "version": "0.11.19",
+  "version": "0.11.22",
   "type": "module",
   "author": "okmtyuta",
   "license": "MIT",
-  "main": "./ui/index.js",
+  "main": "./dist/index.js",
   "repository": {
     "type": "git",
     "url": "https:/github.com/okmtyuta/amatelas"
   },
   "files": [
-    "ui",
-    "ui/style.css"
+    "dist",
+    "dist/style.css"
   ],
   "exports": {
     "./server": {
-      "import": "./ui/server.js",
-      "types": "./ui/types/src/server.d.ts"
+      "import": "./dist/server.js",
+      "types": "./dist/types/src/server.d.ts"
     },
     "./client": {
-      "import": "./ui/client.js",
-      "types": "./ui/types/src/client.d.ts"
+      "import": "./dist/client.js",
+      "types": "./dist/types/src/client.d.ts"
     },
     "./style.css": {
-      "import": "./ui/style.css"
+      "import": "./dist/style.css"
     }
   },
   "scripts": {

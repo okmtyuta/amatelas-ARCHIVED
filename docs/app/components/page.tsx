@@ -1,17 +1,26 @@
 import { Heading, List, ListItem } from '@okmtyuta/amatelas/server'
 import Link from 'next/link'
 
+const components = [
+  { name: 'Button', url: 'button' },
+  { name: 'TextField', url: 'text-field' },
+  { name: 'Textarea', url: 'textarea' }
+]
+
 const Page = () => {
   return (
     <>
       <Heading>Components</Heading>
       <List>
-        <ListItem>
-          <Link href="/components/button">Button</Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/components/text-field">TextField</Link>
-        </ListItem>
+        {components.map((component) => {
+          return (
+            <ListItem key={component.name}>
+              <Link href={`/components/${component.url}`}>
+                {component.name}
+              </Link>
+            </ListItem>
+          )
+        })}
       </List>
     </>
   )
