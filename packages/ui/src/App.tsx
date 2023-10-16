@@ -1,20 +1,20 @@
-import { Frame, Heading, Link, Paragraph } from './index'
+import { Button, Frame, Heading } from './index'
 import '@okmtyuta/awesome-css/reset.css'
 import './app.css'
-import { demoText } from './demo-text'
 
 export const App = () => {
   return (
     <>
       <Frame className="frame">
         <Heading>Link</Heading>
-        <Paragraph>
-          {demoText.ja.long}続きは
-          <Link color="info" external href="#">
-            詳細ページ
-          </Link>
-          から。{demoText.ja.long}
-        </Paragraph>
+
+        <Button width="xs">xsのボタンです</Button>
+        <Button width="sm">smのボタンです</Button>
+        <Button width="md">mdのボタンです</Button>
+        <Button width="lg">lgのボタンです</Button>
+        <Button width="xl">xlのボタンです</Button>
+        <Button width="full">fullのボタンです</Button>
+        <Button width="auto">autoのボタンです</Button>
       </Frame>
     </>
   )

@@ -7,9 +7,11 @@ import { Progress } from '../progress'
 
 type Variant = 'standard' | 'outlined' | 'filled'
 type Color = 'text' | 'danger' | 'info' | 'success' | 'warning'
+type Width = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full' | "auto" | "half" | "quarter"
 
 export type ButtonProps<T extends ElementType> = {
-  tag?: T
+  as?: T
+  width?: Width
   variant?: Variant
   color?: Color
   shade?: boolean
@@ -52,9 +54,17 @@ const getSpinner = (color: Color, variant: Variant, spinner?: ReactNode) => {
 
   return <Progress size="xs" color={color} />
 }
+const getWidthClass = (width?: Width) => {
+  if (width) {
+    return styles[width]
+  }
+
+  return styles['auto']
+}
 
 export const Button = <T extends ElementType = 'button'>({
-  tag,
+  as,
+  width,
   variant,
   color,
   shade,
@@ -63,25 +73,27 @@ export const Button = <T extends ElementType = 'button'>({
   classNames,
   ...props
 }: ButtonProps<T>) => {
-  const Tag = tag ?? 'button'
+  const _Button = as ?? 'button'
   const _variant = getVariant(variant)
   const _color = getColor(color)
   const _shadeClass = getShadeClass(shade)
   const _spinner = getSpinner(_color, _variant, spinner)
+  const _widthClass = getWidthClass(width)
 
   return (
-    <Tag
+    <_Button
       {...props}
       className={clsx(
         styles['button'],
         styles[_variant],
         styles[_color],
+        _widthClass,
         _shadeClass,
         classNames?.exterior
       )}
     >
       {loading ? _spinner : <></>}
       {props.children}
-    </Tag>
+    </_Button>
   )
 }
