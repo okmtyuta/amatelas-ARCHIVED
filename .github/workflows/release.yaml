@@ -1,12 +1,9 @@
 name: npm publish
 
 on:
-  # v*.*.*のタグが付与されたときに実行
-  push:
-    branches-ignore:
-      - '**'
-    tags:
-      - 'v*'
+  # release noteが作成されたらpublish
+  release:
+    types: [published]
 jobs:
   publish:
     runs-on: ubuntu-latest
