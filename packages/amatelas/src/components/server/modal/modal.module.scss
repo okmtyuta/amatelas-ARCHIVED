@@ -1,0 +1,41 @@
+@use '@theme/css/color/color.scss' as *;
+@use '@layer/layer.scss' as layer;
+@use '@theme/css/effect/use-shade' as *;
+
+html:has(.modal.open) {
+  overflow: hidden;
+}
+
+.modal.open {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: layer.$top;
+
+  backdrop-filter: blur(4px);
+  background-color: rgba($color: $accents3, $alpha: 0.3);
+}
+.modal.close {
+  display: none;
+}
+.open > .modal-content {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: white;
+  border-radius: 4px;
+  overflow: scroll;
+}
+
+.shade {
+  @include use-shade();
+}

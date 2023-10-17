@@ -1,24 +1,24 @@
-import { Frame, Heading, Textarea } from './index'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import '@okmtyuta/awesome-css/reset.css'
-import './app.css'
-import { Flex } from './components/server/flex/Flex'
-import { demoText } from './demo-text'
+import { Heading, Frame } from '.'
+import { Index } from './_pages'
+import { ModalIndex } from './_pages/modal'
+import { ModalOpen } from './_pages/modal/open'
 
 export const App = () => {
   return (
     <>
       <Frame className="frame">
-        <Heading>Link</Heading>
-
-        <Flex>
-          <Textarea placeholder="standard" variant="standard" />
-          <Textarea
-            defaultValue={demoText.ja.long}
-            placeholder="filled"
-            variant="filled"
-          />
-          <Textarea placeholder="outlined" variant="outlined" />
-        </Flex>
+        <Heading>Amatelas Experimental</Heading>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/">
+              <Route index element={<Index />} />
+              <Route path="/modal" element={<ModalIndex />} />
+              <Route path="/modal/open" element={<ModalOpen />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
       </Frame>
     </>
   )
