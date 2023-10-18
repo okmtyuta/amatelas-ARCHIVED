@@ -1,0 +1,131 @@
+@use '@theme/css/color/color.scss' as *;
+@use '@theme/css/effect/use-shade.scss' as *;
+@use '@layer/layer.scss' as layer;
+
+// 基本のz-index = 0
+$base-z-index: layer.$earth;
+// switch-barのz-index = 0
+$switch-bar-z-index: calc(layer.$earth);
+// switch-ballのz-index = 10
+$switch-ball-z-index: calc(layer.$earth + 10);
+// switch-ballが動くアニメーションの時間
+$transition-time: 0.2s;
+// switch-barの横幅
+$switch-bar-width: 100px;
+// switch-barの高さ
+$switch-bar-height: 20px;
+// switch-barの端の丸みの半径
+$switch-bar-radius: calc($switch-bar-height / 2);
+// switch-ballがswitch-barからどれだけずれているか
+$switch-bar-left: 0px;
+// switch-ballの半径
+$switch-ball-radius: 20px;
+
+.switch {
+  display: inline-block;
+  position: relative;
+  height: calc($switch-ball-radius * 2);
+  width: calc($switch-bar-width + $switch-bar-left * 2);
+}
+
+.switch {
+  > .switch-ball {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: calc($switch-ball-radius * 2);
+    height: calc($switch-ball-radius * 2);
+    border-radius: 50%;
+    transition: all $transition-time;
+    z-index: $switch-ball-z-index;
+    @include use-shade();
+  }
+  &:has(.switch-input:not(:checked)) {
+    > .switch-ball {
+      left: 0;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+    }
+    &.info > .switch-ball {
+      background-color: white;
+    }
+    &.danger > .switch-ball {
+      background-color: white;
+    }
+    &.success > .switch-ball {
+      background-color: white;
+    }
+    &.warning > .switch-ball {
+      background-color: white;
+    }
+  }
+
+  &:has(.switch-input:checked) {
+    > .switch-ball {
+      $translate-x: calc(
+        $switch-bar-width - 2 * ($switch-ball-radius - $switch-bar-left)
+      );
+      transform: translate($translate-x, -50%);
+      -webkit-transform: translate($translate-x, -50%);
+      -ms-transform: translate($translate-x, -50%);
+    }
+    &.info > .switch-ball {
+      background-color: $info;
+    }
+    &.danger > .switch-ball {
+      background-color: $danger;
+    }
+    &.success > .switch-ball {
+      background-color: $success;
+    }
+    &.warning > .switch-ball {
+      background-color: $warning;
+    }
+  }
+}
+
+.switch {
+  > .switch-bar {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: $switch-bar-left;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    width: $switch-bar-width;
+    height: $switch-bar-height;
+    border-radius: $switch-bar-radius;
+    z-index: $switch-bar-z-index;
+  }
+  &:has(.switch-input:not(:checked)) {
+    &.info > .switch-bar {
+      background-color: $accents3;
+    }
+    &.danger > .switch-bar {
+      background-color: $accents3;
+    }
+    &.success > .switch-bar {
+      background-color: $accents3;
+    }
+    &.warning > .switch-bar {
+      background-color: $accents3;
+    }
+  }
+
+  &:has(.switch-input:checked) {
+    &.info > .switch-bar {
+      background-color: rgba($info, 0.3);
+    }
+    &.danger > .switch-bar {
+      background-color: rgba($danger, 0.3);
+    }
+    &.success > .switch-bar {
+      background-color: rgba($success, 0.3);
+    }
+    &.warning > .switch-bar {
+      background-color: rgba($warning, 0.3);
+    }
+  }
+}

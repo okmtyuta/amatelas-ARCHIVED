@@ -5,7 +5,8 @@ const components = [
   { name: 'Button', url: 'button' },
   { name: 'TextField', url: 'text-field' },
   { name: 'Textarea', url: 'textarea' },
-  { name: 'Modal', url: 'modal' }
+  { name: 'Modal', url: 'modal' },
+  { name: 'Switch', url: 'switch' }
 ]
 
 const Page = () => {
