@@ -1,5 +1,5 @@
 import { demoText } from '@root/demo-text'
-import { Alert, Textarea } from '..'
+import { Alert } from '..'
 
 export const Index = () => {
   return (
@@ -8,4 +8,3 @@ export const Index = () => {
     </>
   )
 }
-
