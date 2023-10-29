@@ -3,7 +3,7 @@ import { Button } from './Button'
 import '@okmtyuta/awesome-css/reset.css'
 
 const meta: Meta<typeof Button> = {
-  title: 'server/Button',
+  title: 'components/Button',
   component: Button
 }
 
