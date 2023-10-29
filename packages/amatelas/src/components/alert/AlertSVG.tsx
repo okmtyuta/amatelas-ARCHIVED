@@ -1,5 +1,5 @@
 import { ComponentProps } from 'react'
-import styles from '../alert.module.scss'
+import styles from './alert.module.scss'
 import { clsx } from 'clsx'
 import {
   CheckedCircleSVG,
@@ -10,7 +10,6 @@ import {
 } from '@root/svg'
 
 type AlertCloseSVGProps = ComponentProps<typeof CloseSVG>
-
 type AlertSuccessProps = ComponentProps<typeof CheckedCircleSVG>
 type AlertWarningProps = ComponentProps<typeof WarningSVG>
 type AlertErrorProps = ComponentProps<typeof ErrorSVG>
