@@ -22,7 +22,7 @@ export const Danger: Story = {
   args: {
     summary: 'SUMMARY',
     children: demoText.en.long,
-    variant: "error"
+    variant: 'error'
   }
 }
 export const Warning: Story = {

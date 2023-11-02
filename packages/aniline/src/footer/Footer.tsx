@@ -6,9 +6,7 @@ export const Footer = () => {
     <footer className={styles['footer']}>
       Designed by
       <Space />
-      <Typography color="primary" fontFamily="anton">
-        okmtyuta
-      </Typography>
+      <Typography color="primary">okmtyuta</Typography>
     </footer>
   )
 }
