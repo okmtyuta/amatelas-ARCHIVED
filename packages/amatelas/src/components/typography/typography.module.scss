@@ -13,15 +13,6 @@
 .font-family-serif-jp {
   @include font.use-serif-jp();
 }
-.font-family-anton {
-  @include font.use-anton();
-}
-.font-family-frederica {
-  @include font.use-frederica();
-}
-.font-family-inconsolata {
-  @include font.use-inconsolata();
-}
 
 .color-text {
   @include color.use-text-color();

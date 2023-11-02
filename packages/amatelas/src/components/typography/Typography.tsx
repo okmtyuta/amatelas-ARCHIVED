@@ -8,9 +8,6 @@ type FontFamily =
   | 'serif'
   | 'sans-serif-jp'
   | 'serif-jp'
-  | 'anton'
-  | 'frederica'
-  | 'inconsolata'
   | 'inherit'
 type Color =
   | 'text'

@@ -5,9 +5,7 @@ export const Header = () => {
   return (
     <Sticky position="top" className={styles['header']}>
       <div className={styles['header-content']}>
-        <Typography color="primary" fontFamily="anton">
-          AmatelasUI
-        </Typography>
+        <Typography color="primary">AmatelasUI</Typography>
       </div>
     </Sticky>
   )

@@ -7,7 +7,7 @@ export const Header = () => {
   return (
     <Sticky position="top" className={styles['header']}>
       <div className={styles['header-content']}>
-        <Typography color="primary" fontFamily="anton">
+        <Typography color="primary">
           <Link href="/">AmatelasUI</Link>
         </Typography>
         <div className={styles['links']}>
