@@ -3,7 +3,7 @@ import { TextField } from './TextFiled'
 import '@okmtyuta/awesome-css/reset.css'
 
 const meta: Meta<typeof TextField> = {
-  title: 'server/TextField',
+  title: 'components/TextField',
   component: TextField
 }
 
