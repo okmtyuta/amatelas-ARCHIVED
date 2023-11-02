@@ -7,28 +7,13 @@ type DefaultDetailsProps = ComponentProps<'details'>
 
 type AccordionProps = {
   summary: ReactNode
-  classNames?: {
-    root?: string
-    summary?: string
-    content?: string
-  }
 } & DefaultDetailsProps
 
-export const Accordion = ({
-  summary,
-  classNames,
-  ...props
-}: AccordionProps) => {
+export const Accordion = ({ summary, ...props }: AccordionProps) => {
   return (
-    <details
-      {...props}
-      className={clsx(styles['accordion'], props.className, classNames?.root)}
-    >
-      <summary className={clsx(styles['summary'], classNames?.summary)}>
-        {summary}{' '}
-        <ExpandMoreSVG
-          className={clsx(styles['expand-more-svg'], classNames?.content)}
-        />
+    <details {...props} className={clsx(styles['accordion'], props.className)}>
+      <summary className={clsx(styles['summary'])}>
+        {summary} <ExpandMoreSVG className={clsx(styles['expand-more-svg'])} />
       </summary>
       <div>{props.children}</div>
     </details>
