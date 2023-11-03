@@ -1,34 +1,38 @@
 import '@okmtyuta/awesome-css/reset.css'
-import { Heading, Frame, Button } from '.'
-import { ControlledAlert } from './components/controlled/alert'
-import { demoText } from './demo-text'
-import { useState } from 'react'
+
+import { Frame, Heading, MaterialTextField } from './components/server'
+import { Textfield } from './components/server/textfield/native/Textfield'
 
 export const App = () => {
-  const [errorClose, setErrorClose] = useState(false)
   return (
     <>
       <Frame className="frame">
         <Heading>Amatelas Experimental</Heading>
-        <ControlledAlert summary="DEMO">{demoText.en.long}</ControlledAlert>
-        <ControlledAlert
-          onDelete={() => {
-            setErrorClose(true)
-          }}
-          close={errorClose}
-          variant="error"
-          summary="DEMO"
-        >
-          {demoText.en.long}
-        </ControlledAlert>
-        <Button
-          color="danger"
-          onClick={() => {
-            setErrorClose(false)
-          }}
-        >
-          OPEN ERROR
-        </Button>
+        <Textfield
+          validate
+          required
+          helper="これはヘルパーテキストです。"
+          placeholder="placeholder"
+          prefix="https://"
+          suffix=".jp"
+          variant="filled"
+        />
+        <Textfield
+          validate
+          required
+          helper="これはヘルパーテキストです。"
+          placeholder="placeholder"
+          prefix="https://"
+          suffix=".jp"
+          variant="outlined"
+        />
+        <MaterialTextField
+          validate
+          required
+          helper="これはヘルパーテキストです。"
+          placeholder="placeholder"
+          variant="standard"
+        />
       </Frame>
     </>
   )

@@ -92,6 +92,6 @@ $error-underline-z-index: calc($base-z-index + 10);
 
 .helper-text {
   color: $accents5;
-  @include use-caption-font-size();
   padding: 4px 12px;
+  @include use-caption-font-size();
 }

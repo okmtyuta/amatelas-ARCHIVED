@@ -1,12 +1,12 @@
-import { Heading, List, ListItem, TextField } from '@okmtyuta/amatelas/server'
+import { Heading, List, ListItem, Textfield } from '@okmtyuta/amatelas/server'
 
 const Page = () => {
   return (
     <>
       <Heading>Overview</Heading>
-      <TextField validate variant="filled" placeholder="placeholder" />
-      <TextField validate variant="outlined" placeholder="placeholder" />
-      <TextField
+      <Textfield validate variant="filled" placeholder="placeholder" />
+      <Textfield validate variant="outlined" placeholder="placeholder" />
+      <Textfield
         validate
         pattern="\d{3}-\d{4}"
         variant="standard"

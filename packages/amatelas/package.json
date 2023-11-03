@@ -17,11 +17,11 @@
   "exports": {
     "./server": {
       "import": "./dist/server.js",
-      "types": "./dist/types/src/server.d.ts"
+      "types": "./dist/types/src/components/server/index.d.ts"
     },
     "./client": {
-      "import": "./dist/client.js",
-      "types": "./dist/types/src/client.d.ts"
+      "import": "./dist/controlled.js",
+      "types": "./dist/types/src/components/controlled/index.d.ts"
     },
     "./style.css": {
       "import": "./dist/style.css"
