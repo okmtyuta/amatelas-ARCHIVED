@@ -14,7 +14,7 @@ export default defineConfig({
     lib: {
       entry: {
         index: resolve(__dirname, 'src/index.ts'),
-        markdown: resolve(__dirname, 'src/markdown.tsx')
+        markdown: resolve(__dirname, 'src/components/markdown/markdown.tsx')
       }
     },
     rollupOptions: {
