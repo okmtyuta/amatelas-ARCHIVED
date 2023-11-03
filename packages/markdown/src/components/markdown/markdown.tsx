@@ -11,12 +11,19 @@ import {
   Typography
 } from '@okmtyuta/amatelas/server'
 
-export const Markdown = ({ children }: { children?: string }) => {
+export const Markdown = ({
+  children,
+  className
+}: {
+  children?: string
+  className?: string
+}) => {
   if (!children) {
     return <></>
   }
   return (
     <ReactMarkdown
+      className={className}
       remarkPlugins={[remarkMath, remarkGfm]}
       rehypePlugins={[rehypeKatex]}
       components={{

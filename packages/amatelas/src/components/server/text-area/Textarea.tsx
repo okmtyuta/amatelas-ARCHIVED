@@ -41,7 +41,7 @@ export const Textarea = ({
   const styles = getStyles(variant)
   const _id = useId()
   return (
-    <>
+    <div className={className}>
       <label
         className={clsx({
           [styles['text-field']]: true,
@@ -52,7 +52,7 @@ export const Textarea = ({
         <textarea
           {...props}
           id={_id}
-          className={clsx(styles['input'], className)}
+          className={clsx(styles['input'])}
           placeholder=" "
         />
         <span className={styles['placeholder']}>
@@ -69,6 +69,6 @@ export const Textarea = ({
       <div className={styles['helper']}>
         {helper ? <div className={styles['helper-text']}>{helper}</div> : null}
       </div>
-    </>
+    </div>
   )
 }
