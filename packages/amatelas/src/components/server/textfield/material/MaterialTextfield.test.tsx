@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react'
 import { describe, test, expect } from 'vitest'
-import { TextField } from './TextFiled'
+import { MaterialTextField } from './MaterialTextfield'
 
-describe('TextField', () => {
+describe('MaterialTextField', () => {
   test('Should be rendered text-field', () => {
-    render(<TextField placeholder="text-field" />)
+    render(<MaterialTextField placeholder="text-field" />)
     const testInput = screen.getByRole('textbox')
     const testPlaceholder = screen.getByText('text-field')
 

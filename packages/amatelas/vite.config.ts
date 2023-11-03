@@ -16,8 +16,8 @@ export default defineConfig({
     outDir: 'dist',
     lib: {
       entry: {
-        index: resolve(__dirname, 'src/index.ts'),
-        server: resolve(__dirname, 'src/server.ts')
+        server: resolve(__dirname, 'src/components/server'),
+        controlled: resolve(__dirname, 'src/components/controlled/')
       }
     },
     rollupOptions: {

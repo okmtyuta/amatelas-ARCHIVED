@@ -1,0 +1,89 @@
+@use '@theme/css/color/color.scss' as *;
+@use '@theme/css/font/font.scss' as *;
+@use '@theme/css/margin/margin.scss' as *;
+@use '@layer/layer.scss' as layer;
+
+// focusしていないときの枠線の色
+$blur-outline-color: $accents4;
+// focusしているときの枠線の色
+$focus-outline-color: $info;
+// focusしていないときの文字色
+$blur-color: $accents4;
+// focusしているときの文字色
+$focus-color: $info;
+// placeholderのアニメーションにかかる時間
+$transition-time: 0.3s;
+
+.text-field {
+  position: relative;
+}
+
+.addon-input {
+  display: flex;
+}
+.prefix,
+.suffix {
+  display: flex;
+  align-items: center;
+  color: $accents4;
+}
+.prefix {
+  padding-right: 6px;
+}
+.suffix {
+  padding-left: 6px;
+}
+
+.input.prefixed {
+  padding-left: 6px;
+}
+.input.suffixed {
+  padding-right: 6px;
+}
+.input {
+  width: 100%;
+  padding: 6px;
+  background-color: $accents2;
+}
+.input:not(:focus) {
+  border-bottom: $blur-outline-color solid 1px;
+}
+.input:focus {
+  border-bottom: 1px solid $focus-outline-color;
+}
+
+.placeholder {
+  transition: all $transition-time;
+  pointer-events: none;
+}
+.text-field:has(.input:focus) > .placeholder,
+.text-field:has(.input:not(:placeholder-shown)) > .placeholder {
+  transition: all $transition-time;
+  pointer-events: none;
+}
+.text-field:not(.validate):has(.input:placeholder-shown:not(:focus))
+  > .placeholder {
+  color: $blur-color;
+}
+.text-field:has(.input:focus) .placeholder {
+  color: $focus-color;
+}
+
+.validate .input:not(:focus):invalid {
+  border-bottom: $danger solid 1px;
+}
+.validate:has(.input:not(:focus):invalid) .placeholder {
+  color: $danger;
+}
+.validate .input:not(:focus):valid {
+  border-bottom: $success solid 1px;
+}
+.validate:has(.input:not(:focus):valid) .placeholder {
+  color: $success;
+}
+
+.helper-text {
+  color: $accents5;
+  padding: 4px 0;
+  @include use-caption-font-size();
+}

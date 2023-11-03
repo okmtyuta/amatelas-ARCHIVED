@@ -12,11 +12,13 @@ type Variant = 'outlined' | 'filled' | 'standard'
 type TextfieldType = 'text' | 'password'
 
 type DefaultInputProps = ComponentProps<'input'>
-type TextFiledProps = {
+type TextfiledProps = {
   variant?: Variant
   type?: TextfieldType
   helper?: ReactNode
   validate?: boolean
+  prefix?: string
+  suffix?: string
 } & DefaultInputProps
 
 const getStyles = (variant?: Variant) => {
@@ -31,13 +33,15 @@ const getStyles = (variant?: Variant) => {
   return standard
 }
 
-export const TextField = ({
+export const Textfield = ({
   variant,
   validate,
   className,
   helper,
+  prefix,
+  suffix,
   ...props
-}: TextFiledProps) => {
+}: TextfiledProps) => {
   const styles = getStyles(variant)
   return (
     <>
@@ -47,21 +51,25 @@ export const TextField = ({
           [styles['validate']]: validate
         })}
       >
-        <input
-          {...props}
-          className={clsx(styles['input'], className)}
-          placeholder=" "
-          type="text"
-        />
         <label className={styles['placeholder']}>
           {props.required ? `${props.placeholder}*` : props.placeholder}
         </label>
 
-        {variant === 'outlined' ? (
-          <span className={outlined['placeholder-background']}>
-            {props.required ? `${props.placeholder}*` : props.placeholder}
-          </span>
-        ) : null}
+        <div className={clsx(styles['addon-input'])}>
+          {prefix && <span className={clsx(styles['prefix'])}>{prefix}</span>}
+          <input
+            {...props}
+            className={clsx({
+              [styles['input']]: true,
+              className: !!className,
+              [styles['prefixed']]: !!prefix,
+              [styles['suffixed']]: !!suffix
+            })}
+            placeholder=" "
+            type="text"
+          />
+          {suffix && <span className={styles['suffix']}>{suffix}</span>}
+        </div>
       </div>
 
       <div className={styles['helper']}>
