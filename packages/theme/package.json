@@ -21,7 +21,9 @@
       "import": "./dist/theme/css/color/index.css"
     }
   },
-  "scripts": {},
+  "scripts": {
+    "build": "./build.zsh"
+  },
   "peerDependencies": {},
   "dependencies": {},
   "devDependencies": {},
