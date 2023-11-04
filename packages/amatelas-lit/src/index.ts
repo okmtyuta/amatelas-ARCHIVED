@@ -1,1 +1,1 @@
-export { AmatelasTextfiled } from './components/textfield'
+export { AmatelasHeading } from './components/heading'
