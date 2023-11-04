@@ -1,0 +1,16 @@
+// 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+$xs-padding: 2px;
+$sm-padding: 4px;
+$md-padding: 8px;
+$lg-padding: 16px;
+$xl-padding: 32px;
+$none-padding: 0px;
+
+$padding-type: (
+  xs: $xs-padding,
+  sm: $sm-padding,
+  md: $md-padding,
+  lg: $lg-padding,
+  xl: $xl-padding,
+  none: $none-padding
+);

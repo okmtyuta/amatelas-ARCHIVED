@@ -1,0 +1,21 @@
+.amatelas-highlight {
+  padding: 0px 4px;
+  border-radius: 4px;
+
+  &.danger {
+    color: var(--color-danger);
+    background-color: rgba(var(--rgb-color-danger), 0.12);
+  }
+  &.info {
+    color: var(--color-info);
+    background-color: rgba(var(--rgb-color-info), 0.12);
+  }
+  &.success {
+    color: var(--color-success);
+    background-color: rgba(var(--rgb-color-success), 0.12);
+  }
+  &.warning {
+    color: var(--color-warning);
+    background-color: rgba(var(--rgb-color-warning), 0.12);
+  }
+}

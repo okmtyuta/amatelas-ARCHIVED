@@ -1,0 +1,74 @@
+.amatelas-alert {
+  padding: 16px;
+  color: white;
+  fill: white;
+
+  &:has(.input:checked) {
+    display: none;
+  }
+  &.info {
+    background-color: var(--color-info);
+    .close-label:hover {
+      border-radius: 50%;
+      background-color: var(--color-info-darken1);
+    }
+  }
+  &.warning {
+    background-color: var(--color-warning);
+    .close-label:hover {
+      border-radius: 50%;
+      background-color: var(--color-warning-darken1);
+    }
+  }
+  &.success {
+    background-color: var(--color-success);
+    .close-label:hover {
+      border-radius: 50%;
+      background-color: var(--color-success-darken1);
+    }
+  }
+  &.danger {
+    background-color: var(--color-danger);
+    .close-label:hover {
+      border-radius: 50%;
+      background-color: var(--color-danger-darken1);
+    }
+  }
+
+  .close {
+    flex-shrink: 0;
+  }
+  .close-svg {
+    cursor: pointer;
+    user-select: none;
+  }
+  .label-svg {
+    flex-shrink: 0;
+  }
+  .summary {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .summary-text {
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+  }
+  .close-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    transform: translate(4px, -4px);
+    cursor: pointer;
+  }
+
+  .input {
+    display: none;
+  }
+  .alert-head {
+    display: flex;
+    justify-content: space-between;
+  }
+}

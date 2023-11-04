@@ -1,35 +1,29 @@
 import { ComponentProps } from 'react'
-import styles from './highlight.module.scss'
 import { clsx } from 'clsx'
 
-type Color =
-  | 'info'
-  | 'success'
-  | 'danger'
-  | 'warning'
-  | 'text'
-  | 'primary'
-  | 'secondary'
-  | 'tertiary'
+import '@okmtyuta/amatelas-theme/color.css'
+import './highlight.css'
+
+type Color = 'info' | 'success' | 'danger' | 'warning'
 
 type DefaultSpanProps = ComponentProps<'span'>
 type HighlightProps = {
   color?: Color
 } & DefaultSpanProps
 
-const getColorClass = (color?: Color) => {
+const getColor = (color?: Color) => {
   if (color) {
-    return styles[color]
+    return color
   }
 
-  return styles['primary']
+  return 'info'
 }
 
 export const Highlight = ({ color, ...props }: HighlightProps) => {
-  const colorClass = getColorClass(color)
+  const colorClass = getColor(color)
 
   return (
-    <span {...props} className={clsx(styles.highlight, colorClass)}>
+    <span {...props} className={clsx('amatelas-highlight', colorClass)}>
       {props.children}
     </span>
   )

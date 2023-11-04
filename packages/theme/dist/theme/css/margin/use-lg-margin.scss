@@ -1,0 +1,31 @@
+@use './use-margin.scss' as *;
+
+//// all lg ////
+@mixin use-lg-margin() {
+  @include use-margin(lg);
+}
+
+//// x and y lg ////
+@mixin use-lg-margin-x() {
+  @include use-margin-x(lg);
+}
+@mixin use-lg-margin-y() {
+  @include use-margin-y(lg);
+}
+
+//// left right bottom top lg ////
+@mixin use-lg-margin-left() {
+  @include use-margin-left(lg);
+}
+
+@mixin use-lg-margin-right() {
+  @include use-margin-right(lg);
+}
+
+@mixin use-lg-margin-bottom() {
+  @include use-margin-bottom(lg);
+}
+
+@mixin use-lg-margin-top() {
+  @include use-margin-top(lg);
+}

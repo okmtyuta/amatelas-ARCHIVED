@@ -1,6 +1,7 @@
-import styles from './frame.module.scss'
 import { ComponentProps } from 'react'
 import { clsx } from 'clsx'
+
+import './frame.css'
 
 type FrameWidth = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
@@ -9,20 +10,20 @@ type FrameProps = {
   width?: FrameWidth
 } & DefaultDivProps
 
-const getWidthClass = (width?: FrameWidth) => {
+const getWidth = (width?: FrameWidth) => {
   if (width) {
-    return styles[width]
+    return width
   }
 
-  return styles['md']
+  return 'md'
 }
 
 export const Frame = ({ width, ...props }: FrameProps) => {
-  const widthClass = getWidthClass(width)
+  const widthClass = getWidth(width)
   return (
     <div
       {...props}
-      className={clsx(styles['frame'], widthClass, props.className)}
+      className={clsx('amatelas-frame', widthClass, props.className)}
     >
       {props.children}
     </div>
