@@ -247,8 +247,8 @@ importers:
   packages/markdown:
     dependencies:
       '@okmtyuta/amatelas':
-        specifier: ^0.11.26
-        version: 0.11.26(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.8)
+        specifier: ^0.12.0
+        version: 0.12.0(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.8)
       clsx:
         specifier: ^2.0.0
         version: 2.0.0
@@ -2262,8 +2262,8 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  /@okmtyuta/amatelas@0.11.26(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.8):
-    resolution: {integrity: sha512-4KVi5Pm+3D7uX7Guo5wlVPSswcXYjJoPl1GR/oaczabqNtonPD50A3xLygGEmdYLHgvnY4GlT/Gl3FFeX7I6OA==}
+  /@okmtyuta/amatelas@0.12.0(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.8):
+    resolution: {integrity: sha512-AXb6zYJhTPJ+0MkDkmwJGRHlUnW/eOiOGqfdnrvJQNBr6vuNnlxCWcPaKRLA6pAPkPbMesB52bR9HTlG6KxmZA==}
     peerDependencies:
       clsx: ^2.0.0
       react: ^18.2.0

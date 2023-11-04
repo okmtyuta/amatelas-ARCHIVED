@@ -1,0 +1,106 @@
+/* spacing value: https://www.figma.com/community/file/1255349027535859598/Design-System-1.3.3 */
+.amatelas-heading {
+  --heading1-top-space: 64px;
+  --heading1-bottom-space: 24px;
+  --heading2-top-space: 64px;
+  --heading2-bottom-space: 24px;
+  --heading3-top-space: 40px;
+  --heading3-bottom-space: 24px;
+  --heading4-top-space: 40px;
+  --heading4-bottom-space: 16px;
+  --heading5-top-space: 40px;
+  --heading5-bottom-space: 16px;
+  --heading6-top-space: 24px;
+  --heading6-bottom-space: 16px;
+
+  &.h1 {
+    /* @include use-heading1-font(); */
+    margin-top: var(--heading1-top-space);
+    margin-bottom: var(--heading1-bottom-space);
+
+    @media screen and (max-width: 767px) {
+      font-size: var(--heading1-size-sp);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      font-size: var(--heading1-size-tab);
+    }
+    @media screen and (min-width: 1025px) {
+      font-size: var(--heading1-size-pc);
+    }
+  }
+  &.h2 {
+    /* @include use-heading2-font(); */
+    margin-top: var(--heading2-top-space);
+    margin-bottom: var(--heading2-bottom-space);
+
+    @media screen and (max-width: 767px) {
+      font-size: var(--heading2-size-sp);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      font-size: var(--heading2-size-tab);
+    }
+    @media screen and (min-width: 1025px) {
+      font-size: var(--heading2-size-pc);
+    }
+  }
+  &.h3 {
+    /* @include use-heading3-font(); */
+    margin-top: var(--heading3-top-space);
+    margin-bottom: var(--heading3-bottom-space);
+
+    @media screen and (max-width: 767px) {
+      font-size: var(--heading3-size-sp);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      font-size: var(--heading3-size-tab);
+    }
+    @media screen and (min-width: 1025px) {
+      font-size: var(--heading3-size-pc);
+    }
+  }
+  &.h4 {
+    /* @include use-heading4-font(); */
+    margin-top: var(--heading4-top-space);
+    margin-bottom: var(--heading4-bottom-space);
+
+    @media screen and (max-width: 767px) {
+      font-size: var(--heading4-size-sp);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      font-size: var(--heading4-size-tab);
+    }
+    @media screen and (min-width: 1025px) {
+      font-size: var(--heading4-size-pc);
+    }
+  }
+  &.h5 {
+    /* @include use-heading5-font(); */
+    margin-top: var(--heading5-top-space);
+    margin-bottom: var(--heading5-bottom-space);
+
+    @media screen and (max-width: 767px) {
+      font-size: var(--heading5-size-sp);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      font-size: var(--heading5-size-tab);
+    }
+    @media screen and (min-width: 1025px) {
+      font-size: var(--heading5-size-pc);
+    }
+  }
+  &.h6 {
+    /* @include use-heading6-font(); */
+    margin-top: var(--heading6-top-space);
+    margin-bottom: var(--heading6-bottom-space);
+
+    @media screen and (max-width: 767px) {
+      font-size: var(--heading6-size-sp);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      font-size: var(--heading6-size-tab);
+    }
+    @media screen and (min-width: 1025px) {
+      font-size: var(--heading6-size-pc);
+    }
+  }
+}

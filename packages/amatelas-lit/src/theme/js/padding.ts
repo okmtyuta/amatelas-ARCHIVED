@@ -5,11 +5,16 @@ const lgPadding = 16
 const xlPadding = 32
 const nonePadding = 0
 
-const paddingSizeUnit = "px"
+const paddingSizeUnit = 'px'
 export const withPaddingSizeUnit = (paddingSize: number) => {
   return `${paddingSize}${paddingSizeUnit}`
 }
 
 export const padding = {
-  xsPadding, smPadding, mdPadding, lgPadding, xlPadding, nonePadding
+  xsPadding,
+  smPadding,
+  mdPadding,
+  lgPadding,
+  xlPadding,
+  nonePadding
 }

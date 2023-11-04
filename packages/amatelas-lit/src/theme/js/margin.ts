@@ -5,11 +5,16 @@ const lgMargin = 16
 const xlMargin = 32
 const noneMargin = 0
 
-const marginSizeUnit = "px"
+const marginSizeUnit = 'px'
 export const withMarginSizeUnit = (marginSize: number) => {
   return `${marginSize}${marginSizeUnit}`
 }
 
 export const margin = {
-  xsMargin, smMargin, mdMargin, lgMargin, xlMargin, noneMargin
+  xsMargin,
+  smMargin,
+  mdMargin,
+  lgMargin,
+  xlMargin,
+  noneMargin
 }
