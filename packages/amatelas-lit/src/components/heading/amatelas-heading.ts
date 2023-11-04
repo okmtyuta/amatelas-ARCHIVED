@@ -1,11 +1,10 @@
 import { LitElement, html, unsafeCSS } from 'lit'
-import { customElement } from 'lit/decorators.js'
 import clsx from 'clsx'
 
 import '@theme/css/font/font-size.css'
 import style from './amatelas-heading.css?inline'
 
-@customElement('amatelas-heading')
+// @customElement('amatelas-heading')
 export class AmatelasHeading extends LitElement {
   render() {
     return html`
