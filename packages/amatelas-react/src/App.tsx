@@ -16,6 +16,16 @@ export const App = () => {
         <Button color="danger" variant="standard">
           BUTTON
         </Button>
+
+        <Button disabled color="info" variant="filled">
+          BUTTON
+        </Button>
+        <Button disabled color="warning" variant="outlined">
+          BUTTON
+        </Button>
+        <Button disabled color="danger" variant="standard">
+          BUTTON
+        </Button>
       </Frame>
     </>
   )

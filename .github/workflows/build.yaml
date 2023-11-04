@@ -16,13 +16,16 @@ jobs:
         run: pnpm i --frozen-lockfile
 
       - name: Build Theme
-        run: pnpm build:theme
+        run: pnpm build:amatelas-theme
 
-      - name: Build Amatelas
-        run: pnpm build:amatelas
+      - name: Build Amatelas React
+        run: pnpm build:amatelas-react
 
-      - name: Build Markdown
-        run: pnpm build:markdown
+      - name: Build Amatelas Lit
+        run: pnpm build:amatelas-lit
+
+      # - name: Build Markdown
+      #   run: pnpm build:markdown
 
       - name: Build Docs
         run: pnpm build:docs

@@ -10,12 +10,13 @@
     "url": "https://github.com/okmtyuta/amatelas"
   },
   "scripts": {
-    "build:theme": "pnpm --filter @okmtyuta/amatelas-theme build",
-    "build:amatelas": "pnpm --filter @okmtyuta/amatelas-react build",
+    "build:amatelas-theme": "pnpm --filter @okmtyuta/amatelas-theme build",
+    "build:amatelas-react": "pnpm --filter @okmtyuta/amatelas-react build",
+    "build:amatelas-lit": "pnpm --filter @okmtyuta/amatelas-lit build:cdn",
     "build:markdown": "pnpm --filter @okmtyuta/amatelas-react-markdown build",
     "build:storybook": "pnpm --filter @okmtyuta/amatelas-react build-storybook",
     "build:docs": "pnpm --filter @okmtyuta/amatelas-docs build",
-    "build": "pnpm build:amatelas && pnpm build:markdown && pnpm build:docs && pnpm build:storybook",
+    "build": "pnpm build:amatelas-theme && pnpm build:amatelas-lit && pnpm build:amatelas-react && pnpm build:markdown && pnpm build:docs && pnpm build:storybook",
     "dev:amatelas": "pnpm --filter @okmtyuta/amatelas-react dev",
     "test:amatelas": "pnpm --filter @okmtyuta/amatelas-react test",
     "storybook": "pnpm --filter @okmtyuta/amatelas-react storybook",

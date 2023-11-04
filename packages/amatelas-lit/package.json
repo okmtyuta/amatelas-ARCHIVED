@@ -1,19 +1,40 @@
 {
-  "name": "amatelas-lit",
-  "private": true,
+  "name": "@okmtyuta/amatelas-lit",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:cdn": "vite --config cdn.vite.config.ts build && tsc --project cdn.tsconfig.json",
     "preview": "vite preview"
   },
+  "files": [
+    "dist",
+    "dist/style.css",
+    "cdn",
+    "cdn/style.css"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./style.css": {
+      "import": "./dist/style.css"
+    }
+  },
   "dependencies": {
+    "@okmtyuta/amatelas-css": "workspace:^",
+    "@okmtyuta/amatelas-theme": "workspace:^",
     "clsx": "^2.0.0",
     "lit": "^3.0.0"
   },
   "devDependencies": {
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

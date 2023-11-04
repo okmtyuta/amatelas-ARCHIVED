@@ -1,8 +1,8 @@
 - [x] accordion: merged
 - [x] alert: merged
-- [x] avatar
-- [x] blockquote
-- [x] button
+- [x] avatar: merged
+- [x] blockquote: merged
+- [x] button: merged
 - [ ] checkbox
 - [ ] chip
 - [ ] code
