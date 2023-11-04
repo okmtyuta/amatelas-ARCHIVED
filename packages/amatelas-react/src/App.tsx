@@ -1,24 +1,21 @@
 import '@okmtyuta/awesome-css/reset.css'
 
-import { Alert, Frame } from './components/server'
-import { demoText } from './demo-text'
+import { Frame } from './components/server'
+import { Button } from './components/server/button/native/Button'
 
 export const App = () => {
   return (
     <>
       <Frame>
-        <Alert variant="info" summary="ALERT">
-          {demoText.en.short}
-        </Alert>
-        <Alert variant="warning" summary="ALERT">
-          {demoText.en.short}
-        </Alert>
-        <Alert variant="danger" summary="ALERT">
-          {demoText.en.short}
-        </Alert>
-        <Alert variant="success" summary="ALERT">
-          {demoText.en.short}
-        </Alert>
+        <Button color="info" variant="filled">
+          BUTTON
+        </Button>
+        <Button color="warning" variant="outlined">
+          BUTTON
+        </Button>
+        <Button color="danger" variant="standard">
+          BUTTON
+        </Button>
       </Frame>
     </>
   )

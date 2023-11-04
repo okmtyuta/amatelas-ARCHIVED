@@ -1,22 +1,15 @@
 // Refer to https://mui.com/material-ui/react-button/
 
 import { clsx } from 'clsx'
-import styles from './button.module.scss'
 import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react'
-import { Progress } from '../progress'
+import { Progress } from '../..'
+
+import '@okmtyuta/amatelas-theme/color.css'
+import './button.css'
 
 type Variant = 'standard' | 'outlined' | 'filled'
-type Color = 'text' | 'danger' | 'info' | 'success' | 'warning'
-type Width =
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | 'full'
-  | 'auto'
-  | 'half'
-  | 'quarter'
+type Color = 'danger' | 'info' | 'success' | 'warning'
+type Width = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full' | 'auto'
 
 export type ButtonProps<T extends ElementType> = {
   as?: T
@@ -43,11 +36,11 @@ const getColor = (color?: Color) => {
     return color
   }
 
-  return 'text'
+  return 'info'
 }
-const getShadeClass = (shade?: boolean) => {
+const getShade = (shade?: boolean) => {
   if (shade) {
-    return styles['shade']
+    return 'shade'
   }
 
   return ''
@@ -63,12 +56,12 @@ const getSpinner = (color: Color, variant: Variant, spinner?: ReactNode) => {
 
   return <Progress size="xs" color={color} />
 }
-const getWidthClass = (width?: Width) => {
+const getWidth = (width?: Width) => {
   if (width) {
-    return styles[width]
+    return width
   }
 
-  return styles['auto']
+  return 'auto'
 }
 
 export const Button = <T extends ElementType = 'button'>({
@@ -79,27 +72,19 @@ export const Button = <T extends ElementType = 'button'>({
   shade,
   loading,
   spinner,
-  classNames,
   ...props
 }: ButtonProps<T>) => {
   const _Button = as ?? 'button'
   const _variant = getVariant(variant)
   const _color = getColor(color)
-  const _shadeClass = getShadeClass(shade)
+  const _shade = getShade(shade)
   const _spinner = getSpinner(_color, _variant, spinner)
-  const _widthClass = getWidthClass(width)
+  const _width = getWidth(width)
 
   return (
     <_Button
       {...props}
-      className={clsx(
-        styles['button'],
-        styles[_variant],
-        styles[_color],
-        _widthClass,
-        _shadeClass,
-        classNames?.exterior
-      )}
+      className={clsx('amatelas-button', _variant, _color, _width, _shade)}
     >
       {loading ? _spinner : <></>}
       {props.children}
