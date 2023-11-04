@@ -10,6 +10,7 @@
     "url": "https://github.com/okmtyuta/amatelas"
   },
   "scripts": {
+    "build:theme": "pnpm --filter @okmtyuta/amatelas-theme build",
     "build:amatelas": "pnpm --filter @okmtyuta/amatelas-react build",
     "build:markdown": "pnpm --filter @okmtyuta/amatelas-react-markdown build",
     "build:storybook": "pnpm --filter @okmtyuta/amatelas-react build-storybook",

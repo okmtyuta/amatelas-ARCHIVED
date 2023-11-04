@@ -1,16 +1,16 @@
-- [x] accordion
-- [x] alert
-- [ ] avatar
-- [ ] blockquote
-- [ ] button
+- [x] accordion: merged
+- [x] alert: merged
+- [x] avatar
+- [x] blockquote
+- [x] button
 - [ ] checkbox
-- [ ] ship
+- [ ] chip
 - [ ] code
 - [ ] fixed
 - [ ] flex
-- [x] frame
-- [x] heading
-- [x] highlight
+- [x] frame: merged
+- [x] heading: merged
+- [x] highlight: merged
 - [ ] link
 - [ ] list
 - [ ] message

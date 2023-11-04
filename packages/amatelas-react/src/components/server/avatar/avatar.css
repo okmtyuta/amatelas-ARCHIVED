@@ -1,0 +1,30 @@
+.avatar {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  flex-shrink: 0;
+}
+.avatar-image {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: var(--color-accents3) solid 1px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar-name {
+  font-size: var(--body1-size);
+}
+.avatar-account {
+  /* @include font.use-caption-font-size();
+  color: color.$accents6; */
+  font-size: var(--caption-size);
+  color: var(--color-accents6);
+}
+.avatar-info {
+  display: inline-flex;
+  flex-direction: column;
+}
