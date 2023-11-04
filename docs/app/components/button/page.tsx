@@ -1,5 +1,5 @@
 'use client'
-import { Heading, Progress, Button } from '@okmtyuta/amatelas/server'
+import { Heading, Progress, Button } from '@okmtyuta/amatelas-react/server'
 import { useState } from 'react'
 
 const _sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))

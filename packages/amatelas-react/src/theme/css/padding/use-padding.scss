@@ -1,0 +1,33 @@
+@use './padding-type.scss' as *;
+
+//// all ////
+@mixin use-padding($type) {
+  padding: map-get($map: $padding-type, $key: $type);
+}
+
+//// x and y ////
+@mixin use-padding-x($type) {
+  padding-left: map-get($map: $padding-type, $key: $type);
+  padding-right: map-get($map: $padding-type, $key: $type);
+}
+@mixin use-padding-y($type) {
+  padding-top: map-get($map: $padding-type, $key: $type);
+  padding-bottom: map-get($map: $padding-type, $key: $type);
+}
+
+//// left right bottom top ////
+@mixin use-padding-left($type) {
+  padding-left: map-get($map: $padding-type, $key: $type);
+}
+
+@mixin use-padding-right($type) {
+  padding-right: map-get($map: $padding-type, $key: $type);
+}
+
+@mixin use-padding-bottom($type) {
+  padding-bottom: map-get($map: $padding-type, $key: $type);
+}
+
+@mixin use-padding-top($type) {
+  padding-top: map-get($map: $padding-type, $key: $type);
+}

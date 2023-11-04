@@ -1,0 +1,20 @@
+@use '../mq/mq.scss' as mq;
+@use './font-size.scss' as font-size;
+@use './font-weight.scss' as font-weight;
+
+@mixin responsive-font($font-type) {
+  $font-size-map: map-get(
+    $map: font-size.$font-size,
+    $key: $font-type
+  );
+  @include mq.mq(pc) {
+    font-size: map-get($map: $font-size-map, $key: pc);
+  }
+  @include mq.mq(tab) {
+    font-size: map-get($map: $font-size-map, $key: tab);
+  }
+  @include mq.mq(sp) {
+    font-size: map-get($map: $font-size-map, $key: sp);
+  }
+  font-weight: map-get($map: font-weight.$font-weight, $key: $font-type);
+}

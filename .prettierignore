@@ -1,5 +1,5 @@
-packages/amatelas/dist
-packages/amatelas/storybook-static
+packages/amatelas-react/dist
+packages/amatelas-react/storybook-static
 packages/markdown/markdown
 packages/aniline/aniline
 

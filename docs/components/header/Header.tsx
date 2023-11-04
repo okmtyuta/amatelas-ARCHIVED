@@ -1,4 +1,4 @@
-import { Link, Sticky, Typography } from '@okmtyuta/amatelas/server'
+import { Link, Sticky, Typography } from '@okmtyuta/amatelas-react/server'
 import styles from './header.module.scss'
 import { GitHubLogoSVG } from '../svg'
 import { StorybookLogoSVG } from '../svg/StorybookLogoSVG'

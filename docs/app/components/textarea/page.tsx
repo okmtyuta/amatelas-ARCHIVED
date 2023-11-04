@@ -1,4 +1,4 @@
-import { Flex, Heading, Textarea } from '@okmtyuta/amatelas/server'
+import { Flex, Heading, Textarea } from '@okmtyuta/amatelas-react/server'
 
 const Page = () => {
   return (

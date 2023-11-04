@@ -1,4 +1,4 @@
-import { Space, Typography } from '@okmtyuta/amatelas'
+import { Space, Typography } from '@okmtyuta/amatelas-react'
 import styles from './footer.module.css'
 
 export const Footer = () => {

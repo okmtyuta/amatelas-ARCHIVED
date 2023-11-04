@@ -1,0 +1,11 @@
+$sans: 'Noto Sans', sans-serif;
+$sans-jp: 'Noto Sans JP', sans-serif;
+$serif: 'Noto Serif', serif;
+$serif-jp: 'Noto Serif JP', serif;
+
+$font-family: (
+  sans: $sans,
+  sans-jp: $sans-jp,
+  serif: $serif,
+  serif-jp: $serif-jp
+);

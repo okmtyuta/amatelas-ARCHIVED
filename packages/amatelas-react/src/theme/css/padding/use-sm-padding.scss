@@ -1,0 +1,31 @@
+@use './use-padding.scss' as *;
+
+//// all sm ////
+@mixin use-sm-padding() {
+  @include use-padding(sm);
+}
+
+//// x and y sm ////
+@mixin use-sm-padding-x() {
+  @include use-padding-x(sm);
+}
+@mixin use-sm-padding-y() {
+  @include use-padding-y(sm);
+}
+
+//// left right bottom top sm ////
+@mixin use-sm-padding-left() {
+  @include use-padding-left(sm);
+}
+
+@mixin use-sm-padding-right() {
+  @include use-padding-right(sm);
+}
+
+@mixin use-sm-padding-bottom() {
+  @include use-padding-bottom(sm);
+}
+
+@mixin use-sm-padding-top() {
+  @include use-padding-top(sm);
+}
