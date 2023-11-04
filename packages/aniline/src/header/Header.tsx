@@ -1,4 +1,4 @@
-import { Sticky, Typography } from '@okmtyuta/amatelas'
+import { Sticky, Typography } from '@okmtyuta/amatelas-react'
 import styles from './header.module.css'
 
 export const Header = () => {

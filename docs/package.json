@@ -4,16 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build:amatelas": "pnpm --filter @okmtyuta/amatelas build",
-    "build:markdown": "pnpm --filter @okmtyuta/amatelas-markdown build",
+    "build:amatelas": "pnpm --filter @okmtyuta/amatelas-react build",
+    "build:markdown": "pnpm --filter @okmtyuta/amatelas-react-markdown build",
     "build": "next build",
     "build:prod": "pnpm build:amatelas && pnpm build:markdown && pnpm build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@okmtyuta/amatelas": "workspace:^",
-    "@okmtyuta/amatelas-markdown": "workspace:^",
+    "@okmtyuta/amatelas-react": "workspace:^",
+    "@okmtyuta/amatelas-react-markdown": "workspace:^",
     "@okmtyuta/awesome-css": "^0.0.2",
     "@types/node": "^20.5.9",
     "@types/react": "^18.2.15",

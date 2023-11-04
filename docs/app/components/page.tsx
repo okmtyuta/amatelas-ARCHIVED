@@ -1,4 +1,4 @@
-import { Heading, List, ListItem } from '@okmtyuta/amatelas/server'
+import { Heading, List, ListItem } from '@okmtyuta/amatelas-react/server'
 import Link from 'next/link'
 
 const components = [

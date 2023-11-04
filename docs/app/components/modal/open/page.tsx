@@ -1,4 +1,4 @@
-import { Button, Flex, Heading, Modal } from '@okmtyuta/amatelas/server'
+import { Button, Flex, Heading, Modal } from '@okmtyuta/amatelas-react/server'
 
 const Page = () => {
   return (

@@ -1,0 +1,5 @@
+@use './font-weight.scss' as font-weight;
+
+@mixin use-font-weight($font-type) {
+  font-weight: map-get($map: font-weight.$font-weight, $key: $font-type);
+}

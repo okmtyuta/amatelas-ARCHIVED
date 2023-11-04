@@ -5,7 +5,7 @@ import {
   Space,
   List,
   ListItem
-} from '@okmtyuta/amatelas/server'
+} from '@okmtyuta/amatelas-react/server'
 
 const Page = () => {
   return (

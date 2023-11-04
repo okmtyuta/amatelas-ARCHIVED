@@ -1,6 +1,6 @@
 import { Frame } from '@okmtyuta/amatelas/server'
 
-import '@okmtyuta/amatelas/style.css'
+import '@okmtyuta/amatelas-react/style.css'
 import { MarkdownTextarea } from './components/markdown-textarea/MarkdownTextarea'
 import './reset.css'
 

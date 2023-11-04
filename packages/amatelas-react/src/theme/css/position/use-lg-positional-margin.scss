@@ -1,0 +1,31 @@
+@use './use-positional-margin.scss' as *;
+
+//// all lg ////
+@mixin use-lg-positional-margin() {
+  @include use-positional-margin(lg);
+}
+
+//// x and y lg ////
+@mixin use-lg-positional-margin-x() {
+  @include use-positional-margin-x(lg);
+}
+@mixin use-lg-positional-margin-y() {
+  @include use-positional-margin-y(lg);
+}
+
+//// left right bottom top lg ////
+@mixin use-lg-positional-margin-left() {
+  @include use-positional-margin-left(lg);
+}
+
+@mixin use-lg-positional-margin-right() {
+  @include use-positional-margin-right(lg);
+}
+
+@mixin use-lg-positional-margin-bottom() {
+  @include use-positional-margin-bottom(lg);
+}
+
+@mixin use-lg-positional-margin-top() {
+  @include use-positional-margin-top(lg);
+}

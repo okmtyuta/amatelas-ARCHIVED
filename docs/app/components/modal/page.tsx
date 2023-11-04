@@ -1,5 +1,5 @@
 'use client'
-import { Button, Flex, Heading, Modal } from '@okmtyuta/amatelas/server'
+import { Button, Flex, Heading, Modal } from '@okmtyuta/amatelas-react/server'
 import { useState } from 'react'
 
 const Page = () => {

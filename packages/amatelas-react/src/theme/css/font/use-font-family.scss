@@ -1,0 +1,14 @@
+@use './font-family.scss' as font-family;
+
+@mixin use-sans-serif() {
+  font-family: font-family.$sans;
+}
+@mixin use-sans-serif-jp() {
+  font-family: font-family.$sans-jp;
+}
+@mixin use-serif() {
+  font-family: font-family.$serif;
+}
+@mixin use-serif-jp() {
+  font-family: font-family.$serif-jp;
+}

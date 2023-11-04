@@ -1,4 +1,9 @@
-import { Heading, List, ListItem, Textfield } from '@okmtyuta/amatelas/server'
+import {
+  Heading,
+  List,
+  ListItem,
+  Textfield
+} from '@okmtyuta/amatelas-react/server'
 
 const Page = () => {
   return (

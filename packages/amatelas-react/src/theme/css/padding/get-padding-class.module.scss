@@ -1,0 +1,134 @@
+@use './padding.scss' as *;
+
+.xs-padding {
+  @include use-xs-padding();
+}
+.sm-padding {
+  @include use-sm-padding();
+}
+.md-padding {
+  @include use-md-padding();
+}
+.lg-padding {
+  @include use-lg-padding();
+}
+.xl-padding {
+  @include use-xl-padding();
+}
+.none-padding {
+  @include use-none-padding();
+}
+
+.xs-padding-x {
+  @include use-xs-padding-x();
+}
+.sm-padding-x {
+  @include use-sm-padding-x();
+}
+.md-padding-x {
+  @include use-md-padding-x();
+}
+.lg-padding-x {
+  @include use-lg-padding-x();
+}
+.xl-padding-x {
+  @include use-xl-padding-x();
+}
+.none-padding-x {
+  @include use-none-padding-x();
+}
+
+.xs-padding-y {
+  @include use-xs-padding-y();
+}
+.sm-padding-y {
+  @include use-sm-padding-y();
+}
+.md-padding-y {
+  @include use-md-padding-y();
+}
+.lg-padding-y {
+  @include use-lg-padding-y();
+}
+.xl-padding-y {
+  @include use-xl-padding-y();
+}
+.none-padding-y {
+  @include use-none-padding-y();
+}
+
+.xs-padding-top {
+  @include use-xs-padding-top();
+}
+.sm-padding-top {
+  @include use-sm-padding-top();
+}
+.md-padding-top {
+  @include use-md-padding-top();
+}
+.lg-padding-top {
+  @include use-lg-padding-top();
+}
+.xl-padding-top {
+  @include use-xl-padding-top();
+}
+.none-padding-top {
+  @include use-none-padding-top();
+}
+
+.xs-padding-left {
+  @include use-xs-padding-left();
+}
+.sm-padding-left {
+  @include use-sm-padding-left();
+}
+.md-padding-left {
+  @include use-md-padding-left();
+}
+.lg-padding-left {
+  @include use-lg-padding-left();
+}
+.xl-padding-left {
+  @include use-xl-padding-left();
+}
+.none-padding-left {
+  @include use-none-padding-left();
+}
+
+.xs-padding-bottom {
+  @include use-xs-padding-bottom();
+}
+.sm-padding-bottom {
+  @include use-sm-padding-bottom();
+}
+.md-padding-bottom {
+  @include use-md-padding-bottom();
+}
+.lg-padding-bottom {
+  @include use-lg-padding-bottom();
+}
+.xl-padding-bottom {
+  @include use-xl-padding-bottom();
+}
+.none-padding-bottom {
+  @include use-none-padding-bottom();
+}
+
+.xs-padding-right {
+  @include use-xs-padding-right();
+}
+.sm-padding-right {
+  @include use-sm-padding-right();
+}
+.md-padding-right {
+  @include use-md-padding-right();
+}
+.lg-padding-right {
+  @include use-lg-padding-right();
+}
+.xl-padding-right {
+  @include use-xl-padding-right();
+}
+.none-padding-right {
+  @include use-none-padding-right();
+}

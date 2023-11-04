@@ -1,0 +1,33 @@
+@use './margin-type.scss' as *;
+
+//// all ////
+@mixin use-margin($type) {
+  margin: map-get($map: $margin-type, $key: $type);
+}
+
+//// x and y ////
+@mixin use-margin-x($type) {
+  margin-left: map-get($map: $margin-type, $key: $type);
+  margin-right: map-get($map: $margin-type, $key: $type);
+}
+@mixin use-margin-y($type) {
+  margin-top: map-get($map: $margin-type, $key: $type);
+  margin-bottom: map-get($map: $margin-type, $key: $type);
+}
+
+//// left right bottom top ////
+@mixin use-margin-left($type) {
+  margin-left: map-get($map: $margin-type, $key: $type);
+}
+
+@mixin use-margin-right($type) {
+  margin-right: map-get($map: $margin-type, $key: $type);
+}
+
+@mixin use-margin-bottom($type) {
+  margin-bottom: map-get($map: $margin-type, $key: $type);
+}
+
+@mixin use-margin-top($type) {
+  margin-top: map-get($map: $margin-type, $key: $type);
+}

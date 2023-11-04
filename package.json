@@ -10,16 +10,16 @@
     "url": "https://github.com/okmtyuta/amatelas"
   },
   "scripts": {
-    "build:amatelas": "pnpm --filter @okmtyuta/amatelas build",
+    "build:amatelas": "pnpm --filter @okmtyuta/amatelas-react build",
+    "build:markdown": "pnpm --filter @okmtyuta/amatelas-react-markdown build",
+    "build:storybook": "pnpm --filter @okmtyuta/amatelas-react build-storybook",
     "build:docs": "pnpm --filter @okmtyuta/amatelas-docs build",
-    "build:markdown": "pnpm --filter @okmtyuta/amatelas-markdown build",
-    "build:storybook": "pnpm --filter @okmtyuta/amatelas build-storybook",
     "build": "pnpm build:amatelas && pnpm build:markdown && pnpm build:docs && pnpm build:storybook",
-    "dev:amatelas": "pnpm --filter @okmtyuta/amatelas dev",
-    "test:amatelas": "pnpm --filter @okmtyuta/amatelas test",
-    "storybook": "pnpm --filter @okmtyuta/amatelas storybook",
+    "dev:amatelas": "pnpm --filter @okmtyuta/amatelas-react dev",
+    "test:amatelas": "pnpm --filter @okmtyuta/amatelas-react test",
+    "storybook": "pnpm --filter @okmtyuta/amatelas-react storybook",
     "dev:server": "pnpm --filter @amatelas/server dev",
-    "dev:docs": "pnpm --filter @okmtyuta/amatelas-docs dev",
+    "dev:docs": "pnpm --filter @okmtyuta/amatelas-react-docs dev",
     "preview": "pnpm --filter @amatelas/docs dev",
     "format": "prettier --write ./",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"

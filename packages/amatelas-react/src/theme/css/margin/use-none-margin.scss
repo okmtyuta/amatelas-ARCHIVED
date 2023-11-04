@@ -1,0 +1,31 @@
+@use './use-margin.scss' as *;
+
+//// all none ////
+@mixin use-none-margin() {
+  @include use-margin(none);
+}
+
+//// x and y none ////
+@mixin use-none-margin-x() {
+  @include use-margin-x(none);
+}
+@mixin use-none-margin-y() {
+  @include use-margin-y(none);
+}
+
+//// left right bottom top none ////
+@mixin use-none-margin-left() {
+  @include use-margin-left(none);
+}
+
+@mixin use-none-margin-right() {
+  @include use-margin-right(none);
+}
+
+@mixin use-none-margin-bottom() {
+  @include use-margin-bottom(none);
+}
+
+@mixin use-none-margin-top() {
+  @include use-margin-top(none);
+}

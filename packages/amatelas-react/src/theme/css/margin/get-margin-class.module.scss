@@ -1,0 +1,134 @@
+@use './margin.scss' as *;
+
+.xs-margin {
+  @include use-xs-margin();
+}
+.sm-margin {
+  @include use-sm-margin();
+}
+.md-margin {
+  @include use-md-margin();
+}
+.lg-margin {
+  @include use-lg-margin();
+}
+.xl-margin {
+  @include use-xl-margin();
+}
+.none-margin {
+  @include use-none-margin();
+}
+
+.xs-margin-x {
+  @include use-xs-margin-x();
+}
+.sm-margin-x {
+  @include use-sm-margin-x();
+}
+.md-margin-x {
+  @include use-md-margin-x();
+}
+.lg-margin-x {
+  @include use-lg-margin-x();
+}
+.xl-margin-x {
+  @include use-xl-margin-x();
+}
+.none-margin-x {
+  @include use-none-margin-x();
+}
+
+.xs-margin-y {
+  @include use-xs-margin-y();
+}
+.sm-margin-y {
+  @include use-sm-margin-y();
+}
+.md-margin-y {
+  @include use-md-margin-y();
+}
+.lg-margin-y {
+  @include use-lg-margin-y();
+}
+.xl-margin-y {
+  @include use-xl-margin-y();
+}
+.none-margin-y {
+  @include use-none-margin-y();
+}
+
+.xs-margin-top {
+  @include use-xs-margin-top();
+}
+.sm-margin-top {
+  @include use-sm-margin-top();
+}
+.md-margin-top {
+  @include use-md-margin-top();
+}
+.lg-margin-top {
+  @include use-lg-margin-top();
+}
+.xl-margin-top {
+  @include use-xl-margin-top();
+}
+.none-margin-top {
+  @include use-none-margin-top();
+}
+
+.xs-margin-left {
+  @include use-xs-margin-left();
+}
+.sm-margin-left {
+  @include use-sm-margin-left();
+}
+.md-margin-left {
+  @include use-md-margin-left();
+}
+.lg-margin-left {
+  @include use-lg-margin-left();
+}
+.xl-margin-left {
+  @include use-xl-margin-left();
+}
+.none-margin-left {
+  @include use-none-margin-left();
+}
+
+.xs-margin-bottom {
+  @include use-xs-margin-bottom();
+}
+.sm-margin-bottom {
+  @include use-sm-margin-bottom();
+}
+.md-margin-bottom {
+  @include use-md-margin-bottom();
+}
+.lg-margin-bottom {
+  @include use-lg-margin-bottom();
+}
+.xl-margin-bottom {
+  @include use-xl-margin-bottom();
+}
+.none-margin-bottom {
+  @include use-none-margin-bottom();
+}
+
+.xs-margin-right {
+  @include use-xs-margin-right();
+}
+.sm-margin-right {
+  @include use-sm-margin-right();
+}
+.md-margin-right {
+  @include use-md-margin-right();
+}
+.lg-margin-right {
+  @include use-lg-margin-right();
+}
+.xl-margin-right {
+  @include use-xl-margin-right();
+}
+.none-margin-right {
+  @include use-none-margin-right();
+}

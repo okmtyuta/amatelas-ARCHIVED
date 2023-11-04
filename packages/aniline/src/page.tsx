@@ -1,8 +1,8 @@
-import { Frame } from '@okmtyuta/amatelas'
+import { Frame } from '@okmtyuta/amatelas-react'
 import { Header } from './header/Header'
 import { Footer } from './footer/Footer'
 
-import '@okmtyuta/amatelas/style.css'
+import '@okmtyuta/amatelas-react/style.css'
 import { Typing } from './components'
 
 export const Page = () => {

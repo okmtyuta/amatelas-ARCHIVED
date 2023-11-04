@@ -1,5 +1,10 @@
 'use client'
-import { Flex, Heading, Switch, Typography } from '@okmtyuta/amatelas/server'
+import {
+  Flex,
+  Heading,
+  Switch,
+  Typography
+} from '@okmtyuta/amatelas-react/server'
 import { useState } from 'react'
 
 const Page = () => {
