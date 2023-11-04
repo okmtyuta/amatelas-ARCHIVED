@@ -3,9 +3,6 @@ packages/amatelas-react/storybook-static
 packages/markdown/markdown
 packages/aniline/aniline
 
-# themes are formatted at tools module. Hence themes in any other modules is not required to be formatted
-packages/**/theme
-
 .next
 .vscode
 
