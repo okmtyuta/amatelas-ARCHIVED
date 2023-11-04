@@ -1,5 +1,7 @@
 import clsx from 'clsx'
 import { ComponentPropsWithoutRef, ElementType } from 'react'
+
+import '@okmtyuta/amatelas-theme/font.css'
 import './heading.css'
 
 type HeadingType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'

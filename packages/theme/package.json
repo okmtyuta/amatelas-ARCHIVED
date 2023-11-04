@@ -1,0 +1,34 @@
+{
+  "name": "@okmtyuta/amatelas-theme",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "author": "okmtyuta",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https:/github.com/okmtyuta/amatelas"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./font.css": {
+      "import": "./dist/theme/css/font/index.css"
+    },
+    "./color.css": {
+      "import": "./dist/theme/css/color/index.css"
+    }
+  },
+  "scripts": {},
+  "peerDependencies": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}

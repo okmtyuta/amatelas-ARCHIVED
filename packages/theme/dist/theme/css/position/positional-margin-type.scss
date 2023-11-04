@@ -1,0 +1,16 @@
+// 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+$xs-positional-margin: 2px;
+$sm-positional-margin: 4px;
+$md-positional-margin: 8px;
+$lg-positional-margin: 16px;
+$xl-positional-margin: 32px;
+$none-positional-margin: 0px;
+
+$positional-margin-type: (
+  xs: $xs-positional-margin,
+  sm: $sm-positional-margin,
+  md: $md-positional-margin,
+  lg: $lg-positional-margin,
+  xl: $xl-positional-margin,
+  none: $none-positional-margin
+);

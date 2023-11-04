@@ -19,7 +19,7 @@
     "test:amatelas": "pnpm --filter @okmtyuta/amatelas-react test",
     "storybook": "pnpm --filter @okmtyuta/amatelas-react storybook",
     "dev:server": "pnpm --filter @amatelas/server dev",
-    "dev:docs": "pnpm --filter @okmtyuta/amatelas-react-docs dev",
+    "dev:docs": "pnpm --filter @okmtyuta/amatelas-docs dev",
     "preview": "pnpm --filter @amatelas/docs dev",
     "format": "prettier --write ./",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"

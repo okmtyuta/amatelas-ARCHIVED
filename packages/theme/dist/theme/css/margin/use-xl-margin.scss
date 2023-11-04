@@ -1,0 +1,31 @@
+@use './use-margin.scss' as *;
+
+//// all xl ////
+@mixin use-xl-margin() {
+  @include use-margin(xl);
+}
+
+//// x and y xl ////
+@mixin use-xl-margin-x() {
+  @include use-margin-x(xl);
+}
+@mixin use-xl-margin-y() {
+  @include use-margin-y(xl);
+}
+
+//// left right bottom top xl ////
+@mixin use-xl-margin-left() {
+  @include use-margin-left(xl);
+}
+
+@mixin use-xl-margin-right() {
+  @include use-margin-right(xl);
+}
+
+@mixin use-xl-margin-bottom() {
+  @include use-margin-bottom(xl);
+}
+
+@mixin use-xl-margin-top() {
+  @include use-margin-top(xl);
+}

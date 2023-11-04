@@ -1,5 +1,4 @@
 import { ComponentProps } from 'react'
-import styles from './alert.module.scss'
 import { clsx } from 'clsx'
 import {
   CheckedCircleSVG,
@@ -16,29 +15,20 @@ type AlertErrorProps = ComponentProps<typeof ErrorSVG>
 type AlertInfoProps = ComponentProps<typeof InfoSVG>
 
 export const AlertCloseSVG = ({ className, ...props }: AlertCloseSVGProps) => {
-  return (
-    <CloseSVG {...props} className={clsx(styles['close-svg'], className)} />
-  )
+  return <CloseSVG {...props} className={clsx('close-svg', className)} />
 }
 
 export const AlertSuccessSVG = ({ className, ...props }: AlertSuccessProps) => {
   return (
-    <CheckedCircleSVG
-      {...props}
-      className={clsx(styles['label-svg'], className)}
-    />
+    <CheckedCircleSVG {...props} className={clsx('label-svg', className)} />
   )
 }
 export const AlertWarningSVG = ({ className, ...props }: AlertWarningProps) => {
-  return (
-    <WarningSVG {...props} className={clsx(styles['label-svg'], className)} />
-  )
+  return <WarningSVG {...props} className={clsx('label-svg', className)} />
 }
 export const AlertErrorSVG = ({ className, ...props }: AlertErrorProps) => {
-  return (
-    <ErrorSVG {...props} className={clsx(styles['label-svg'], className)} />
-  )
+  return <ErrorSVG {...props} className={clsx('label-svg', className)} />
 }
 export const AlertInfoSVG = ({ className, ...props }: AlertInfoProps) => {
-  return <InfoSVG {...props} className={clsx(styles['label-svg'], className)} />
+  return <InfoSVG {...props} className={clsx('label-svg', className)} />
 }

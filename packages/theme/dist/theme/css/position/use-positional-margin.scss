@@ -1,0 +1,36 @@
+@use './positional-margin-type.scss' as *;
+
+//// all ////
+@mixin use-positional-margin($type) {
+  top: map-get($map: $positional-margin-type, $key: $type);
+  bottom: map-get($map: $positional-margin-type, $key: $type);
+  right: map-get($map: $positional-margin-type, $key: $type);
+  left: map-get($map: $positional-margin-type, $key: $type);
+}
+
+//// x and y ////
+@mixin use-positional-margin-x($type) {
+  left: map-get($map: $positional-margin-type, $key: $type);
+  right: map-get($map: $positional-margin-type, $key: $type);
+}
+@mixin use-positional-margin-y($type) {
+  top: map-get($map: $positional-margin-type, $key: $type);
+  bottom: map-get($map: $positional-margin-type, $key: $type);
+}
+
+//// left right bottom top ////
+@mixin use-positional-margin-left($type) {
+  left: map-get($map: $positional-margin-type, $key: $type);
+}
+
+@mixin use-positional-margin-right($type) {
+  right: map-get($map: $positional-margin-type, $key: $type);
+}
+
+@mixin use-positional-margin-bottom($type) {
+  bottom: map-get($map: $positional-margin-type, $key: $type);
+}
+
+@mixin use-positional-margin-top($type) {
+  top: map-get($map: $positional-margin-type, $key: $type);
+}
