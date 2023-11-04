@@ -4,22 +4,25 @@
     "outDir": "cdn",
     "declarationMap": true,
     "baseUrl": ".",
+    "emitDeclarationOnly": true,
+    "declaration": true,
+
     "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
     "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
+
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "emitDeclarationOnly": true,
-    "declaration": true,
+
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "allowSyntheticDefaultImports": true,
     "paths": {
       "@root/*": ["src/*"],
       "@theme/*": ["src/theme/*"]

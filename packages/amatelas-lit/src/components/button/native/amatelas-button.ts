@@ -3,7 +3,7 @@ import { property } from 'lit/decorators.js'
 import clsx from 'clsx'
 
 import '@okmtyuta/amatelas-theme/color.css'
-import style from './amatelas-button.css?inline'
+import style from '@okmtyuta/amatelas-css/amatelas-button.css?inline'
 
 // type Variant = 'standard' | 'outlined' | 'filled'
 // type Color = 'danger' | 'info' | 'success' | 'warning'
@@ -20,10 +20,14 @@ export class AmatelasButton extends LitElement {
   @property()
   width = 'auto'
 
+  @property({ type: Boolean })
+  disabled = false
+
   render() {
     return html`
       <button
         class=${clsx('amatelas-button', this.variant, this.color, this.width)}
+        ?disabled=${this.disabled}
       >
         <slot></slot>
       </button>

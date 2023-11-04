@@ -5,7 +5,7 @@ import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react'
 import { Progress } from '../..'
 
 import '@okmtyuta/amatelas-theme/color.css'
-import './button.css'
+import '@okmtyuta/amatelas-css/amatelas-button.css'
 
 type Variant = 'standard' | 'outlined' | 'filled'
 type Color = 'danger' | 'info' | 'success' | 'warning'

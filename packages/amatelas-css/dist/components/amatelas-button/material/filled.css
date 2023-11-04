@@ -1,0 +1,61 @@
+.amatelas-material-button {
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  padding: 12px 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:disabled {
+    color: var(--color-text);
+    background-color: rgba(var(--rgb-color-text), 0.12);
+    cursor: not-allowed;
+    &.outlined {
+      border: 1px solid var(--color-text);
+    }
+  }
+
+  &.filled {
+    &.info {
+      border: none;
+      color: white;
+      background-color: var(--color-info);
+
+      &:hover {
+        background-color: var(--color-info-lighten1);
+      }
+    }
+    &.danger {
+      border: none;
+      color: white;
+      background-color: var(--color-danger);
+
+      &:hover {
+        background-color: var(--color-danger-lighten1);
+      }
+    }
+    &.warning {
+      border: none;
+      color: white;
+      background-color: var(--color-warning);
+
+      &:hover {
+        background-color: var(--color-warning-lighten1);
+      }
+    }
+    &.success {
+      border: none;
+      color: white;
+      background-color: var(--color-success);
+
+      &:hover {
+        background-color: var(--color-success-lighten1);
+      }
+    }
+  }
+}

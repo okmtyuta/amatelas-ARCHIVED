@@ -1,7 +1,7 @@
 import { LitElement, html, unsafeCSS } from 'lit'
 import clsx from 'clsx'
 
-import '@theme/css/font/font-size.css'
+import '@okmtyuta/amatelas-theme/font.css'
 import style from './amatelas-heading.css?inline'
 
 // @customElement('amatelas-heading')

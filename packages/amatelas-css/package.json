@@ -1,0 +1,33 @@
+{
+  "name": "@okmtyuta/amatelas-css",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "author": "okmtyuta",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https:/github.com/okmtyuta/amatelas"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./amatelas-button.css": {
+      "import": "./dist/components/amatelas-button/index.css"
+    }
+  },
+  "scripts": {
+    "build": "./build.zsh"
+  },
+  "peerDependencies": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}

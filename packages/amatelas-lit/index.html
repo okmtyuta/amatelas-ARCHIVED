@@ -5,20 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amatelas-lit | Experimental</title>
     <link rel="stylesheet" href="./src/index.css" />
-    <!-- <script type="module" src="/src/index.ts"></script> -->
-    <!-- <script src="/packages/amatelas-lit/cdn/index.js"></script>
-    <link rel="stylesheet" href="/packages/amatelas-lit/cdn/style.css" /> -->
-
-    <script src="https://cdn.jsdelivr.net/npm/@okmtyuta/amatelas-lit@0.0.0/cdn/index.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@okmtyuta/amatelas-lit@0.0.0/cdn/style.css"
-    />
+    <script type="module" src="/src/init.ts"></script>
   </head>
   <body>
     <div style="margin: 48px">
-      <amatelas-button variant="filled">BUTTON</amatelas-button>
-      <amatelas-button color="danger" variant="filled">BUTTON</amatelas-button>
+      <amatelas-button variant="standard">BUTTON</amatelas-button>
+      <amatelas-button disabled color="danger" variant="standard"
+        >BUTTON</amatelas-button
+      >
     </div>
   </body>
 </html>

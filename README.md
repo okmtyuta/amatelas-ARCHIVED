@@ -14,3 +14,10 @@ You can start with Amatelas UI web-components version:
   href="https://cdn.jsdelivr.net/npm/@okmtyuta/amatelas-lit@0.0.0/cdn/style.css"
 />
 ```
+
+- amatelas-css: css files for amatelas ui
+- amatelas-lit: with lit
+- amatelas-react: with react
+- amatelas-theme: themes
+
+theme < css < lit, react

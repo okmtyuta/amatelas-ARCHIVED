@@ -79,11 +79,16 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
 
+  packages/amatelas-css: {}
+
   packages/amatelas-lit:
     dependencies:
+      '@okmtyuta/amatelas-css':
+        specifier: workspace:^
+        version: link:../amatelas-css
       '@okmtyuta/amatelas-theme':
         specifier: workspace:^
-        version: link:../theme
+        version: link:../amatelas-theme
       clsx:
         specifier: ^2.0.0
         version: 2.0.0
@@ -100,9 +105,12 @@ importers:
 
   packages/amatelas-react:
     dependencies:
+      '@okmtyuta/amatelas-css':
+        specifier: workspace:^
+        version: link:../amatelas-css
       '@okmtyuta/amatelas-theme':
         specifier: workspace:^
-        version: link:../theme
+        version: link:../amatelas-theme
       clsx:
         specifier: ^2.0.0
         version: 2.0.0
@@ -210,6 +218,8 @@ importers:
         specifier: ^0.34.5
         version: 0.34.5(jsdom@22.1.0)(sass@1.68.0)
 
+  packages/amatelas-theme: {}
+
   packages/aniline:
     dependencies:
       '@okmtyuta/amatelas-react':
@@ -304,8 +314,6 @@ importers:
       vite:
         specifier: ^4.4.5
         version: 4.4.9(@types/node@20.7.1)(sass@1.68.0)
-
-  packages/theme: {}
 
 packages:
 

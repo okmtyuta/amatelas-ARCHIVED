@@ -12,7 +12,7 @@ export default defineConfig({
   build: {
     outDir: 'cdn',
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
+      entry: resolve(__dirname, 'src/init.ts'),
       name: 'index',
       fileName: 'index'
     },
