@@ -16,6 +16,18 @@
   "exports": {
     "./amatelas-button.css": {
       "import": "./dist/components/amatelas-button/index.css"
+    },
+    "./amatelas-checkbox.css": {
+      "import": "./dist/components/amatelas-checkbox/index.css"
+    },
+    "./amatelas-chip.css": {
+      "import": "./dist/components/amatelas-chip/index.css"
+    },
+    "./amatelas-list.css": {
+      "import": "./dist/components/amatelas-list/index.css"
+    },
+    "./amatelas-snack.css": {
+      "import": "./dist/components/amatelas-snack/index.css"
     }
   },
   "scripts": {

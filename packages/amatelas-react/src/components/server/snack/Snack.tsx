@@ -1,8 +1,7 @@
 // Refer to https://mui.com/material-ui/react-snackbar/
 
-import { ComponentProps } from 'react'
+import { ComponentProps, useId } from 'react'
 import { clsx } from 'clsx'
-import styles from './snack.module.scss'
 import {
   CheckedCircleSVG,
   CloseSVG,
@@ -11,7 +10,11 @@ import {
   WarningSVG
 } from '@root/svg'
 
-type SnackVariant = 'info' | 'error' | 'warning' | 'success'
+import '@okmtyuta/amatelas-theme/color.css'
+import '@okmtyuta/amatelas-theme/layer.css'
+import '@okmtyuta/amatelas-css/amatelas-snack.css'
+
+type SnackVariant = 'info' | 'danger' | 'warning' | 'success'
 type SnackPosition = 'top' | 'bottom' | 'left' | 'right'
 
 type DefaultDivProps = ComponentProps<'div'>
@@ -21,70 +24,50 @@ type SnackProps = {
   position?: SnackPosition
 } & DefaultDivProps
 
-const getVariantClass = (variant?: SnackVariant) => {
+const getVariant = (variant?: SnackVariant) => {
   if (variant) {
-    return styles[variant]
+    return variant
   }
 
-  return styles['info']
+  return 'info'
 }
-const getSnackIcon = (variant?: SnackVariant) => {
-  const getSnackVariant = (variant?: SnackVariant) => {
-    if (variant) {
-      return variant
-    }
-    return 'info'
-  }
-
-  const snackVariant = getSnackVariant(variant)
-  const iconClass = styles[`${snackVariant}-icon`]
+const getIcon = (variant?: SnackVariant) => {
+  const snackVariant = getVariant(variant)
+  const icon = `${snackVariant}-icon`
 
   if (variant === 'success') {
-    return (
-      <CheckedCircleSVG className={clsx(styles['snack-icon'], iconClass)} />
-    )
+    return <CheckedCircleSVG className={clsx('icon', icon)} />
   }
   if (variant === 'warning') {
-    return <WarningSVG className={clsx(styles['snack-icon'], iconClass)} />
+    return <WarningSVG className={clsx('icon', icon)} />
   }
-  if (variant === 'error') {
-    return <ErrorSVG className={clsx(styles['snack-icon'], iconClass)} />
-  }
-
-  return <InfoSVG className={clsx(styles['snack-icon'], iconClass)} />
-}
-const getInputId = (inputId?: string) => {
-  if (inputId) {
-    return inputId
+  if (variant === 'danger') {
+    return <ErrorSVG className={clsx('icon', icon)} />
   }
 
-  return crypto.randomUUID()
+  return <InfoSVG className={clsx('icon', icon)} />
 }
-const getPositionClass = (position?: SnackPosition) => {
+const getPosition = (position?: SnackPosition) => {
+  // TODO: ここの実装
   if (position) {
-    return styles[`position-${position}`]
+    return `${position}`
   }
 
-  return styles['position-top']
+  return 'top'
 }
 
 export const Snack = ({ variant, position, ...props }: SnackProps) => {
-  const variantClass = getVariantClass(variant)
-  const snackIcon = getSnackIcon(variant)
-
-  // TODO: id
-  const inputId = getInputId(props.id)
-  const positionClass = getPositionClass(position)
+  const _variant = getVariant(variant)
+  const _icon = getIcon(variant)
+  const _id = useId()
+  const _position = getPosition(position)
 
   return (
-    <div
-      {...props}
-      className={clsx(styles['snack'], variantClass, positionClass)}
-    >
-      <input className={styles['input']} type="checkbox" id={inputId} />
-      {snackIcon}
+    <div {...props} className={clsx('amatelas-snack', _variant, _position)}>
+      <input className={'input'} type="checkbox" id={_id} />
+      {_icon}
       <div>{props.children}</div>
-      <label className={styles['close-icon']} htmlFor={inputId}>
+      <label className={'close-icon'} htmlFor={_id}>
         <CloseSVG />
       </label>
     </div>

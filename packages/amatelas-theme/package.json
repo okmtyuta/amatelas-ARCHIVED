@@ -19,6 +19,9 @@
     },
     "./color.css": {
       "import": "./dist/theme/css/color/index.css"
+    },
+    "./layer.css": {
+      "import": "./dist/theme/css/layer/index.css"
     }
   },
   "scripts": {

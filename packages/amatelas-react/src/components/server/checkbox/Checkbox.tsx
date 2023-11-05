@@ -1,7 +1,9 @@
 import { ComponentProps, useId } from 'react'
-import styles from './checkbox.module.scss'
 import { DangerousSVG, DoneSVG } from '@root/svg'
 import clsx from 'clsx'
+
+import '@okmtyuta/amatelas-theme/color.css'
+import '@okmtyuta/amatelas-css/amatelas-checkbox.css'
 
 type DefaultFieldsetProps = ComponentProps<'fieldset'>
 type CheckboxGroupProps = DefaultFieldsetProps
@@ -16,21 +18,16 @@ type CheckboxProps = DefaultInputProps
 export const Checkbox = ({ children, ...props }: CheckboxProps) => {
   const _id = useId()
   return (
-    <label htmlFor={_id} className={styles['checkbox']}>
-      <input
-        {...props}
-        className={styles['checkbox-input']}
-        id={_id}
-        type="checkbox"
-      />
-      <span className={clsx(styles['checked'], styles['marker'])}>
+    <label htmlFor={_id} className="amatelas-checkbox">
+      <input {...props} className="checkbox-input" id={_id} type="checkbox" />
+      <span className={clsx('checked', 'marker')}>
         <DoneSVG />
       </span>
-      <span className={clsx(styles['unchecked'], styles['marker'])}>
+      <span className={clsx('unchecked', 'marker')}>
         <DangerousSVG />
       </span>
 
-      <span className={styles['detail']}>{children}</span>
+      <span className="detail">{children}</span>
     </label>
   )
 }

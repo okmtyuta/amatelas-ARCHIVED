@@ -3,22 +3,22 @@
 - [x] avatar: merged
 - [x] blockquote: merged
 - [x] button: merged
-- [ ] checkbox
-- [ ] chip
-- [ ] code
+- [x] checkbox
+- [x] chip
+- [x] code
 - [ ] fixed
 - [ ] flex
 - [x] frame: merged
 - [x] heading: merged
 - [x] highlight: merged
 - [ ] link
-- [ ] list
+- [x] list
 - [ ] message
 - [ ] modal
 - [ ] paragraph
 - [ ] progress
 - [ ] radio
-- [ ] snack
+- [x] snack
 - [ ] sticky
 - [ ] switch
 - [ ] text-area

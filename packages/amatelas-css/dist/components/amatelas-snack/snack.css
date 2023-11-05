@@ -1,0 +1,49 @@
+.amatelas-snack {
+  gap: 12px;
+  width: 300px;
+  display: flex;
+  color: white;
+  fill: white;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: var(--layer-mid);
+  border-radius: 4px;
+  padding: 8px;
+
+  &.info {
+    background-color: var(--color-info);
+  }
+  &.warning {
+    background-color: var(--color-warning);
+  }
+  &.success {
+    background-color: var(--color-success);
+  }
+  &.error {
+    background-color: var(--color-danger);
+  }
+
+  &:has(.input:checked) {
+    display: none;
+  }
+
+  .icon {
+    flex-shrink: 0;
+  }
+  .close-icon {
+    cursor: pointer;
+    user-select: none;
+    flex-shrink: 0;
+  }
+  .label {
+    display: flex;
+    gap: 12px;
+    padding-bottom: 8px;
+  }
+  .label-content {
+    font-weight: bold;
+  }
+  .input {
+    display: none;
+  }
+}

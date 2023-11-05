@@ -1,0 +1,25 @@
+.amatelas-checkbox {
+  display: inline-flex;
+  gap: 6px;
+  cursor: pointer;
+
+  .checkbox-input {
+    display: none;
+  }
+  .checked {
+    fill: var(--color-success);
+  }
+  .unchecked {
+    fill: var(--color-danger);
+  }
+  .checkbox-input:checked ~ .unchecked {
+    display: none;
+  }
+  .checkbox-input:not(:checked) ~ .checked {
+    display: none;
+  }
+  .marker {
+    display: inline-block;
+    height: 1lh;
+  }
+}
