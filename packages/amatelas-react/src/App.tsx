@@ -1,31 +1,15 @@
 import '@okmtyuta/awesome-css/reset.css'
 
-import { Frame } from './components/server'
+import { Checkbox, Frame, List, ListItem, Snack } from './components/server'
 import { Button } from './components/server/button/native/Button'
+import { MaterialChip } from './components/server/chip/material/MaterialChip'
+import { demoText } from './demo-text'
 
 export const App = () => {
   return (
     <>
       <Frame>
-        <Button color="info" variant="filled">
-          BUTTON
-        </Button>
-        <Button color="warning" variant="outlined">
-          BUTTON
-        </Button>
-        <Button color="danger" variant="standard">
-          BUTTON
-        </Button>
-
-        <Button disabled color="info" variant="filled">
-          BUTTON
-        </Button>
-        <Button disabled color="warning" variant="outlined">
-          BUTTON
-        </Button>
-        <Button disabled color="danger" variant="standard">
-          BUTTON
-        </Button>
+        <Snack>{demoText.en.short}</Snack>
       </Frame>
     </>
   )

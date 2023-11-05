@@ -19,9 +19,6 @@ export type ButtonProps<T extends ElementType> = {
   shade?: boolean
   loading?: boolean
   spinner?: ReactNode
-  classNames?: {
-    exterior?: string
-  }
 } & Omit<ComponentPropsWithoutRef<T>, 'tag'>
 
 const getVariant = (variant?: Variant) => {

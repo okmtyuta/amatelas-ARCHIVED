@@ -1,7 +1,9 @@
 import { ComponentProps, ReactNode } from 'react'
-import styles from './list.module.scss'
 import { clsx } from 'clsx'
 import { DangerousSVG, DiscSVG, DoneSVG } from '@root/svg'
+
+import '@okmtyuta/amatelas-theme/color.css'
+import '@okmtyuta/amatelas-css/amatelas-list.css'
 
 type Gap = 'xs' | 'md' | 'xl'
 type Margin = 'xs' | 'md' | 'xl'
@@ -23,35 +25,41 @@ type ListItemProps = DefaultListItemProps & {
   marker?: Marker
 }
 
-const getGapClass = (gap?: Gap) => {
+const getGap = (gap?: Gap) => {
   if (gap) {
-    return styles[`gap-${gap}`]
+    return `gap-${gap}`
   }
 
-  return styles['gap-md']
+  return 'gap-md'
 }
-const getMarginClass = (margin?: Margin) => {
+const getMargin = (margin?: Margin) => {
   if (margin) {
-    return styles[`margin-${margin}`]
+    return `margin-${margin}`
   }
 
-  return styles['margin-md']
+  return 'margin-md'
+}
+
+const getMarker = (marker?: Marker) => {
+  if (marker === 'done') {
+    return <DoneSVG className={'done'} />
+  }
+
+  if (marker === 'dangerous') {
+    return <DangerousSVG className={'dangerous'} />
+  }
+
+  return <DiscSVG className={'disc'} />
 }
 
 export const List = ({ gap, margin, ...props }: ListProps) => {
-  const gapClass = getGapClass(gap)
-  const marginClass = getMarginClass(margin)
+  const _gap = getGap(gap)
+  const _margin = getMargin(margin)
 
   return (
     <ul
       {...props}
-      className={clsx(
-        styles['list'],
-        styles['unordered'],
-        gapClass,
-        marginClass,
-        props.className
-      )}
+      className={clsx('amatelas-list', _gap, _margin, props.className)}
     >
       {props.children}
     </ul>
@@ -60,30 +68,18 @@ export const List = ({ gap, margin, ...props }: ListProps) => {
 
 export const MarkerListItem = ({ marker, ...props }: MarkerListItemProps) => {
   return (
-    <li {...props} className={styles['list-item']}>
-      <span className={styles['marker']}>{marker}</span>
+    <li {...props} className={'amatelas-list-item'}>
+      <span className={'marker'}>{marker}</span>
       <span>{props.children}</span>
     </li>
   )
 }
 
-const getMarker = (marker?: Marker) => {
-  if (marker === 'done') {
-    return <DoneSVG className={styles['done']} />
-  }
-
-  if (marker === 'dangerous') {
-    return <DangerousSVG className={styles['dangerous']} />
-  }
-
-  return <DiscSVG className={styles['disc']} />
-}
-
 export const ListItem = ({ marker, ...props }: ListItemProps) => {
   const _marker = getMarker(marker)
   return (
-    <li {...props} className={styles['list-item']}>
-      <span className={styles['marker']}>{_marker}</span>
+    <li {...props} className={'amatelas-list-item'}>
+      <span className={'marker'}>{_marker}</span>
       <span>{props.children}</span>
     </li>
   )
