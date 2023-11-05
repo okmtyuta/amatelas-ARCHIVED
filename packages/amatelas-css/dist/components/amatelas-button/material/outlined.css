@@ -1,4 +1,4 @@
-.amatelas-material-button {
+.AMUI_amatelas-material-button_ {
   outline: none;
   position: relative;
   overflow: hidden;
@@ -20,17 +20,8 @@
     }
   }
 
-  &.outlined:not(:disabled) {
-    &.text {
-      color: var(--color-text);
-      border: var(--color-text) solid 1px;
-      background-color: inherit;
-
-      &:hover {
-        background-color: rgba(var(--rgb-color-text), 0.08);
-      }
-    }
-    &.info {
+  &.AMUI_amatelas-material-button_outlined:not(:disabled) {
+    &.AMUI_amatelas-material-button_info {
       color: var(--color-info);
       border: var(--color-info) solid 1px;
       background-color: inherit;
@@ -39,7 +30,7 @@
         background-color: rgba(var(--rgb-color-info), 0.08);
       }
     }
-    &.danger {
+    &.AMUI_amatelas-material-button_danger {
       color: var(--color-danger);
       border: var(--color-danger) solid 1px;
       background-color: inherit;
@@ -48,7 +39,7 @@
         background-color: rgba(var(--rgb-color-danger), 0.08);
       }
     }
-    &.warning {
+    &.AMUI_amatelas-material-button_warning {
       color: var(--color-warning);
       border: var(--color-warning) solid 1px;
       background-color: inherit;
@@ -57,7 +48,7 @@
         background-color: rgba(var(--rgb-color-warning), 0.08);
       }
     }
-    &.success {
+    &.AMUI_amatelas-material-button_success {
       color: var(--color-success);
       border: var(--color-success) solid 1px;
       background-color: inherit;

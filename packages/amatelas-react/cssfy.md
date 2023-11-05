@@ -2,23 +2,23 @@
 - [x] alert: merged
 - [x] avatar: merged
 - [x] blockquote: merged
-- [x] button: merged
-- [x] checkbox
-- [x] chip
-- [x] code
+- [x] button: merged: native-kapsel
+- [x] checkbox: merged
+- [x] chip: merged: material-kapsel
+- [x] code: merged
 - [ ] fixed
 - [ ] flex
 - [x] frame: merged
 - [x] heading: merged
 - [x] highlight: merged
 - [ ] link
-- [x] list
+- [x] list: merged
 - [ ] message
 - [ ] modal
 - [ ] paragraph
 - [ ] progress
 - [ ] radio
-- [x] snack
+- [x] snack: merged
 - [ ] sticky
 - [ ] switch
 - [ ] text-area

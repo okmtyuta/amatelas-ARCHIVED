@@ -1,4 +1,4 @@
-.amatelas-material-chip.filled {
+.AMUI_amatelas-material-chip_.AMUI_amatelas-material-chip_filled {
   max-width: 100%;
   font-size: 0.8125rem;
   display: inline-flex;
@@ -19,7 +19,7 @@
   vertical-align: middle;
   box-sizing: border-box;
 
-  .text {
+  .AMUI_amatelas-material-chip_text {
     overflow: hidden;
     text-overflow: ellipsis;
     padding-left: 12px;
@@ -27,7 +27,7 @@
     white-space: nowrap;
   }
 
-  &.danger {
+  &.AMUI_amatelas-material-chip_danger {
     background-color: var(--color-danger);
     color: white;
     border: 0px;
@@ -36,7 +36,7 @@
       background-color: var(--color-danger-lighten1);
     }
   }
-  &.info {
+  &.AMUI_amatelas-material-chip_info {
     background-color: var(--color-info);
     color: white;
     border: 0px;
@@ -45,7 +45,7 @@
       background-color: var(--color-info-lighten1);
     }
   }
-  &.warning {
+  &.AMUI_amatelas-material-chip_warning {
     background-color: var(--color-warning);
     color: white;
     border: 0px;
@@ -54,7 +54,7 @@
       background-color: var(--color-warning-lighten1);
     }
   }
-  &.success {
+  &.AMUI_amatelas-material-chip_success {
     background-color: var(--color-warning);
     color: white;
     border: 0px;

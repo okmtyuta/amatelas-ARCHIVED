@@ -7,6 +7,11 @@ import { Progress } from '../..'
 import '@okmtyuta/amatelas-theme/color.css'
 import '@okmtyuta/amatelas-css/amatelas-button.css'
 
+const CLASS_PREFIX = 'AMUI_amatelas-button_'
+const prefixed = (target: string) => {
+  return `${CLASS_PREFIX}${target}`
+}
+
 type Variant = 'standard' | 'outlined' | 'filled'
 type Color = 'danger' | 'info' | 'success' | 'warning'
 type Width = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full' | 'auto'
@@ -16,7 +21,6 @@ export type ButtonProps<T extends ElementType> = {
   width?: Width
   variant?: Variant
   color?: Color
-  shade?: boolean
   loading?: boolean
   spinner?: ReactNode
 } & Omit<ComponentPropsWithoutRef<T>, 'tag'>
@@ -34,13 +38,6 @@ const getColor = (color?: Color) => {
   }
 
   return 'info'
-}
-const getShade = (shade?: boolean) => {
-  if (shade) {
-    return 'shade'
-  }
-
-  return ''
 }
 const getSpinner = (color: Color, variant: Variant, spinner?: ReactNode) => {
   if (spinner) {
@@ -66,7 +63,6 @@ export const Button = <T extends ElementType = 'button'>({
   width,
   variant,
   color,
-  shade,
   loading,
   spinner,
   ...props
@@ -74,14 +70,18 @@ export const Button = <T extends ElementType = 'button'>({
   const _Button = as ?? 'button'
   const _variant = getVariant(variant)
   const _color = getColor(color)
-  const _shade = getShade(shade)
   const _spinner = getSpinner(_color, _variant, spinner)
   const _width = getWidth(width)
 
   return (
     <_Button
       {...props}
-      className={clsx('amatelas-button', _variant, _color, _width, _shade)}
+      className={clsx(
+        prefixed(''),
+        prefixed(_variant),
+        prefixed(_color),
+        prefixed(_width)
+      )}
     >
       {loading ? _spinner : <></>}
       {props.children}

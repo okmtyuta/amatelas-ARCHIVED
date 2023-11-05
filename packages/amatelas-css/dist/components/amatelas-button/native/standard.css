@@ -1,4 +1,4 @@
-.amatelas-button.standard {
+.AMUI_amatelas-button_.AMUI_amatelas-button_standard {
   outline: none;
   position: relative;
   overflow: hidden;
@@ -11,14 +11,14 @@
   box-sizing: border-box;
   cursor: pointer;
 }
-.amatelas-button.standard:disabled {
+.AMUI_amatelas-button_.AMUI_amatelas-button_standard:disabled {
   color: var(--color-text);
   background-color: rgba(var(--rgb-color-text), 0.12);
   cursor: not-allowed;
   border: none;
 }
-.amatelas-button.standard:not(:disabled) {
-  &.info {
+.AMUI_amatelas-button_.AMUI_amatelas-button_standard:not(:disabled) {
+  &.AMUI_amatelas-button_info {
     border: none;
     color: var(--color-info);
     background-color: inherit;
@@ -27,7 +27,7 @@
       background-color: rgba(var(--rgb-color-info), 0.08);
     }
   }
-  &.danger {
+  &.AMUI_amatelas-button_danger {
     border: none;
     color: var(--color-danger);
     background-color: inherit;
@@ -36,7 +36,7 @@
       background-color: rgba(var(--rgb-color-danger), 0.08);
     }
   }
-  &.warning {
+  &.AMUI_amatelas-button_warning {
     border: none;
     color: var(--color-warning);
     background-color: inherit;
@@ -45,7 +45,7 @@
       background-color: rgba(var(--rgb-color-warning), 0.08);
     }
   }
-  &.success {
+  &.AMUI_amatelas-button_success {
     border: none;
     color: var(--color-success);
     background-color: inherit;

@@ -1,4 +1,4 @@
-.amatelas-button.outlined {
+.AMUI_amatelas-button_.AMUI_amatelas-button_outlined {
   outline: none;
   position: relative;
   overflow: hidden;
@@ -11,7 +11,7 @@
   box-sizing: border-box;
   cursor: pointer;
 }
-.amatelas-button.outlined:disabled {
+.AMUI_amatelas-button_.AMUI_amatelas-button_outlined:disabled {
   color: var(--color-text);
   background-color: rgba(var(--rgb-color-text), 0.12);
   cursor: not-allowed;
@@ -19,8 +19,8 @@
     border: 1px solid var(--color-text);
   }
 }
-.amatelas-button.outlined:not(:disabled) {
-  &.info {
+.AMUI_amatelas-button_.AMUI_amatelas-button_outlined:not(:disabled) {
+  &.AMUI_amatelas-button_info {
     color: var(--color-info);
     border: var(--color-info) solid 1px;
     background-color: inherit;
@@ -29,7 +29,7 @@
       background-color: rgba(var(--rgb-color-info), 0.08);
     }
   }
-  &.danger {
+  &.AMUI_amatelas-button_danger {
     color: var(--color-danger);
     border: var(--color-danger) solid 1px;
     background-color: inherit;
@@ -38,7 +38,7 @@
       background-color: rgba(var(--rgb-color-danger), 0.08);
     }
   }
-  &.warning {
+  &.AMUI_amatelas-button_warning {
     color: var(--color-warning);
     border: var(--color-warning) solid 1px;
     background-color: inherit;
@@ -47,7 +47,7 @@
       background-color: rgba(var(--rgb-color-warning), 0.08);
     }
   }
-  &.success {
+  &.AMUI_amatelas-button_success {
     color: var(--color-success);
     border: var(--color-success) solid 1px;
     background-color: inherit;

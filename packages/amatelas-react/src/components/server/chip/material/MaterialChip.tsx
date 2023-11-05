@@ -6,6 +6,11 @@ import { clsx } from 'clsx'
 import '@okmtyuta/amatelas-theme/color.css'
 import '@okmtyuta/amatelas-css/amatelas-chip.css'
 
+const CLASS_PREFIX = 'AMUI_amatelas-material-chip_'
+const prefixed = (target: string) => {
+  return `${CLASS_PREFIX}${target}`
+}
+
 type Variant = 'filled' | 'outlined'
 type Color = 'danger' | 'info' | 'success' | 'warning'
 
@@ -43,9 +48,9 @@ export const MaterialChip = <T extends ElementType = 'span'>({
   return (
     <_Chip
       {...props}
-      className={clsx('amatelas-material-chip', _variant, _color)}
+      className={clsx(prefixed(''), prefixed(_variant), prefixed(_color))}
     >
-      <span className="text">{props.children}</span>
+      <span className={prefixed('text')}>{props.children}</span>
     </_Chip>
   )
 }

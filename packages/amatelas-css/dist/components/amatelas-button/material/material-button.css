@@ -2,26 +2,26 @@
 @import url(./filled.css);
 @import url(./outlined.css);
 
-.amatelas-material-button {
-  &.xs {
+.AMUI_amatelas-material-button_ {
+  &.AMUI_amatelas-material-button_xs {
     width: 64px;
   }
-  &.sm {
+  &.AMUI_amatelas-material-button_sm {
     width: 128px;
   }
-  &.md {
+  &.AMUI_amatelas-material-button_md {
     width: 256px;
   }
-  &.lg {
+  &.AMUI_amatelas-material-button_lg {
     width: 512px;
   }
-  &.xl {
+  &.AMUI_amatelas-material-button_xl {
     width: 768px;
   }
-  &.full {
+  &.AMUI_amatelas-material-button_full {
     width: 100%;
   }
-  &.auto {
+  &.AMUI_amatelas-material-button_auto {
     width: auto;
   }
 }

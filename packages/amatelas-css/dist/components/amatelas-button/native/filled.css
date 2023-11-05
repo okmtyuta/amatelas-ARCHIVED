@@ -1,4 +1,4 @@
-.amatelas-button.filled {
+.AMUI_amatelas-button_.AMUI_amatelas-button_filled {
   outline: none;
   position: relative;
   overflow: hidden;
@@ -11,14 +11,14 @@
   box-sizing: border-box;
   cursor: pointer;
 }
-.amatelas-button.filled:disabled {
+.AMUI_amatelas-button_.AMUI_amatelas-button_filled:disabled {
   color: var(--color-text);
   background-color: rgba(var(--rgb-color-text), 0.12);
   cursor: not-allowed;
   border: none;
 }
-.amatelas-button.filled:not(:disabled) {
-  &.info {
+.AMUI_amatelas-button_.AMUI_amatelas-button_filled:not(:disabled) {
+  &.AMUI_amatelas-button_info {
     border: none;
     color: white;
     background-color: var(--color-info);
@@ -27,7 +27,7 @@
       background-color: var(--color-info-lighten1);
     }
   }
-  &.danger {
+  &.AMUI_amatelas-button_danger {
     border: none;
     color: white;
     background-color: var(--color-danger);
@@ -36,7 +36,7 @@
       background-color: var(--color-danger-lighten1);
     }
   }
-  &.warning {
+  &.AMUI_amatelas-button_warning {
     border: none;
     color: white;
     background-color: var(--color-warning);
@@ -45,7 +45,7 @@
       background-color: var(--color-warning-lighten1);
     }
   }
-  &.success {
+  &.AMUI_amatelas-button_success {
     border: none;
     color: white;
     background-color: var(--color-success);
