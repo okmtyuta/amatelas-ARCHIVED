@@ -4,19 +4,23 @@ import { clsx } from 'clsx'
 import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react'
 import { Progress } from '../..'
 
-import '@okmtyuta/amatelas-theme/color.css'
-import './material-button.css'
+import '@okmtyuta/amatelas-theme/v2/color.css'
+import '@okmtyuta/amatelas-css/amatelas-button.css'
 
 type Variant = 'standard' | 'outlined' | 'filled'
 type Color = 'danger' | 'info' | 'success' | 'warning'
 type Width = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full' | 'auto'
+
+const CLASS_PREFIX = 'AMUI_amatelas-material-button_'
+const prefixed = (target: string) => {
+  return `${CLASS_PREFIX}${target}`
+}
 
 export type MaterialButtonProps<T extends ElementType> = {
   as?: T
   width?: Width
   variant?: Variant
   color?: Color
-  shade?: boolean
   loading?: boolean
   spinner?: ReactNode
   classNames?: {
@@ -37,13 +41,6 @@ const getColor = (color?: Color) => {
   }
 
   return 'info'
-}
-const getShade = (shade?: boolean) => {
-  if (shade) {
-    return 'shade'
-  }
-
-  return ''
 }
 const getSpinner = (color: Color, variant: Variant, spinner?: ReactNode) => {
   if (spinner) {
@@ -69,7 +66,6 @@ export const MaterialButton = <T extends ElementType = 'button'>({
   width,
   variant,
   color,
-  shade,
   loading,
   spinner,
   ...props
@@ -77,7 +73,6 @@ export const MaterialButton = <T extends ElementType = 'button'>({
   const _Button = as ?? 'button'
   const _variant = getVariant(variant)
   const _color = getColor(color)
-  const _shade = getShade(shade)
   const _spinner = getSpinner(_color, _variant, spinner)
   const _width = getWidth(width)
 
@@ -85,11 +80,10 @@ export const MaterialButton = <T extends ElementType = 'button'>({
     <_Button
       {...props}
       className={clsx(
-        'amatelas-material-button',
-        _variant,
-        _color,
-        _width,
-        _shade
+        prefixed(''),
+        prefixed(_variant),
+        prefixed(_color),
+        prefixed(_width)
       )}
     >
       {loading ? _spinner : <></>}

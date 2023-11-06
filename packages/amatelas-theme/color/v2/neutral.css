@@ -1,0 +1,23 @@
+:root {
+  --AMUI-color-neutral-lighten10: #f8f8f8;
+  --AMUI-color-neutral-lighten9: #f2f2f2;
+  --AMUI-color-neutral-lighten8: #e5e5e5;
+  --AMUI-color-neutral-lighten7: #d8d8d8;
+  --AMUI-color-neutral-lighten6: #cbcbcb;
+  --AMUI-color-neutral-lighten5: #bfbfbf;
+  --AMUI-color-neutral-lighten4: #b2b2b2;
+  --AMUI-color-neutral-lighten3: #a5a5a5;
+  --AMUI-color-neutral-lighten2: #989898;
+  --AMUI-color-neutral-lighten1: #8b8b8b;
+  --AMUI-color-neutral: #7f7f7f;
+  --AMUI-color-neutral-darken1: #727272;
+  --AMUI-color-neutral-darken2: #656565;
+  --AMUI-color-neutral-darken3: #585858;
+  --AMUI-color-neutral-darken4: #4c4c4c;
+  --AMUI-color-neutral-darken5: #3f3f3f;
+  --AMUI-color-neutral-darken6: #323232;
+  --AMUI-color-neutral-darken7: #262626;
+  --AMUI-color-neutral-darken8: #191919;
+  --AMUI-color-neutral-darken9: #0c0c0c;
+  --AMUI-color-neutral-darken10: #060606;
+}

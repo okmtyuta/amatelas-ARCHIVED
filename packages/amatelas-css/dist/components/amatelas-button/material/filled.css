@@ -1,4 +1,4 @@
-.AMUI_amatelas-material-button_ {
+.AMUI_amatelas-material-button_.AMUI_amatelas-material-button_filled {
   outline: none;
   position: relative;
   overflow: hidden;
@@ -10,52 +10,53 @@
   gap: 12px;
   box-sizing: border-box;
   cursor: pointer;
+}
+.AMUI_amatelas-material-button_.AMUI_amatelas-material-button_filled:disabled {
+  color: var(--AMUI-color-neutral-darken9);
+  background-color: var(--AMUI-color-neutral-lighten9);
+  cursor: not-allowed;
+  &.outlined {
+    border: 1px solid var(--color-text);
+  }
+}
 
-  &:disabled {
-    color: var(--color-text);
-    background-color: rgba(var(--rgb-color-text), 0.12);
-    cursor: not-allowed;
-    &.outlined {
-      border: 1px solid var(--color-text);
+.AMUI_amatelas-material-button_.AMUI_amatelas-material-button_filled:not(
+    :disabled
+  ) {
+  &.AMUI_amatelas-material-button_info {
+    border: none;
+    color: white;
+    background-color: var(--AMUI-color-info);
+
+    &:hover {
+      background-color: var(--AMUI-color-info-lighten2);
     }
   }
+  &.AMUI_amatelas-material-button_danger {
+    border: none;
+    color: white;
+    background-color: var(--AMUI-color-alert);
 
-  &.AMUI_amatelas-material-button_filled {
-    &.AMUI_amatelas-material-button_info {
-      border: none;
-      color: white;
-      background-color: var(--color-info);
-
-      &:hover {
-        background-color: var(--color-info-lighten1);
-      }
+    &:hover {
+      background-color: var(--AMUI-color-alert-lighten2);
     }
-    &.AMUI_amatelas-material-button_danger {
-      border: none;
-      color: white;
-      background-color: var(--color-danger);
+  }
+  &.AMUI_amatelas-material-button_warning {
+    border: none;
+    color: white;
+    background-color: var(--AMUI-color-warning);
 
-      &:hover {
-        background-color: var(--color-danger-lighten1);
-      }
+    &:hover {
+      background-color: var(--AMUI-color-warning-lighten2);
     }
-    &.AMUI_amatelas-material-button_warning {
-      border: none;
-      color: white;
-      background-color: var(--color-warning);
+  }
+  &.AMUI_amatelas-material-button_success {
+    border: none;
+    color: white;
+    background-color: var(--AMUI-color-success);
 
-      &:hover {
-        background-color: var(--color-warning-lighten1);
-      }
-    }
-    &.AMUI_amatelas-material-button_success {
-      border: none;
-      color: white;
-      background-color: var(--color-success);
-
-      &:hover {
-        background-color: var(--color-success-lighten1);
-      }
+    &:hover {
+      background-color: var(--AMUI-color-success-lighten2);
     }
   }
 }

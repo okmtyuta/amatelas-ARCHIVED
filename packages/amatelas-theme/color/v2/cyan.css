@@ -1,0 +1,23 @@
+:root {
+  --AMUI-color-cyan-lighten10: #f2fafb;
+  --AMUI-color-cyan-lighten9: #e5f5f8;
+  --AMUI-color-cyan-lighten8: #ccecf2;
+  --AMUI-color-cyan-lighten7: #b2e3eb;
+  --AMUI-color-cyan-lighten6: #99dae5;
+  --AMUI-color-cyan-lighten5: #7fd1df;
+  --AMUI-color-cyan-lighten4: #66c7d8;
+  --AMUI-color-cyan-lighten3: #4cbed2;
+  --AMUI-color-cyan-lighten2: #33b5cb;
+  --AMUI-color-cyan-lighten1: #19acc5;
+  --AMUI-color-cyan: #00a3bf;
+  --AMUI-color-cyan-darken1: #0092ab;
+  --AMUI-color-cyan-darken2: #008298;
+  --AMUI-color-cyan-darken3: #007285;
+  --AMUI-color-cyan-darken4: #006172;
+  --AMUI-color-cyan-darken5: #00515f;
+  --AMUI-color-cyan-darken6: #00414c;
+  --AMUI-color-cyan-darken7: #003039;
+  --AMUI-color-cyan-darken8: #002026;
+  --AMUI-color-cyan-darken9: #001013;
+  --AMUI-color-cyan-darken10: #000809;
+}

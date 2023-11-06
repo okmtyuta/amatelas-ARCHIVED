@@ -3,7 +3,7 @@
 import { ComponentPropsWithoutRef, ElementType } from 'react'
 import { clsx } from 'clsx'
 
-import '@okmtyuta/amatelas-theme/color.css'
+import '@okmtyuta/amatelas-theme/v2/color.css'
 import '@okmtyuta/amatelas-css/amatelas-chip.css'
 
 const CLASS_PREFIX = 'AMUI_amatelas-material-chip_'

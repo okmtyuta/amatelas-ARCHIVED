@@ -4,7 +4,7 @@ import { clsx } from 'clsx'
 import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react'
 import { Progress } from '../..'
 
-import '@okmtyuta/amatelas-theme/color.css'
+import '@okmtyuta/amatelas-theme/v2/color.css'
 import '@okmtyuta/amatelas-css/amatelas-button.css'
 
 const CLASS_PREFIX = 'AMUI_amatelas-button_'

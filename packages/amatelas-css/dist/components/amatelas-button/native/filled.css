@@ -21,37 +21,37 @@
   &.AMUI_amatelas-button_info {
     border: none;
     color: white;
-    background-color: var(--color-info);
+    background-color: var(--AMUI-color-info);
 
     &:hover {
-      background-color: var(--color-info-lighten1);
+      background-color: var(--AMUI-color-info-lighten1);
     }
   }
   &.AMUI_amatelas-button_danger {
     border: none;
     color: white;
-    background-color: var(--color-danger);
+    background-color: var(--AMUI-color-alert);
 
     &:hover {
-      background-color: var(--color-danger-lighten1);
+      background-color: var(--AMUI-color-alert-lighten1);
     }
   }
   &.AMUI_amatelas-button_warning {
     border: none;
     color: white;
-    background-color: var(--color-warning);
+    background-color: var(--AMUI-color-warning);
 
     &:hover {
-      background-color: var(--color-warning-lighten1);
+      background-color: var(--AMUI-color-warning-lighten1);
     }
   }
   &.AMUI_amatelas-button_success {
     border: none;
     color: white;
-    background-color: var(--color-success);
+    background-color: var(--AMUI-color-success);
 
     &:hover {
-      background-color: var(--color-success-lighten1);
+      background-color: var(--AMUI-color-success-lighten1);
     }
   }
 }

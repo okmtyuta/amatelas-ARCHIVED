@@ -10,9 +10,6 @@
 
   border-radius: 16px;
   white-space: nowrap;
-  transition:
-    background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   outline: 0px;
   text-decoration: none;
   padding: 0px;
@@ -28,39 +25,39 @@
   }
 
   &.AMUI_amatelas-material-chip_danger {
-    background-color: var(--color-danger);
+    background-color: var(--AMUI-color-alert);
     color: white;
     border: 0px;
 
     &:hover {
-      background-color: var(--color-danger-lighten1);
+      background-color: var(--AMUI-color-alert-lighten2);
     }
   }
   &.AMUI_amatelas-material-chip_info {
-    background-color: var(--color-info);
+    background-color: var(--AMUI-color-info);
     color: white;
     border: 0px;
 
     &:hover {
-      background-color: var(--color-info-lighten1);
+      background-color: var(--AMUI-color-info-lighten2);
     }
   }
   &.AMUI_amatelas-material-chip_warning {
-    background-color: var(--color-warning);
+    background-color: var(--AMUI-color-warning);
     color: white;
     border: 0px;
 
     &:hover {
-      background-color: var(--color-warning-lighten1);
+      background-color: var(--AMUI-color-warning-lighten2);
     }
   }
   &.AMUI_amatelas-material-chip_success {
-    background-color: var(--color-warning);
+    background-color: var(--AMUI-color-success);
     color: white;
     border: 0px;
 
     &:hover {
-      background-color: var(--color-warning-lighten1);
+      background-color: var(--AMUI-color-success-lighten2);
     }
   }
 }
