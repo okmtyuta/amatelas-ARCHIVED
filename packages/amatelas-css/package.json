@@ -17,6 +17,9 @@
     "./amatelas-button.css": {
       "import": "./dist/components/amatelas-button/index.css"
     },
+    "./amatelas-material-button.css": {
+      "import": "./dist/components/amatelas-button/index.css"
+    },
     "./amatelas-checkbox.css": {
       "import": "./dist/components/amatelas-checkbox/index.css"
     },

@@ -1,4 +1,4 @@
-.amatelas-button.standard {
+.AMUI_amatelas-button_.AMUI_amatelas-button_standard {
   outline: none;
   position: relative;
   overflow: hidden;
@@ -11,47 +11,47 @@
   box-sizing: border-box;
   cursor: pointer;
 }
-.amatelas-button.standard:disabled {
+.AMUI_amatelas-button_.AMUI_amatelas-button_standard:disabled {
   color: var(--color-text);
   background-color: rgba(var(--rgb-color-text), 0.12);
   cursor: not-allowed;
   border: none;
 }
-.amatelas-button.standard:not(:disabled) {
-  &.info {
+.AMUI_amatelas-button_.AMUI_amatelas-button_standard:not(:disabled) {
+  &.AMUI_amatelas-button_info {
     border: none;
-    color: var(--color-info);
+    color: var(--AMUI-color-info);
     background-color: inherit;
 
     &:hover {
-      background-color: rgba(var(--rgb-color-info), 0.08);
+      background-color: var(--AMUI-color-info-lighten10);
     }
   }
-  &.danger {
+  &.AMUI_amatelas-button_danger {
     border: none;
-    color: var(--color-danger);
+    color: var(--AMUI-color-alert);
     background-color: inherit;
 
     &:hover {
-      background-color: rgba(var(--rgb-color-danger), 0.08);
+      background-color: var(--AMUI-color-alert-lighten10);
     }
   }
-  &.warning {
+  &.AMUI_amatelas-button_warning {
     border: none;
-    color: var(--color-warning);
+    color: var(--AMUI-color-warning);
     background-color: inherit;
 
     &:hover {
-      background-color: rgba(var(--rgb-color-warning), 0.08);
+      background-color: var(--AMUI-color-warning-lighten10);
     }
   }
-  &.success {
+  &.AMUI_amatelas-button_success {
     border: none;
-    color: var(--color-success);
+    color: var(--AMUI-color-success);
     background-color: inherit;
 
     &:hover {
-      background-color: rgba(var(--rgb-color-success), 0.08);
+      background-color: var(--AMUI-color-success-lighten10);
     }
   }
 }
