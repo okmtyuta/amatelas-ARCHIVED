@@ -18,20 +18,18 @@
   border: none;
 }
 .AMUI_amatelas-button_.AMUI_amatelas-button_standard:not(:disabled) {
-  &.AMUI_amatelas-button_info {
+  &.AMUI_amatelas-button_success {
     border: none;
-    color: var(--AMUI-color-info);
+    color: var(--AMUI-color-success);
     background-color: inherit;
-
     &:hover {
-      background-color: var(--AMUI-color-info-lighten10);
+      background-color: var(--AMUI-color-success-lighten10);
     }
   }
   &.AMUI_amatelas-button_alert {
     border: none;
     color: var(--AMUI-color-alert);
     background-color: inherit;
-
     &:hover {
       background-color: var(--AMUI-color-alert-lighten10);
     }
@@ -40,36 +38,104 @@
     border: none;
     color: var(--AMUI-color-warning);
     background-color: inherit;
-
     &:hover {
       background-color: var(--AMUI-color-warning-lighten10);
     }
   }
-  &.AMUI_amatelas-button_success {
+  &.AMUI_amatelas-button_info {
     border: none;
-    color: var(--AMUI-color-success);
+    color: var(--AMUI-color-info);
     background-color: inherit;
-
     &:hover {
-      background-color: var(--AMUI-color-success-lighten10);
+      background-color: var(--AMUI-color-info-lighten10);
     }
   }
-  &.AMUI_amatelas-button_neutral {
+  &.AMUI_amatelas-button_blue {
     border: none;
-    color: var(--AMUI-color-neutral);
+    color: var(--AMUI-color-blue);
     background-color: inherit;
-
     &:hover {
-      background-color: var(--AMUI-color-neutral-lighten10);
+      background-color: var(--AMUI-color-blue-lighten10);
     }
   }
   &.AMUI_amatelas-button_light-blue {
     border: none;
     color: var(--AMUI-color-light-blue);
     background-color: inherit;
-
     &:hover {
       background-color: var(--AMUI-color-light-blue-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_cyan {
+    border: none;
+    color: var(--AMUI-color-cyan);
+    background-color: inherit;
+    &:hover {
+      background-color: var(--AMUI-color-cyan-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_green {
+    border: none;
+    color: var(--AMUI-color-green);
+    background-color: inherit;
+    &:hover {
+      background-color: var(--AMUI-color-green-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_lime {
+    border: none;
+    color: var(--AMUI-color-lime);
+    background-color: inherit;
+    &:hover {
+      background-color: var(--AMUI-color-lime-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_yellow {
+    border: none;
+    color: var(--AMUI-color-yellow);
+    background-color: inherit;
+    &:hover {
+      background-color: var(--AMUI-color-yellow-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_orange {
+    border: none;
+    color: var(--AMUI-color-orange);
+    background-color: inherit;
+    &:hover {
+      background-color: var(--AMUI-color-orange-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_red {
+    border: none;
+    color: var(--AMUI-color-red);
+    background-color: inherit;
+    &:hover {
+      background-color: var(--AMUI-color-red-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_magenta {
+    border: none;
+    color: var(--AMUI-color-magenta);
+    background-color: inherit;
+    &:hover {
+      background-color: var(--AMUI-color-magenta-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_purple {
+    border: none;
+    color: var(--AMUI-color-purple);
+    background-color: inherit;
+    &:hover {
+      background-color: var(--AMUI-color-purple-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_neutral {
+    border: none;
+    color: var(--AMUI-color-neutral);
+    background-color: inherit;
+    &:hover {
+      background-color: var(--AMUI-color-neutral-lighten10);
     }
   }
 }

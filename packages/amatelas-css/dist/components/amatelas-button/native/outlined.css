@@ -54,6 +54,96 @@
       background-color: var(--AMUI-color-success-lighten10);
     }
   }
+  &.AMUI_amatelas-button_blue {
+    color: var(--AMUI-color-blue);
+    border: var(--AMUI-color-blue) solid 1px;
+    background-color: inherit;
+
+    &:hover {
+      background-color: var(--AMUI-color-blue-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_light-blue {
+    color: var(--AMUI-color-light-blue);
+    border: var(--AMUI-color-light-blue) solid 1px;
+    background-color: inherit;
+
+    &:hover {
+      background-color: var(--AMUI-color-light-blue-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_cyan {
+    color: var(--AMUI-color-cyan);
+    border: var(--AMUI-color-cyan) solid 1px;
+    background-color: inherit;
+
+    &:hover {
+      background-color: var(--AMUI-color-cyan-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_green {
+    color: var(--AMUI-color-green);
+    border: var(--AMUI-color-green) solid 1px;
+    background-color: inherit;
+
+    &:hover {
+      background-color: var(--AMUI-color-green-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_lime {
+    color: var(--AMUI-color-lime);
+    border: var(--AMUI-color-lime) solid 1px;
+    background-color: inherit;
+
+    &:hover {
+      background-color: var(--AMUI-color-lime-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_yellow {
+    color: var(--AMUI-color-yellow);
+    border: var(--AMUI-color-yellow) solid 1px;
+    background-color: inherit;
+
+    &:hover {
+      background-color: var(--AMUI-color-yellow-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_orange {
+    color: var(--AMUI-color-orange);
+    border: var(--AMUI-color-orange) solid 1px;
+    background-color: inherit;
+
+    &:hover {
+      background-color: var(--AMUI-color-orange-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_red {
+    color: var(--AMUI-color-red);
+    border: var(--AMUI-color-red) solid 1px;
+    background-color: inherit;
+
+    &:hover {
+      background-color: var(--AMUI-color-red-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_magenta {
+    color: var(--AMUI-color-magenta);
+    border: var(--AMUI-color-magenta) solid 1px;
+    background-color: inherit;
+
+    &:hover {
+      background-color: var(--AMUI-color-magenta-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_purple {
+    color: var(--AMUI-color-purple);
+    border: var(--AMUI-color-purple) solid 1px;
+    background-color: inherit;
+
+    &:hover {
+      background-color: var(--AMUI-color-purple-lighten10);
+    }
+  }
   &.AMUI_amatelas-button_neutral {
     color: var(--AMUI-color-neutral);
     border: var(--AMUI-color-neutral) solid 1px;
@@ -63,13 +153,11 @@
       background-color: var(--AMUI-color-neutral-lighten10);
     }
   }
-  &.AMUI_amatelas-button_light-blue {
-    color: var(--AMUI-color-light-blue);
-    border: var(--AMUI-color-light-blue) solid 1px;
-    background-color: inherit;
-
-    &:hover {
-      background-color: var(--AMUI-color-neutral-lighten10);
-    }
-  }
 }
+
+/* 
+| 'orange'
+| 'red'
+| 'magenta'
+| 'purple'
+| 'neutral' */
