@@ -33,7 +33,7 @@
       background-color: var(--AMUI-color-info-lighten10);
     }
   }
-  &.AMUI_amatelas-material-chip_danger {
+  &.AMUI_amatelas-material-chip_alert {
     border: 1px solid var(--AMUI-color-alert);
     color: var(--AMUI-color-alert);
     background-color: transparent;

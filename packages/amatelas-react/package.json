@@ -29,7 +29,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build && tsc && tsc-alias",
+    "prebuild": "pnpm --filter @okmtyuta/amatelas-theme build",
+    "build": "pnpm prebuild && vite build && tsc && tsc-alias",
     "test": "vitest --watch=false",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",

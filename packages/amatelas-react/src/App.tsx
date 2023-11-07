@@ -9,49 +9,73 @@ export const App = () => {
         <Flex gap="xl">
           <Flex direction="row">
             <div>
-              <Button width="auto" disabled color="info" variant="outlined">
+              <Button width="auto" color="info" variant="outlined">
                 BUTTON
               </Button>
-              <Button width="auto" disabled color="info" variant="filled">
+              <Button width="auto" color="info" variant="filled">
                 BUTTON
               </Button>
-              <Button disabled color="info" variant="standard">
-                BUTTON
-              </Button>
-            </div>
-
-            <div>
-              <Button disabled color="danger" variant="outlined">
-                BUTTON
-              </Button>
-              <Button disabled color="danger" variant="filled">
-                BUTTON
-              </Button>
-              <Button disabled color="danger" variant="standard">
+              <Button color="info" variant="standard">
                 BUTTON
               </Button>
             </div>
 
             <div>
-              <Button disabled color="warning" variant="outlined">
+              <Button color="alert" variant="outlined">
                 BUTTON
               </Button>
-              <Button disabled color="warning" variant="filled">
+              <Button color="alert" variant="filled">
                 BUTTON
               </Button>
-              <Button disabled color="warning" variant="standard">
+              <Button color="alert" variant="standard">
                 BUTTON
               </Button>
             </div>
 
             <div>
-              <Button disabled color="success" variant="outlined">
+              <Button color="warning" variant="outlined">
                 BUTTON
               </Button>
-              <Button disabled color="success" variant="filled">
+              <Button color="warning" variant="filled">
                 BUTTON
               </Button>
-              <Button disabled color="success" variant="standard">
+              <Button color="warning" variant="standard">
+                BUTTON
+              </Button>
+            </div>
+
+            <div>
+              <Button color="success" variant="outlined">
+                BUTTON
+              </Button>
+              <Button color="success" variant="filled">
+                BUTTON
+              </Button>
+              <Button color="success" variant="standard">
+                BUTTON
+              </Button>
+            </div>
+
+            <div>
+              <Button color="neutral" variant="outlined">
+                BUTTON
+              </Button>
+              <Button color="neutral" variant="filled">
+                BUTTON
+              </Button>
+              <Button color="neutral" variant="standard">
+                BUTTON
+              </Button>
+            </div>
+
+            <div>
+              <Button color="light-blue" variant="outlined">
+                BUTTON
+              </Button>
+              <Button color="light-blue" variant="filled">
+                BUTTON
+              </Button>
+              <Button color="light-blue" variant="standard">
                 BUTTON
               </Button>
             </div>
@@ -68,10 +92,10 @@ export const App = () => {
             </div>
 
             <div>
-              <Chip color="danger" variant="outlined">
+              <Chip color="alert" variant="outlined">
                 BUTTON
               </Chip>
-              <Chip color="danger" variant="filled">
+              <Chip color="alert" variant="filled">
                 BUTTON
               </Chip>
             </div>

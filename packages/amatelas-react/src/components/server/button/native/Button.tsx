@@ -1,11 +1,12 @@
 // Refer to https://mui.com/material-ui/react-button/
 
 import { clsx } from 'clsx'
-import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react'
-import { Progress } from '../..'
+import { ComponentPropsWithoutRef, ElementType } from 'react'
+// import { Progress } from '../..'
 
 import '@okmtyuta/amatelas-theme/v2/color.css'
 import '@okmtyuta/amatelas-css/amatelas-button.css'
+import { Color } from '@root/types/color/Color'
 
 const CLASS_PREFIX = 'AMUI_amatelas-button_'
 const prefixed = (target: string) => {
@@ -13,16 +14,15 @@ const prefixed = (target: string) => {
 }
 
 type Variant = 'standard' | 'outlined' | 'filled'
-type Color = 'danger' | 'info' | 'success' | 'warning'
+type ButtonColor = Color
 type Width = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full' | 'auto'
 
 export type ButtonProps<T extends ElementType> = {
   as?: T
   width?: Width
   variant?: Variant
-  color?: Color
+  color?: ButtonColor
   loading?: boolean
-  spinner?: ReactNode
 } & Omit<ComponentPropsWithoutRef<T>, 'tag'>
 
 const getVariant = (variant?: Variant) => {
@@ -39,17 +39,6 @@ const getColor = (color?: Color) => {
 
   return 'info'
 }
-const getSpinner = (color: Color, variant: Variant, spinner?: ReactNode) => {
-  if (spinner) {
-    return spinner
-  }
-
-  if (variant === 'filled') {
-    return <Progress size="xs" color="white" />
-  }
-
-  return <Progress size="xs" color={color} />
-}
 const getWidth = (width?: Width) => {
   if (width) {
     return width
@@ -63,14 +52,11 @@ export const Button = <T extends ElementType = 'button'>({
   width,
   variant,
   color,
-  loading,
-  spinner,
   ...props
 }: ButtonProps<T>) => {
   const _Button = as ?? 'button'
   const _variant = getVariant(variant)
   const _color = getColor(color)
-  const _spinner = getSpinner(_color, _variant, spinner)
   const _width = getWidth(width)
 
   return (
@@ -83,7 +69,6 @@ export const Button = <T extends ElementType = 'button'>({
         prefixed(_width)
       )}
     >
-      {loading ? _spinner : <></>}
       {props.children}
     </_Button>
   )
