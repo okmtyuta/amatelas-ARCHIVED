@@ -5,6 +5,7 @@ import { clsx } from 'clsx'
 
 import '@okmtyuta/amatelas-theme/v2/color.css'
 import '@okmtyuta/amatelas-css/amatelas-chip.css'
+import { Color } from '@root/types'
 
 const CLASS_PREFIX = 'AMUI_amatelas-material-chip_'
 const prefixed = (target: string) => {
@@ -12,12 +13,12 @@ const prefixed = (target: string) => {
 }
 
 type Variant = 'filled' | 'outlined'
-type Color = 'danger' | 'info' | 'success' | 'warning'
+type ChipColor = Color
 
 type MaterialChipProps<T extends ElementType> = {
   as?: T
   variant?: Variant
-  color?: Color
+  color?: ChipColor
   shade?: boolean
 } & Omit<ComponentPropsWithoutRef<T>, 'tag'>
 

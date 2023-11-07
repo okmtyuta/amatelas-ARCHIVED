@@ -12,8 +12,8 @@
   cursor: pointer;
 }
 .AMUI_amatelas-button_.AMUI_amatelas-button_filled:disabled {
-  color: var(--color-text);
-  background-color: rgba(var(--rgb-color-text), 0.12);
+  color: var(--AMUI-color-neutral-darken9);
+  background-color: var(--AMUI-color-neutral-lighten9);
   cursor: not-allowed;
   border: none;
 }
@@ -24,16 +24,16 @@
     background-color: var(--AMUI-color-info);
 
     &:hover {
-      background-color: var(--AMUI-color-info-lighten1);
+      background-color: var(--AMUI-color-info-lighten2);
     }
   }
-  &.AMUI_amatelas-button_danger {
+  &.AMUI_amatelas-button_alert {
     border: none;
     color: white;
     background-color: var(--AMUI-color-alert);
 
     &:hover {
-      background-color: var(--AMUI-color-alert-lighten1);
+      background-color: var(--AMUI-color-alert-lighten2);
     }
   }
   &.AMUI_amatelas-button_warning {
@@ -42,7 +42,7 @@
     background-color: var(--AMUI-color-warning);
 
     &:hover {
-      background-color: var(--AMUI-color-warning-lighten1);
+      background-color: var(--AMUI-color-warning-lighten2);
     }
   }
   &.AMUI_amatelas-button_success {
@@ -51,7 +51,25 @@
     background-color: var(--AMUI-color-success);
 
     &:hover {
-      background-color: var(--AMUI-color-success-lighten1);
+      background-color: var(--AMUI-color-success-lighten2);
+    }
+  }
+  &.AMUI_amatelas-button_neutral {
+    border: none;
+    color: white;
+    background-color: var(--AMUI-color-neutral);
+
+    &:hover {
+      background-color: var(--AMUI-color-neutral-lighten2);
+    }
+  }
+  &.AMUI_amatelas-button_light-blue {
+    border: none;
+    color: white;
+    background-color: var(--AMUI-color-light-blue);
+
+    &:hover {
+      background-color: var(--AMUI-color-light-blue-lighten2);
     }
   }
 }

@@ -24,7 +24,7 @@
     white-space: nowrap;
   }
 
-  &.AMUI_amatelas-material-chip_danger {
+  &.AMUI_amatelas-material-chip_alert {
     background-color: var(--AMUI-color-alert);
     color: white;
     border: 0px;

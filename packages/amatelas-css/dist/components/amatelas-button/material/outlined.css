@@ -30,7 +30,7 @@
       background-color: var(--AMUI-color-info-lighten10);
     }
   }
-  &.AMUI_amatelas-material-button_danger {
+  &.AMUI_amatelas-material-button_alert {
     color: var(--AMUI-color-alert);
     border: var(--AMUI-color-alert) solid 1px;
     background-color: inherit;

@@ -15,9 +15,6 @@
   color: var(--AMUI-color-neutral-darken9);
   background-color: var(--AMUI-color-neutral-lighten9);
   cursor: not-allowed;
-  &.outlined {
-    border: 1px solid var(--color-text);
-  }
 }
 
 .AMUI_amatelas-material-button_.AMUI_amatelas-material-button_filled:not(
@@ -32,7 +29,7 @@
       background-color: var(--AMUI-color-info-lighten2);
     }
   }
-  &.AMUI_amatelas-material-button_danger {
+  &.AMUI_amatelas-material-button_alert {
     border: none;
     color: white;
     background-color: var(--AMUI-color-alert);

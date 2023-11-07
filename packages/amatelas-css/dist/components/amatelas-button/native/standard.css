@@ -12,8 +12,8 @@
   cursor: pointer;
 }
 .AMUI_amatelas-button_.AMUI_amatelas-button_standard:disabled {
-  color: var(--color-text);
-  background-color: rgba(var(--rgb-color-text), 0.12);
+  color: var(--AMUI-color-neutral-darken9);
+  background-color: var(--AMUI-color-neutral-lighten9);
   cursor: not-allowed;
   border: none;
 }
@@ -27,7 +27,7 @@
       background-color: var(--AMUI-color-info-lighten10);
     }
   }
-  &.AMUI_amatelas-button_danger {
+  &.AMUI_amatelas-button_alert {
     border: none;
     color: var(--AMUI-color-alert);
     background-color: inherit;
@@ -52,6 +52,24 @@
 
     &:hover {
       background-color: var(--AMUI-color-success-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_neutral {
+    border: none;
+    color: var(--AMUI-color-neutral);
+    background-color: inherit;
+
+    &:hover {
+      background-color: var(--AMUI-color-neutral-lighten10);
+    }
+  }
+  &.AMUI_amatelas-button_light-blue {
+    border: none;
+    color: var(--AMUI-color-light-blue);
+    background-color: inherit;
+
+    &:hover {
+      background-color: var(--AMUI-color-light-blue-lighten10);
     }
   }
 }
