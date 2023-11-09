@@ -1,6 +1,6 @@
 import '@okmtyuta/awesome-css/reset.css'
 
-import { Button, Flex, Frame, Chip } from './components/server'
+import { Button, Flex, Frame } from './components/server'
 
 export const App = () => {
   return (
@@ -55,15 +55,16 @@ export const App = () => {
                 BUTTON
               </Button>
             </div>
-
+          </Flex>
+          <Flex direction="row">
             <div>
-              <Button color="neutral" variant="outlined">
+              <Button width="auto" color="blue" variant="outlined">
                 BUTTON
               </Button>
-              <Button color="neutral" variant="filled">
+              <Button width="auto" color="blue" variant="filled">
                 BUTTON
               </Button>
-              <Button color="neutral" variant="standard">
+              <Button color="blue" variant="standard">
                 BUTTON
               </Button>
             </div>
@@ -79,43 +80,116 @@ export const App = () => {
                 BUTTON
               </Button>
             </div>
+
+            <div>
+              <Button color="cyan" variant="outlined">
+                BUTTON
+              </Button>
+              <Button color="cyan" variant="filled">
+                BUTTON
+              </Button>
+              <Button color="cyan" variant="standard">
+                BUTTON
+              </Button>
+            </div>
+
+            <div>
+              <Button color="green" variant="outlined">
+                BUTTON
+              </Button>
+              <Button color="green" variant="filled">
+                BUTTON
+              </Button>
+              <Button color="green" variant="standard">
+                BUTTON
+              </Button>
+            </div>
           </Flex>
 
           <Flex direction="row">
             <div>
-              <Chip color="info" variant="outlined">
+              <Button width="auto" color="lime" variant="outlined">
                 BUTTON
-              </Chip>
-              <Chip color="info" variant="filled">
+              </Button>
+              <Button width="auto" color="lime" variant="filled">
                 BUTTON
-              </Chip>
+              </Button>
+              <Button color="lime" variant="standard">
+                BUTTON
+              </Button>
             </div>
 
             <div>
-              <Chip color="alert" variant="outlined">
+              <Button color="yellow" variant="outlined">
                 BUTTON
-              </Chip>
-              <Chip color="alert" variant="filled">
+              </Button>
+              <Button color="yellow" variant="filled">
                 BUTTON
-              </Chip>
+              </Button>
+              <Button color="yellow" variant="standard">
+                BUTTON
+              </Button>
             </div>
 
             <div>
-              <Chip color="warning" variant="outlined">
+              <Button color="orange" variant="outlined">
                 BUTTON
-              </Chip>
-              <Chip color="warning" variant="filled">
+              </Button>
+              <Button color="orange" variant="filled">
                 BUTTON
-              </Chip>
+              </Button>
+              <Button color="orange" variant="standard">
+                BUTTON
+              </Button>
             </div>
 
             <div>
-              <Chip color="success" variant="outlined">
+              <Button color="red" variant="outlined">
                 BUTTON
-              </Chip>
-              <Chip color="success" variant="filled">
+              </Button>
+              <Button color="red" variant="filled">
                 BUTTON
-              </Chip>
+              </Button>
+              <Button color="red" variant="standard">
+                BUTTON
+              </Button>
+            </div>
+          </Flex>
+          <Flex direction="row">
+            <div>
+              <Button width="auto" color="magenta" variant="outlined">
+                BUTTON
+              </Button>
+              <Button width="auto" color="magenta" variant="filled">
+                BUTTON
+              </Button>
+              <Button color="magenta" variant="standard">
+                BUTTON
+              </Button>
+            </div>
+
+            <div>
+              <Button color="purple" variant="outlined">
+                BUTTON
+              </Button>
+              <Button color="purple" variant="filled">
+                BUTTON
+              </Button>
+              <Button color="purple" variant="standard">
+                BUTTON
+              </Button>
+            </div>
+
+            <div>
+              <Button color="neutral" variant="outlined">
+                BUTTON
+              </Button>
+              <Button color="neutral" variant="filled">
+                BUTTON
+              </Button>
+              <Button color="neutral" variant="standard">
+                BUTTON
+              </Button>
             </div>
           </Flex>
         </Flex>
