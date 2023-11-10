@@ -12,10 +12,10 @@ export const App = () => {
               <Button width="auto" color="info" variant="outlined">
                 BUTTON
               </Button>
-              <Button width="auto" color="info" variant="filled">
+              <Button disabled width="auto" color="info" variant="filled">
                 BUTTON
               </Button>
-              <Button color="info" variant="standard">
+              <Button disabled color="info" variant="standard">
                 BUTTON
               </Button>
             </div>
