@@ -7,15 +7,19 @@ import {
   AlertSuccessSVG,
   AlertWarningSVG
 } from './AlertSVG'
+import { alertPrefixed } from '@okmtyuta/_amatelas-theme/prefixed'
 
 import '@okmtyuta/amatelas-theme/color.css'
 import './alert.css'
+import { Color } from '@okmtyuta/_amatelas-theme/color'
 
 export type AlertVariant = 'info' | 'danger' | 'warning' | 'success'
 
 type DefaultDivProps = ComponentProps<'div'>
+type AlertColor = Color
 type AlertProps = {
   variant?: AlertVariant
+  color?: AlertColor
   summary?: string
   onDelete?: MouseEventHandler<SVGSVGElement>
 } & DefaultDivProps
@@ -27,7 +31,18 @@ export const getVariant = (variant?: AlertVariant) => {
 
   return 'info'
 }
+const getAlertColor = (color?: AlertColor, variant?: AlertVariant) => {
+  console.log(color, variant)
+  if (color) {
+    return color
+  }
 
+  if (variant) {
+    return variant
+  }
+
+  return 'info'
+}
 const getAlertSVG = (params: { variant?: AlertVariant }) => {
   const alertVariant = getVariant(params.variant)
 
@@ -44,23 +59,33 @@ const getAlertSVG = (params: { variant?: AlertVariant }) => {
   return <AlertInfoSVG />
 }
 
-export const Alert = ({ variant, summary, onDelete, ...props }: AlertProps) => {
-  const _variant = getVariant(variant)
+export const Alert = ({
+  variant,
+  color,
+  summary,
+  onDelete,
+  ...props
+}: AlertProps) => {
+  const _color = getAlertColor(color, variant)
   const _alertSVG = getAlertSVG({ variant })
   const _id = useId()
 
   return (
-    <div className={clsx('amatelas-alert', _variant)}>
-      <input className={clsx('input')} id={_id} type="checkbox" />
+    <div className={clsx(alertPrefixed(), alertPrefixed(_color))}>
+      <input
+        className={clsx(alertPrefixed('input'))}
+        id={_id}
+        type="checkbox"
+      />
 
-      <div className={clsx('alert-head')}>
-        <div className={clsx('summary')}>
+      <div className={clsx(alertPrefixed('alert-head'))}>
+        <div className={clsx(alertPrefixed('summary'))}>
           {_alertSVG}
-          <span className={clsx('summary-text')}>{summary}</span>
+          <span className={clsx(alertPrefixed('summary-text'))}>{summary}</span>
         </div>
 
-        <span className={clsx('close')}>
-          <label htmlFor={_id} className={clsx('close-label')}>
+        <span className={clsx(alertPrefixed('close'))}>
+          <label htmlFor={_id} className={clsx(alertPrefixed('close-label'))}>
             <AlertCloseSVG onClick={onDelete} />
           </label>
         </span>

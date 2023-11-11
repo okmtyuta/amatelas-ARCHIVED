@@ -29,13 +29,13 @@
   },
   "scripts": {
     "dev": "vite",
-    "prebuild": "pnpm --filter @okmtyuta/amatelas-theme build",
+    "prebuild": "pnpm --filter @okmtyuta/amatelas-theme build && pnpm --filter @okmtyuta/_amatelas-theme build",
     "build": "pnpm prebuild && vite build && tsc && tsc-alias",
     "test": "vitest --watch=false",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "pnpm --filter @okmtyuta/amatelas-theme build && storybook build"
+    "build-storybook": "pnpm prebuild && pnpm --filter @okmtyuta/amatelas-theme build && storybook build"
   },
   "peerDependencies": {
     "clsx": "^2.0.0",

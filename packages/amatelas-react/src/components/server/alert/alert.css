@@ -1,74 +1,163 @@
-.amatelas-alert {
+.AMUI-components_alert_ {
   padding: 16px;
   color: white;
   fill: white;
+}
+.AMUI-components_alert_:has(.AMUI-components_alert_input:checked) {
+  display: none;
+}
+.AMUI-components_alert_ .AMUI-components_alert_close {
+  flex-shrink: 0;
+}
+.AMUI-components_alert_ .AMUI-components_alert_close-svg {
+  cursor: pointer;
+  user-select: none;
+}
+.AMUI-components_alert_ .AMUI-components_alert_label-svg {
+  flex-shrink: 0;
+}
+.AMUI-components_alert_ .AMUI-components_alert_summary {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.AMUI-components_alert_ .AMUI-components_alert_summary-text {
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+}
+.AMUI-components_alert_ .AMUI-components_alert_close-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transform: translate(4px, -4px);
+  cursor: pointer;
+}
+.AMUI-components_alert_ .AMUI-components_alert_input {
+  display: none;
+}
+.AMUI-components_alert_ .AMUI-components_alert_alert-head {
+  display: flex;
+  justify-content: space-between;
+}
 
-  &:has(.input:checked) {
-    display: none;
+.AMUI-components_alert_.AMUI-components_alert_success {
+  background-color: #28a745;
+  .AMUI-components_alert_close-label:hover {
+    border-radius: 50%;
+    background-color: #269e41;
   }
-  &.info {
-    background-color: var(--color-info);
-    .close-label:hover {
-      border-radius: 50%;
-      background-color: var(--color-info-darken1);
-    }
-  }
-  &.warning {
-    background-color: var(--color-warning);
-    .close-label:hover {
-      border-radius: 50%;
-      background-color: var(--color-warning-darken1);
-    }
-  }
-  &.success {
-    background-color: var(--color-success);
-    .close-label:hover {
-      border-radius: 50%;
-      background-color: var(--color-success-darken1);
-    }
-  }
-  &.danger {
-    background-color: var(--color-danger);
-    .close-label:hover {
-      border-radius: 50%;
-      background-color: var(--color-danger-darken1);
-    }
-  }
+}
 
-  .close {
-    flex-shrink: 0;
+.AMUI-components_alert_.AMUI-components_alert_alert {
+  background-color: #dc3545;
+  .AMUI-components_alert_close-label:hover {
+    border-radius: 50%;
+    background-color: #d13241;
   }
-  .close-svg {
-    cursor: pointer;
-    user-select: none;
-  }
-  .label-svg {
-    flex-shrink: 0;
-  }
-  .summary {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 8px;
-  }
-  .summary-text {
-    font-weight: bold;
-    display: inline-flex;
-    align-items: center;
-  }
-  .close-label {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4px;
-    transform: translate(4px, -4px);
-    cursor: pointer;
-  }
+}
 
-  .input {
-    display: none;
+.AMUI-components_alert_.AMUI-components_alert_warning {
+  background-color: #ffc107;
+  .AMUI-components_alert_close-label:hover {
+    border-radius: 50%;
+    background-color: #f2b706;
   }
-  .alert-head {
-    display: flex;
-    justify-content: space-between;
+}
+
+.AMUI-components_alert_.AMUI-components_alert_info {
+  background-color: #17a2b8;
+  .AMUI-components_alert_close-label:hover {
+    border-radius: 50%;
+    background-color: #1599ae;
+  }
+}
+
+.AMUI-components_alert_.AMUI-components_alert_light-blue {
+  background-color: #008bf2;
+  .AMUI-components_alert_close-label:hover {
+    border-radius: 50%;
+    background-color: #0084e5;
+  }
+}
+
+.AMUI-components_alert_.AMUI-components_alert_blue {
+  background-color: #3460fb;
+  .AMUI-components_alert_close-label:hover {
+    border-radius: 50%;
+    background-color: #315bee;
+  }
+}
+
+.AMUI-components_alert_.AMUI-components_alert_cyan {
+  background-color: #00a3bf;
+  .AMUI-components_alert_close-label:hover {
+    border-radius: 50%;
+    background-color: #009ab5;
+  }
+}
+
+.AMUI-components_alert_.AMUI-components_alert_green {
+  background-color: #259d63;
+  .AMUI-components_alert_close-label:hover {
+    border-radius: 50%;
+    background-color: #23955e;
+  }
+}
+
+.AMUI-components_alert_.AMUI-components_alert_lime {
+  background-color: #7eb40d;
+  .AMUI-components_alert_close-label:hover {
+    border-radius: 50%;
+    background-color: #77ab0c;
+  }
+}
+
+.AMUI-components_alert_.AMUI-components_alert_yellow {
+  background-color: #d2a400;
+  .AMUI-components_alert_close-label:hover {
+    border-radius: 50%;
+    background-color: #c79b00;
+  }
+}
+
+.AMUI-components_alert_.AMUI-components_alert_orange {
+  background-color: #fb5b01;
+  .AMUI-components_alert_close-label:hover {
+    border-radius: 50%;
+    background-color: #ee5600;
+  }
+}
+
+.AMUI-components_alert_.AMUI-components_alert_red {
+  background-color: #fe3939;
+  .AMUI-components_alert_close-label:hover {
+    border-radius: 50%;
+    background-color: #f13636;
+  }
+}
+
+.AMUI-components_alert_.AMUI-components_alert_magenta {
+  background-color: #db00db;
+  .AMUI-components_alert_close-label:hover {
+    border-radius: 50%;
+    background-color: #d000d0;
+  }
+}
+
+.AMUI-components_alert_.AMUI-components_alert_purple {
+  background-color: #8843e1;
+  .AMUI-components_alert_close-label:hover {
+    border-radius: 50%;
+    background-color: #813fd5;
+  }
+}
+
+.AMUI-components_alert_.AMUI-components_alert_neutral {
+  background-color: #7f7f7f;
+  .AMUI-components_alert_close-label:hover {
+    border-radius: 50%;
+    background-color: #787878;
   }
 }
