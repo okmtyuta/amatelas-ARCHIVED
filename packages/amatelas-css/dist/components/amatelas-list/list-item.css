@@ -1,0 +1,27 @@
+.AMUI-components_list-item_ {
+  text-align: -webkit-match-parent;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  line-height: 1.7;
+}
+.AMUI-components_list-item_ .AMUI-components_list-item_marker {
+  display: inline-flex;
+  width: 24px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 1lh;
+}
+.AMUI-components_list-item_ .AMUI-components_list-item_disc {
+  height: calc(1lh * 0.3);
+  fill: var(--color-accents3);
+}
+.AMUI-components_list-item_ .AMUI-components_list-item_dangerous {
+  height: calc(1lh * 0.8);
+  fill: var(--color-danger);
+}
+.AMUI-components_list-item_ .AMUI-components_list-item_done {
+  height: calc(1lh * 0.8);
+  fill: var(--color-success);
+}

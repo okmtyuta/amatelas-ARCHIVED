@@ -13,39 +13,42 @@ import {
 import '@okmtyuta/amatelas-theme/color.css'
 import '@okmtyuta/amatelas-theme/layer.css'
 import '@okmtyuta/amatelas-css/amatelas-snack.css'
+import { Color } from '@root/types'
 
-type SnackVariant = 'info' | 'danger' | 'warning' | 'success'
+type SnackVariant = 'info' | 'alert' | 'warning' | 'success'
+type SnackColor = Color
 type SnackPosition = 'top' | 'bottom' | 'left' | 'right'
 
 type DefaultDivProps = ComponentProps<'div'>
 type SnackProps = {
   variant?: SnackVariant
+  color?: SnackColor
   // label?: string
   position?: SnackPosition
 } & DefaultDivProps
 
-const getVariant = (variant?: SnackVariant) => {
-  if (variant) {
-    return variant
+const PREFIX = 'AMUI-components_'
+const SUB_PREFIX = 'snack_'
+const prefixed = (target?: string) => {
+  if (target) {
+    return `${PREFIX}${SUB_PREFIX}${target}`
   }
 
-  return 'info'
+  return `${PREFIX}${SUB_PREFIX}`
 }
-const getIcon = (variant?: SnackVariant) => {
-  const snackVariant = getVariant(variant)
-  const icon = `${snackVariant}-icon`
 
+const getIcon = (variant?: SnackVariant) => {
   if (variant === 'success') {
-    return <CheckedCircleSVG className={clsx('icon', icon)} />
+    return <CheckedCircleSVG className={clsx(prefixed('icon'))} />
   }
   if (variant === 'warning') {
-    return <WarningSVG className={clsx('icon', icon)} />
+    return <WarningSVG className={clsx(prefixed('icon'))} />
   }
-  if (variant === 'danger') {
-    return <ErrorSVG className={clsx('icon', icon)} />
+  if (variant === 'alert') {
+    return <ErrorSVG className={clsx(prefixed('icon'))} />
   }
 
-  return <InfoSVG className={clsx('icon', icon)} />
+  return <InfoSVG className={clsx(prefixed('icon'))} />
 }
 const getPosition = (position?: SnackPosition) => {
   // TODO: ここの実装
@@ -55,19 +58,33 @@ const getPosition = (position?: SnackPosition) => {
 
   return 'top'
 }
+const getSnackColor = (color?: SnackColor, variant?: SnackVariant) => {
+  if (color) {
+    return color
+  }
 
-export const Snack = ({ variant, position, ...props }: SnackProps) => {
-  const _variant = getVariant(variant)
+  if (variant) {
+    return variant
+  }
+
+  return 'info'
+}
+
+export const Snack = ({ variant, position, color, ...props }: SnackProps) => {
+  const _color = getSnackColor(color)
   const _icon = getIcon(variant)
   const _id = useId()
   const _position = getPosition(position)
 
   return (
-    <div {...props} className={clsx('amatelas-snack', _variant, _position)}>
-      <input className={'input'} type="checkbox" id={_id} />
+    <div
+      {...props}
+      className={clsx(prefixed(), prefixed(_color), prefixed(_position))}
+    >
+      <input className={prefixed('input')} type="checkbox" id={_id} />
       {_icon}
       <div>{props.children}</div>
-      <label className={'close-icon'} htmlFor={_id}>
+      <label className={prefixed('close-icon')} htmlFor={_id}>
         <CloseSVG />
       </label>
     </div>

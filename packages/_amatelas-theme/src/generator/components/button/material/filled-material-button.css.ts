@@ -1,9 +1,9 @@
-import fs from 'fs'
+import * as fs from 'fs'
 import { color } from '../../../../theme/color/color'
 import { Hex } from '../../../../theme/color/classes/Hex'
 
 const baseCSS = /* css */ `
-.AMUI_amatelas-button_.AMUI_amatelas-button_outlined {
+.AMUI_amatelas-material-button_.AMUI_amatelas-material-button_filled {
   outline: none;
   position: relative;
   overflow: hidden;
@@ -16,32 +16,32 @@ const baseCSS = /* css */ `
   box-sizing: border-box;
   cursor: pointer;
 }
-.AMUI_amatelas-button_.AMUI_amatelas-button_outlined:disabled {
+.AMUI_amatelas-material-button_.AMUI_amatelas-material-button_filled:disabled {
   color: ${new Hex(color.neutral).getDarken(0.95).getHexString()};
   background-color: ${new Hex(color.neutral).getLighten(0.9).getHexString()};
+  border: solid 1px ${new Hex(color.neutral).getLighten(0.9).getHexString()};
   cursor: not-allowed;
-  border: ${new Hex(color.neutral).getDarken(0.95).getHexString()} 1px solid;
 }
-.AMUI_amatelas-button_ {
-  &.AMUI_amatelas-button_xs {
+.AMUI_amatelas-material-button_ {
+  &.AMUI_amatelas-material-button_xs {
     width: 64px;
   }
-  &.AMUI_amatelas-button_sm {
+  &.AMUI_amatelas-material-button_sm {
     width: 128px;
   }
-  &.AMUI_amatelas-button_md {
+  &.AMUI_amatelas-material-button_md {
     width: 256px;
   }
-  &.AMUI_amatelas-button_lg {
+  &.AMUI_amatelas-material-button_lg {
     width: 512px;
   }
-  &.AMUI_amatelas-button_xl {
+  &.AMUI_amatelas-material-button_xl {
     width: 768px;
   }
-  &.AMUI_amatelas-button_full {
+  &.AMUI_amatelas-material-button_full {
     width: 100%;
   }
-  &.AMUI_amatelas-button_auto {
+  &.AMUI_amatelas-material-button_auto {
     width: auto;
   }
 }
@@ -52,8 +52,8 @@ const sizeVariations = () => {
 
   for (const size of sizes) {
     _sizeVariations.push(/* css */ `
-    .AMUI_amatelas-button_.AMUI_amatelas-button_${size} {
-      width: var(--AMUI-button-size-${size})
+    .AMUI_amatelas-material-button_.AMUI_amatelas-material-button_${size} {
+      width: var(--AMUI-material-button-size-${size})
     }
     `)
   }
@@ -65,13 +65,14 @@ const colorVariations = () => {
   for (const [_color, _code] of Object.entries(color)) {
     const hex = new Hex(_code)
     _colorVariations.push(/* css */ `
-    .AMUI_amatelas-button_.AMUI_amatelas-button_outlined:not(:disabled).AMUI_amatelas-button_${_color} {
-        color: ${hex.getHexString()};
-        border: ${hex.getHexString()} solid 1px;
-        background-color: inherit;
+      .AMUI_amatelas-material-button_.AMUI_amatelas-material-button_filled:not(:disabled).AMUI_amatelas-material-button_${_color} {
+        border: none;
+        color: white;
+        background-color: ${hex.getHexString()};
+        border: solid 1px ${hex.getHexString()};
     
         &:hover {
-          background-color: ${hex.getLighten(0.95).getHexString()};
+          background-color: ${hex.getLighten(0.1).getHexString()};
         }
       }
     `)
@@ -80,10 +81,10 @@ const colorVariations = () => {
   return _colorVariations
 }
 
-export const generateOutlinedButton = () => {
-  const dir = './dist/components/button/native'
+export const generateFilledMaterialButton = () => {
+  const dir = './dist/components/button/material'
   fs.mkdirSync(dir, { recursive: true })
-  const fd = fs.openSync(`${dir}/outlined-button.css`, 'w')
+  const fd = fs.openSync(`${dir}/filled-material-button.css`, 'w')
   fs.writeSync(fd, baseCSS)
 
   for (const colorVariation of colorVariations()) {

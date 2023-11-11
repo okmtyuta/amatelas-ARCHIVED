@@ -1,49 +1,93 @@
-.amatelas-snack {
+.AMUI-components_snack_ {
   gap: 12px;
   width: 300px;
-  display: flex;
+  display: grid;
+  grid-template: 'icon label close'/ 1fr 7fr 1fr;
   color: white;
   fill: white;
-  justify-content: space-between;
-  align-items: flex-start;
   z-index: var(--layer-mid);
   border-radius: 4px;
   padding: 8px;
+}
+.AMUI-components_snack_:has(.AMUI-components_snack_input:checked) {
+  display: none;
+}
+.AMUI-components_snack_ .AMUI-components_snack_icon {
+  flex-shrink: 0;
+}
+.AMUI-components_snack_ .AMUI-components_snack_close-icon {
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+.AMUI-components_snack_ .AMUI-components_snack_label {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 8px;
+}
+.AMUI-components_snack_ .AMUI-components_snack_label-content {
+  font-weight: bold;
+}
+.AMUI-components_snack_ .AMUI-components_snack_input {
+  display: none;
+}
 
-  &.info {
-    background-color: var(--color-info);
-  }
-  &.warning {
-    background-color: var(--color-warning);
-  }
-  &.success {
-    background-color: var(--color-success);
-  }
-  &.error {
-    background-color: var(--color-danger);
-  }
+.AMUI-components_snack_.AMUI-components_snack_success {
+  background-color: #28a745;
+}
 
-  &:has(.input:checked) {
-    display: none;
-  }
+.AMUI-components_snack_.AMUI-components_snack_alert {
+  background-color: #dc3545;
+}
 
-  .icon {
-    flex-shrink: 0;
-  }
-  .close-icon {
-    cursor: pointer;
-    user-select: none;
-    flex-shrink: 0;
-  }
-  .label {
-    display: flex;
-    gap: 12px;
-    padding-bottom: 8px;
-  }
-  .label-content {
-    font-weight: bold;
-  }
-  .input {
-    display: none;
-  }
+.AMUI-components_snack_.AMUI-components_snack_warning {
+  background-color: #ffc107;
+}
+
+.AMUI-components_snack_.AMUI-components_snack_info {
+  background-color: #17a2b8;
+}
+
+.AMUI-components_snack_.AMUI-components_snack_light-blue {
+  background-color: #008bf2;
+}
+
+.AMUI-components_snack_.AMUI-components_snack_blue {
+  background-color: #3460fb;
+}
+
+.AMUI-components_snack_.AMUI-components_snack_cyan {
+  background-color: #00a3bf;
+}
+
+.AMUI-components_snack_.AMUI-components_snack_green {
+  background-color: #259d63;
+}
+
+.AMUI-components_snack_.AMUI-components_snack_lime {
+  background-color: #7eb40d;
+}
+
+.AMUI-components_snack_.AMUI-components_snack_yellow {
+  background-color: #d2a400;
+}
+
+.AMUI-components_snack_.AMUI-components_snack_orange {
+  background-color: #fb5b01;
+}
+
+.AMUI-components_snack_.AMUI-components_snack_red {
+  background-color: #fe3939;
+}
+
+.AMUI-components_snack_.AMUI-components_snack_magenta {
+  background-color: #db00db;
+}
+
+.AMUI-components_snack_.AMUI-components_snack_purple {
+  background-color: #8843e1;
+}
+
+.AMUI-components_snack_.AMUI-components_snack_neutral {
+  background-color: #7f7f7f;
 }

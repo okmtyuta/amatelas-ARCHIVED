@@ -81,13 +81,16 @@ const colorVariations = () => {
   return _colorVariations
 }
 
-fs.mkdirSync('./_dist/_components/_button/', { recursive: true })
-const fd = fs.openSync(`./_dist/_components/_button/_filled-button.css`, 'w')
-fs.writeSync(fd, baseCSS)
+export const generateFilledButton = () => {
+  const dir = './dist/components/button/native'
+  fs.mkdirSync(dir, { recursive: true })
+  const fd = fs.openSync(`${dir}/filled-button.css`, 'w')
+  fs.writeSync(fd, baseCSS)
 
-for (const colorVariation of colorVariations()) {
-  fs.writeSync(fd, colorVariation)
-}
-for (const sizeVariation of sizeVariations()) {
-  fs.writeSync(fd, sizeVariation)
+  for (const colorVariation of colorVariations()) {
+    fs.writeSync(fd, colorVariation)
+  }
+  for (const sizeVariation of sizeVariations()) {
+    fs.writeSync(fd, sizeVariation)
+  }
 }

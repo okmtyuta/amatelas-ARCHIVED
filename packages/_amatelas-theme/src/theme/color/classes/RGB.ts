@@ -4,15 +4,6 @@ import { isRGBArray } from '../guards/isRGBArray'
 import { HexString } from '../types/HexString'
 import { RGBArray } from '../types/RGBArray'
 
-// def complement_zero(target: str):
-//     if len(target) > 2:
-//         raise TooLongTargetError()
-
-//     if len(target) == 2 :
-//         return target
-
-//     return f"0{target}"
-
 const complementZero = (target: string) => {
   if (target.length > 2) {
     throw new CannotComplementZeroError()

@@ -44,6 +44,7 @@
     "styled-components": "^6.0.8"
   },
   "dependencies": {
+    "@okmtyuta/_amatelas-theme": "workspace:^",
     "@okmtyuta/amatelas-css": "workspace:^",
     "@okmtyuta/amatelas-theme": "workspace:^",
     "clsx": "^2.0.0",
