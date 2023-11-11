@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && tsc && tsc-alias",
+    "build:theme": "vite build && tsc && tsc-alias",
     "build:css": "pnpm ts-node ./src/generator/generate.ts",
+    "build": "pnpm build:theme && pnpm build:css",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
