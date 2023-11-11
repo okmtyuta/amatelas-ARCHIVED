@@ -30,10 +30,6 @@
   "references": [{ "path": "./tsconfig.node.json" }],
   "ts-node": {
     "esm": true,
-    "experimentalSpecifierResolution": "node",
-    "require": [
-      "typescript-transform-paths/register",
-      "tsconfig-paths/register"
-    ]
+    "experimentalSpecifierResolution": "node"
   }
 }
