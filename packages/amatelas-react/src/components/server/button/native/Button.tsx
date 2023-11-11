@@ -6,7 +6,7 @@ import { ComponentPropsWithoutRef, ElementType } from 'react'
 
 import '@okmtyuta/amatelas-theme/v2/color.css'
 import '@okmtyuta/amatelas-css/amatelas-button.css'
-import { Color } from '@okmtyuta/_amatelas-theme/color'
+import { Color } from '@root/types/color/Color'
 
 const CLASS_PREFIX = 'AMUI_amatelas-button_'
 const prefixed = (target: string) => {
