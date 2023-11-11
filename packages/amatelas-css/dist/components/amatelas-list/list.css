@@ -1,56 +1,5 @@
-.amatelas-list {
+.AMUI-components_list_ {
   text-align: -webkit-match-parent;
   display: flex;
   flex-direction: column;
-
-  &.margin-xs {
-    margin-top: 4px;
-    margin-bottom: 4px;
-  }
-  &.margin-md {
-    margin-top: 12px;
-    margin-bottom: 12px;
-  }
-  &.margin-xl {
-    margin-top: 16px;
-    margin-bottom: 16px;
-  }
-
-  &.gap-xs {
-    gap: 2px;
-  }
-  &.gap-md {
-    gap: 6px;
-  }
-  &.gap-xl {
-    gap: 10px;
-  }
-}
-.amatelas-list-item {
-  text-align: -webkit-match-parent;
-  display: flex;
-  align-items: flex-start;
-  gap: 6px;
-  line-height: 1.7;
-
-  .marker {
-    display: inline-flex;
-    width: 24px;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    height: 1lh;
-  }
-  .disc {
-    height: calc(1lh * 0.3);
-    fill: var(--color-accents3);
-  }
-  .dangerous {
-    height: calc(1lh * 0.8);
-    fill: var(--color-danger);
-  }
-  .done {
-    height: calc(1lh * 0.8);
-    fill: var(--color-success);
-  }
 }

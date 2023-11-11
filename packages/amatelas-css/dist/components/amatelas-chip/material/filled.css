@@ -15,49 +15,162 @@
   padding: 0px;
   vertical-align: middle;
   box-sizing: border-box;
-
+}
+.AMUI_amatelas-material-chip_.AMUI_amatelas-material-chip_filled
   .AMUI_amatelas-material-chip_text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-left: 12px;
-    padding-right: 12px;
-    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 12px;
+  padding-right: 12px;
+  white-space: nowrap;
+}
+
+.AMUI_amatelas-material-chip_.AMUI_amatelas-material-chip_filled.AMUI_amatelas-material-chip_success {
+  background-color: #28a745;
+  color: white;
+  border: 0px;
+
+  &:hover {
+    background-color: #3daf57;
   }
+}
 
-  &.AMUI_amatelas-material-chip_alert {
-    background-color: var(--AMUI-color-alert);
-    color: white;
-    border: 0px;
+.AMUI_amatelas-material-chip_.AMUI_amatelas-material-chip_filled.AMUI_amatelas-material-chip_alert {
+  background-color: #dc3545;
+  color: white;
+  border: 0px;
 
-    &:hover {
-      background-color: var(--AMUI-color-alert-lighten2);
-    }
+  &:hover {
+    background-color: #df4957;
   }
-  &.AMUI_amatelas-material-chip_info {
-    background-color: var(--AMUI-color-info);
-    color: white;
-    border: 0px;
+}
 
-    &:hover {
-      background-color: var(--AMUI-color-info-lighten2);
-    }
+.AMUI_amatelas-material-chip_.AMUI_amatelas-material-chip_filled.AMUI_amatelas-material-chip_warning {
+  background-color: #ffc107;
+  color: white;
+  border: 0px;
+
+  &:hover {
+    background-color: #ffc71f;
   }
-  &.AMUI_amatelas-material-chip_warning {
-    background-color: var(--AMUI-color-warning);
-    color: white;
-    border: 0px;
+}
 
-    &:hover {
-      background-color: var(--AMUI-color-warning-lighten2);
-    }
+.AMUI_amatelas-material-chip_.AMUI_amatelas-material-chip_filled.AMUI_amatelas-material-chip_info {
+  background-color: #17a2b8;
+  color: white;
+  border: 0px;
+
+  &:hover {
+    background-color: #2eabbf;
   }
-  &.AMUI_amatelas-material-chip_success {
-    background-color: var(--AMUI-color-success);
-    color: white;
-    border: 0px;
+}
 
-    &:hover {
-      background-color: var(--AMUI-color-success-lighten2);
-    }
+.AMUI_amatelas-material-chip_.AMUI_amatelas-material-chip_filled.AMUI_amatelas-material-chip_light-blue {
+  background-color: #008bf2;
+  color: white;
+  border: 0px;
+
+  &:hover {
+    background-color: #1996f3;
+  }
+}
+
+.AMUI_amatelas-material-chip_.AMUI_amatelas-material-chip_filled.AMUI_amatelas-material-chip_blue {
+  background-color: #3460fb;
+  color: white;
+  border: 0px;
+
+  &:hover {
+    background-color: #486ffb;
+  }
+}
+
+.AMUI_amatelas-material-chip_.AMUI_amatelas-material-chip_filled.AMUI_amatelas-material-chip_cyan {
+  background-color: #00a3bf;
+  color: white;
+  border: 0px;
+
+  &:hover {
+    background-color: #19acc5;
+  }
+}
+
+.AMUI_amatelas-material-chip_.AMUI_amatelas-material-chip_filled.AMUI_amatelas-material-chip_green {
+  background-color: #259d63;
+  color: white;
+  border: 0px;
+
+  &:hover {
+    background-color: #3aa672;
+  }
+}
+
+.AMUI_amatelas-material-chip_.AMUI_amatelas-material-chip_filled.AMUI_amatelas-material-chip_lime {
+  background-color: #7eb40d;
+  color: white;
+  border: 0px;
+
+  &:hover {
+    background-color: #8abb25;
+  }
+}
+
+.AMUI_amatelas-material-chip_.AMUI_amatelas-material-chip_filled.AMUI_amatelas-material-chip_yellow {
+  background-color: #d2a400;
+  color: white;
+  border: 0px;
+
+  &:hover {
+    background-color: #d6ad19;
+  }
+}
+
+.AMUI_amatelas-material-chip_.AMUI_amatelas-material-chip_filled.AMUI_amatelas-material-chip_orange {
+  background-color: #fb5b01;
+  color: white;
+  border: 0px;
+
+  &:hover {
+    background-color: #fb6b1a;
+  }
+}
+
+.AMUI_amatelas-material-chip_.AMUI_amatelas-material-chip_filled.AMUI_amatelas-material-chip_red {
+  background-color: #fe3939;
+  color: white;
+  border: 0px;
+
+  &:hover {
+    background-color: #fe4c4c;
+  }
+}
+
+.AMUI_amatelas-material-chip_.AMUI_amatelas-material-chip_filled.AMUI_amatelas-material-chip_magenta {
+  background-color: #db00db;
+  color: white;
+  border: 0px;
+
+  &:hover {
+    background-color: #de19de;
+  }
+}
+
+.AMUI_amatelas-material-chip_.AMUI_amatelas-material-chip_filled.AMUI_amatelas-material-chip_purple {
+  background-color: #8843e1;
+  color: white;
+  border: 0px;
+
+  &:hover {
+    background-color: #9355e4;
+  }
+}
+
+.AMUI_amatelas-material-chip_.AMUI_amatelas-material-chip_filled.AMUI_amatelas-material-chip_neutral {
+  background-color: #7f7f7f;
+  color: white;
+  border: 0px;
+
+  &:hover {
+    background-color: #8b8b8b;
   }
 }
