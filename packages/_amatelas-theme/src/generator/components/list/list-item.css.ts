@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { listItemPrefixed } from '../../../prefixed/components/list/list-item-prefixed'
+import { listItemPrefixed } from './list-item-prefixed'
 
 const baseCSS = /* css */ `
 .${listItemPrefixed()} {

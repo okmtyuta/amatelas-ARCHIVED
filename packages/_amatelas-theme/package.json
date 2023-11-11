@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build:theme": "vite build && tsc && tsc-alias",
-    "build:css": "pnpm ts-node ./src/generator/generate.ts",
+    "build:css": "ts-node ./src/generator/generate.ts",
     "build": "pnpm build:theme && pnpm build:css",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -40,7 +40,6 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "ts-node": "^10.9.1",
     "tsc-alias": "^1.8.8",
-    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   }

@@ -1,16 +1,16 @@
-.amatelas-accordion {
+.AMUI-components_accordion_ {
   border-bottom: black solid 1px;
   padding: 8px 0;
-
-  .summary {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .summary::-webkit-details-marker {
-    display: none;
-  }
-  &[open] .expand-more-svg {
-    transform: rotate(180deg);
-  }
+}
+.AMUI-components_accordion_[open] .AMUI-components_accordion_expand-more-svg {
+  transform: rotate(180deg);
+}
+.AMUI-components_accordion_ .AMUI-components_accordion_summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.AMUI-components_accordion_
+  .AMUI-components_accordion_summary::-webkit-details-marker {
+  display: none;
 }

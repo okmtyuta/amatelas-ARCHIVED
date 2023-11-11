@@ -19,8 +19,6 @@
   font-size: var(--body1-size);
 }
 .avatar-account {
-  /* @include font.use-caption-font-size();
-  color: color.$accents6; */
   font-size: var(--caption-size);
   color: var(--color-accents6);
 }
