@@ -29,6 +29,9 @@
     "./amatelas-list.css": {
       "import": "./dist/components/amatelas-list/index.css"
     },
+    "./amatelas-message.css": {
+      "import": "./dist/components/amatelas-message/index.css"
+    },
     "./amatelas-snack.css": {
       "import": "./dist/components/amatelas-snack/index.css"
     }

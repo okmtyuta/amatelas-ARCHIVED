@@ -22,8 +22,7 @@
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "@root/*": ["src/*"],
-      "@theme/*": ["src/theme/*"]
+      "@src/*": ["src/*"]
     },
     "types": ["node"]
   },

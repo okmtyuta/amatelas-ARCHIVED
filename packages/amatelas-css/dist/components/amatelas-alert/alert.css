@@ -1,0 +1,162 @@
+.AMUI-components_message_ {
+  padding: 16px;
+  color: white;
+  fill: white;
+}
+.AMUI-components_message_:has(.AMUI-components_message_input:checked) {
+  display: none;
+}
+.AMUI-components_message_ .AMUI-components_message_close {
+  flex-shrink: 0;
+}
+.AMUI-components_message_ .AMUI-components_message_close-svg {
+  cursor: pointer;
+  user-select: none;
+}
+.AMUI-components_message_ .AMUI-components_message_label-svg {
+  flex-shrink: 0;
+}
+.AMUI-components_message_ .AMUI-components_message_summary {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.AMUI-components_message_ .AMUI-components_message_summary-text {
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+}
+.AMUI-components_message_ .AMUI-components_message_close-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transform: translate(4px, -4px);
+  cursor: pointer;
+}
+.AMUI-components_message_ .AMUI-components_message_input {
+  display: none;
+}
+.AMUI-components_message_ .AMUI-components_message_alert-head {
+  display: none;
+}
+
+.AMUI-components_message_.AMUI-components_message_success {
+  background-color: #28a745;
+  .close-label:hover {
+    border-radius: 50%;
+    background-color: [object Object];
+  }
+}
+
+.AMUI-components_message_.AMUI-components_message_alert {
+  background-color: #dc3545;
+  .close-label:hover {
+    border-radius: 50%;
+    background-color: [object Object];
+  }
+}
+
+.AMUI-components_message_.AMUI-components_message_warning {
+  background-color: #ffc107;
+  .close-label:hover {
+    border-radius: 50%;
+    background-color: [object Object];
+  }
+}
+
+.AMUI-components_message_.AMUI-components_message_info {
+  background-color: #17a2b8;
+  .close-label:hover {
+    border-radius: 50%;
+    background-color: [object Object];
+  }
+}
+
+.AMUI-components_message_.AMUI-components_message_light-blue {
+  background-color: #008bf2;
+  .close-label:hover {
+    border-radius: 50%;
+    background-color: [object Object];
+  }
+}
+
+.AMUI-components_message_.AMUI-components_message_blue {
+  background-color: #3460fb;
+  .close-label:hover {
+    border-radius: 50%;
+    background-color: [object Object];
+  }
+}
+
+.AMUI-components_message_.AMUI-components_message_cyan {
+  background-color: #00a3bf;
+  .close-label:hover {
+    border-radius: 50%;
+    background-color: [object Object];
+  }
+}
+
+.AMUI-components_message_.AMUI-components_message_green {
+  background-color: #259d63;
+  .close-label:hover {
+    border-radius: 50%;
+    background-color: [object Object];
+  }
+}
+
+.AMUI-components_message_.AMUI-components_message_lime {
+  background-color: #7eb40d;
+  .close-label:hover {
+    border-radius: 50%;
+    background-color: [object Object];
+  }
+}
+
+.AMUI-components_message_.AMUI-components_message_yellow {
+  background-color: #d2a400;
+  .close-label:hover {
+    border-radius: 50%;
+    background-color: [object Object];
+  }
+}
+
+.AMUI-components_message_.AMUI-components_message_orange {
+  background-color: #fb5b01;
+  .close-label:hover {
+    border-radius: 50%;
+    background-color: [object Object];
+  }
+}
+
+.AMUI-components_message_.AMUI-components_message_red {
+  background-color: #fe3939;
+  .close-label:hover {
+    border-radius: 50%;
+    background-color: [object Object];
+  }
+}
+
+.AMUI-components_message_.AMUI-components_message_magenta {
+  background-color: #db00db;
+  .close-label:hover {
+    border-radius: 50%;
+    background-color: [object Object];
+  }
+}
+
+.AMUI-components_message_.AMUI-components_message_purple {
+  background-color: #8843e1;
+  .close-label:hover {
+    border-radius: 50%;
+    background-color: [object Object];
+  }
+}
+
+.AMUI-components_message_.AMUI-components_message_neutral {
+  background-color: #7f7f7f;
+  .close-label:hover {
+    border-radius: 50%;
+    background-color: [object Object];
+  }
+}

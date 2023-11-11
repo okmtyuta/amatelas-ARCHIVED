@@ -8,6 +8,7 @@ import { generateFilledMaterialChip } from './components/chip/material/filled-ma
 import { generateOutlinedMaterialChip } from './components/chip/material/outlined-material-chip.css'
 import { generateListItem } from './components/list/list-item.css'
 import { generateList } from './components/list/list.css'
+import { generateAlert } from './components/alert/alert.css'
 import { generateSnack } from './components/snack/snack.css'
 
 generateFilledButton()
@@ -25,3 +26,5 @@ generateSnack()
 
 generateList()
 generateListItem()
+
+generateAlert()
