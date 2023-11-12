@@ -11,6 +11,8 @@ import { generateList } from './components/list/list.css'
 import { generateAlert } from './components/alert/alert.css'
 import { generateSnack } from './components/snack/snack.css'
 import { generateAccordion } from './components/accordion/accordion.css'
+import { generateAvatar } from './components/avatar/avatar.css'
+import { generateBlockquote } from './components/blockquote/blockauote.css'
 
 generateFilledButton()
 generateStandardButton()
@@ -31,3 +33,7 @@ generateListItem()
 generateAlert()
 
 generateAccordion()
+
+generateAvatar()
+
+generateBlockquote()

@@ -1,12 +1,13 @@
 import '@okmtyuta/awesome-css/reset.css'
 
-import { Accordion, Frame } from './components/server'
+import { Blockquote, Frame } from './components/server'
+import { demoText } from './demo-text'
 
 export const App = () => {
   return (
     <>
       <Frame>
-        <Accordion summary="accordion">Hello</Accordion>
+        <Blockquote>{demoText.en.long}</Blockquote>
       </Frame>
     </>
   )
