@@ -34,6 +34,9 @@
     },
     "./amatelas-snack.css": {
       "import": "./dist/components/amatelas-snack/index.css"
+    },
+    "./amatelas-heading.css": {
+      "import": "./dist/components/amatelas-heading/index.css"
     }
   },
   "scripts": {

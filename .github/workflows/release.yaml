@@ -30,11 +30,11 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build ui
-        run: pnpm build:amatelas
+        run: pnpm build:amatelas-react
 
       - name: publish ui
         run: |
-          cd packages/amatelas
+          cd packages/amatelas-react
           npm publish
         env:
           # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}とするとエラー

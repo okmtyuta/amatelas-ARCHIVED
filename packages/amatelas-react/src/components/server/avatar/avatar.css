@@ -1,10 +1,10 @@
-.avatar {
+.AMUI-components_avatar_ {
   display: inline-flex;
   gap: 12px;
   align-items: center;
   flex-shrink: 0;
 }
-.avatar-image {
+.AMUI-components_avatar_ .AMUI-components_avatar_image {
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -15,16 +15,14 @@
   align-items: center;
   justify-content: center;
 }
-.avatar-name {
+.AMUI-components_avatar_ .AMUI-components_avatar_name {
   font-size: var(--body1-size);
 }
-.avatar-account {
-  /* @include font.use-caption-font-size();
-  color: color.$accents6; */
+.AMUI-components_avatar_ .AMUI-components_avatar_account {
   font-size: var(--caption-size);
   color: var(--color-accents6);
 }
-.avatar-info {
+.AMUI-components_avatar_ .AMUI-components_avatar_info {
   display: inline-flex;
   flex-direction: column;
 }

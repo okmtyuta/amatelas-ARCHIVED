@@ -1,7 +1,7 @@
 import fs from 'fs'
 import { Hex } from '../../../theme/color/classes/Hex'
 import { color } from '../../../theme/color/color'
-import { alertPrefixed } from '../../../prefixed/components/alert/alert-prefixed'
+import { alertPrefixed } from './alert-prefixed'
 
 const baseCSS = /* css */ `
 .${alertPrefixed()} {

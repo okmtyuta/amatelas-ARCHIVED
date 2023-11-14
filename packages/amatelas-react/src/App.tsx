@@ -1,19 +1,13 @@
 import '@okmtyuta/awesome-css/reset.css'
 
-import { Alert, Frame } from './components/server'
+import { Blockquote, Frame } from './components/server'
+import { demoText } from './demo-text'
 
 export const App = () => {
   return (
     <>
       <Frame>
-        <Alert summary="alert">
-          Alert Alert Alert Alert Alert Alert Alert Alert Alert Alert Alert
-          Alert Alert Alert
-        </Alert>
-        <Alert summary="purple" color="purple">
-          Alert Alert Alert Alert Alert Alert Alert Alert Alert Alert Alert
-          Alert Alert Alert
-        </Alert>
+        <Blockquote>{demoText.en.long}</Blockquote>
       </Frame>
     </>
   )

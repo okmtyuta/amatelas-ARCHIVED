@@ -4,6 +4,8 @@ import { ComponentProps } from 'react'
 
 import './avatar.css'
 
+import { avatarPrefixed } from '@okmtyuta/_amatelas-theme/prefixed'
+
 type DefaultSpanProps = ComponentProps<'span'>
 type AvatarProps = {
   name?: string
@@ -13,22 +15,22 @@ type AvatarProps = {
 
 const getIcon = (iconUrl?: string) => {
   if (iconUrl) {
-    return <img className={'avatar-image'} src={iconUrl} />
+    return <img className={avatarPrefixed('image')} src={iconUrl} />
   }
 
-  return <AccountSVG className={'avatar-image'} />
+  return <AccountSVG className={avatarPrefixed('image')} />
 }
 
 export const Avatar = ({ name, account, iconUrl, ...props }: AvatarProps) => {
   const icon = getIcon(iconUrl)
   return (
-    <span {...props} className={clsx('avatar', props.className)}>
+    <span {...props} className={clsx(avatarPrefixed(), props.className)}>
       <span>
         <div>{icon}</div>
       </span>
-      <span className={'avatar-info'}>
-        <span className={'avatar-name'}>{name}</span>
-        <span className={'avatar-account'}>{account}</span>
+      <span className={avatarPrefixed('info')}>
+        <span className={avatarPrefixed('name')}>{name}</span>
+        <span className={avatarPrefixed('account')}>{account}</span>
       </span>
     </span>
   )
