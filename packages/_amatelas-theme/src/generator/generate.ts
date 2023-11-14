@@ -13,6 +13,7 @@ import { generateSnack } from './components/snack/snack.css'
 import { generateAccordion } from './components/accordion/accordion.css'
 import { generateAvatar } from './components/avatar/avatar.css'
 import { generateBlockquote } from './components/blockquote/blockauote.css'
+import { generateHeading } from './components/heading/heading.css'
 
 generateFilledButton()
 generateStandardButton()
@@ -37,3 +38,5 @@ generateAccordion()
 generateAvatar()
 
 generateBlockquote()
+
+generateHeading()
