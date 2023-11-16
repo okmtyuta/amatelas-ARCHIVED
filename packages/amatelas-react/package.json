@@ -82,7 +82,7 @@
     "sort-by": "^1.2.0",
     "storybook": "^7.4.6",
     "tsc-alias": "^1.8.8",
-    "vite": "^4.4.9",
+    "vite": "^5.0.0",
     "vitest": "^0.34.5"
   },
   "publishConfig": {
