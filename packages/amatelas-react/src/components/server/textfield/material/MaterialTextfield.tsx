@@ -4,9 +4,14 @@ import { ComponentProps, ReactNode } from 'react'
 import { clsx } from 'clsx'
 
 import '@okmtyuta/awesome-css/reset.css'
-import filled from './filled.module.scss'
-import standard from './standard.module.scss'
-import outlined from './outlined.module.scss'
+import {
+  standardMaterialTextfieldPrefixed,
+  outlinedMaterialTextfieldPrefixed,
+  filledMaterialTextfieldPrefixed
+} from '@okmtyuta/_amatelas-theme/prefixed'
+import './filled.css'
+import './standard.css'
+import './outlined.css'
 
 type Variant = 'outlined' | 'filled' | 'standard'
 type TextfieldType = 'text' | 'password'
@@ -19,16 +24,17 @@ type TextFiledProps = {
   validate?: boolean
 } & DefaultInputProps
 
-const getStyles = (variant?: Variant) => {
-  if (variant === 'filled') {
-    return filled
-  } else if (variant === 'outlined') {
-    return outlined
-  } else if (variant === 'standard') {
-    return standard
+const getPrefixed = (variant?: Variant) => {
+  switch (variant) {
+    case 'outlined':
+      return outlinedMaterialTextfieldPrefixed
+    case 'filled':
+      return filledMaterialTextfieldPrefixed
+    case 'standard':
+      return standardMaterialTextfieldPrefixed
+    default:
+      return standardMaterialTextfieldPrefixed
   }
-
-  return standard
 }
 
 export const MaterialTextField = ({
@@ -38,34 +44,36 @@ export const MaterialTextField = ({
   helper,
   ...props
 }: TextFiledProps) => {
-  const styles = getStyles(variant)
+  const prefixed = getPrefixed(variant)
   return (
     <>
       <div
         className={clsx({
-          [styles['text-field']]: true,
-          [styles['validate']]: validate
+          [prefixed()]: true,
+          [prefixed('validate')]: validate
         })}
       >
         <input
           {...props}
-          className={clsx(styles['input'], className)}
+          className={clsx(prefixed('input'), className)}
           placeholder=" "
           type="text"
         />
-        <label className={styles['placeholder']}>
+        <label className={prefixed('placeholder')}>
           {props.required ? `${props.placeholder}*` : props.placeholder}
         </label>
 
         {variant === 'outlined' ? (
-          <span className={outlined['placeholder-background']}>
+          <span className={prefixed('placeholder-background')}>
             {props.required ? `${props.placeholder}*` : props.placeholder}
           </span>
         ) : null}
       </div>
 
-      <div className={styles['helper']}>
-        {helper ? <div className={styles['helper-text']}>{helper}</div> : null}
+      <div className={prefixed('helper')}>
+        {helper ? (
+          <div className={prefixed('helper-text')}>{helper}</div>
+        ) : null}
       </div>
     </>
   )

@@ -1,0 +1,104 @@
+.AMUI-components_material-textfield_outlined_ {
+  --blur-outline-color: gray;
+  --focus-outline-color: #17a2b8;
+  --blur-color: gray;
+  --focus-color: #17a2b8;
+  --transition-time: 0.3s;
+  --base-z-index: 0;
+  --blur-placeholder-z-index: 0;
+  --input-z-index: 10;
+  --placeholder-background-z-index: 20;
+  --focus-placeholder-z-index: 30;
+}
+
+.AMUI-components_material-textfield_outlined_ {
+  position: relative;
+  height: 52px;
+  margin-top: 4px;
+}
+.AMUI-components_material-textfield_outlined_placeholder {
+  position: absolute;
+  margin: 0 10px;
+  padding: 0 2px;
+  transform-origin: 0;
+  transition: all var(--transition-time);
+  pointer-events: none;
+  color: var(--blur-color);
+  z-index: var(--blur-placeholder-z-index);
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+.AMUI-components_material-textfield_outlined_input {
+  position: absolute;
+  bottom: 0;
+  padding: 12px;
+  width: 100%;
+  height: 100%;
+  z-index: var(--input-z-index);
+  border: var(--blur-outline-color) solid 1px;
+  border-radius: 4px;
+}
+.AMUI-components_material-textfield_outlined_input:focus {
+  border: var(--focus-outline-color) solid 1px;
+}
+.AMUI-components_material-textfield_outlined_input:focus
+  + .AMUI-components_material-textfield_outlined_placeholder,
+.AMUI-components_material-textfield_outlined_input:not(:placeholder-shown)
+  + .AMUI-components_material-textfield_outlined_placeholder {
+  transform: scale(0.8);
+  top: -0.5lh;
+  transition: all var(--transition-time);
+  pointer-events: none;
+  z-index: var(--focus-placeholder-z-index);
+}
+.AMUI-components_material-textfield_outlined_input:focus
+  + .AMUI-components_material-textfield_outlined_placeholder {
+  color: var(--focus-color);
+}
+.AMUI-components_material-textfield_outlined_input:not(:placeholder-shown):not(
+    :focus
+  )
+  + .AMUI-components_material-textfield_outlined_placeholder {
+  color: var(--blur-color);
+}
+.AMUI-components_material-textfield_outlined_placeholder-background {
+  position: absolute;
+  margin: 0 10px;
+  padding: 0 2px;
+  transform-origin: 0;
+  pointer-events: none;
+  color: var(--blur-color);
+  transform: scale(0.8);
+  top: -0.5px;
+  transition: all var(--transition-time);
+  pointer-events: none;
+  color: transparent;
+
+  background-color: transparent;
+  height: 2px;
+  z-index: var(--placeholder-background-z-index);
+}
+.AMUI-components_material-textfield_outlined_input:focus
+  ~ .AMUI-components_material-textfield_outlined_placeholder-background,
+.AMUI-components_material-textfield_outlined_input:not(:placeholder-shown)
+  ~ .AMUI-components_material-textfield_outlined_placeholder-background {
+  background-color: white;
+}
+
+.AMUI-components_material-textfield_outlined_validate
+  > .AMUI-components_material-textfield_outlined_input:invalid {
+  border: #dc3545 solid 1px;
+}
+.AMUI-components_material-textfield_outlined_validate
+  > .AMUI-components_material-textfield_outlined_input:invalid
+  + .AMUI-components_material-textfield_outlined_placeholder {
+  color: #dc3545;
+}
+
+.AMUI-components_material-textfield_outlined_helper-text {
+  color: gray;
+  padding: 4px 12px;
+  /* @include use-caption-font-size(); */
+}

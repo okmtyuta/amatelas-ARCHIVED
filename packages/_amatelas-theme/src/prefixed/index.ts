@@ -5,3 +5,8 @@ export { accordionPrefixed } from '../generator/components/accordion/accordion-p
 export { avatarPrefixed } from '../generator/components/avatar/avatar-prefixed'
 export { blockquotePrefixed } from '../generator/components/blockquote/blockquote-prefixed'
 export { headingPrefixed } from '../generator/components/heading/heading-prefixed'
+export {
+  standardMaterialTextfieldPrefixed,
+  outlinedMaterialTextfieldPrefixed,
+  filledMaterialTextfieldPrefixed
+} from '../generator/components/textfield/material/material-textfield-prefixed'
