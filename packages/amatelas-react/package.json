@@ -31,7 +31,7 @@
     "dev": "vite",
     "prebuild": "pnpm --filter @okmtyuta/amatelas-theme build && pnpm --filter @okmtyuta/_amatelas-theme build",
     "build": "pnpm prebuild && vite build && tsc && tsc-alias",
-    "test": "vitest --watch=false",
+    "test": "pnpm prebuild &&  --watch=false",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
