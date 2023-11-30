@@ -1,4 +1,5 @@
-.AMUI_amatelas-material-button_.AMUI_amatelas-material-button_outlined {
+
+.AMUI-components_material-button_outlined_ {
   outline: none;
   position: relative;
   overflow: hidden;
@@ -8,53 +9,191 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
+  box-sizing: border-box;
   cursor: pointer;
 }
-.AMUI_amatelas-material-button_.AMUI_amatelas-material-button_outlined:disabled {
-  color: var(--AMUI-color-neutral-darken9);
-  background-color: var(--AMUI-color-neutral-lighten9);
+.AMUI-components_material-button_outlined_:disabled {
+  color: #060606;
+  background-color: #f2f2f2;
   cursor: not-allowed;
-  border: 1px solid var(--AMUI-color-neutral-darken9);
-  box-sizing: border-box;
+  border: #060606 1px solid;
 }
 
-.AMUI_amatelas-material-button_.AMUI_amatelas-material-button_outlined:not(
-    :disabled
-  ) {
-  &.AMUI_amatelas-material-button_info {
-    color: var(--AMUI-color-info);
-    border: var(--AMUI-color-info) solid 1px;
-    background-color: inherit;
-
-    &:hover {
-      background-color: var(--AMUI-color-info-lighten10);
+    .AMUI-components_material-button_outlined_:not(:disabled).AMUI-components_material-button_outlined_success {
+        color: #28a745;
+        border: #28a745 solid 1px;
+        background-color: inherit;
+    
+        &:hover {
+          background-color: #f4faf5;
+        }
+      }
+    
+    .AMUI-components_material-button_outlined_:not(:disabled).AMUI-components_material-button_outlined_alert {
+        color: #dc3545;
+        border: #dc3545 solid 1px;
+        background-color: inherit;
+    
+        &:hover {
+          background-color: #fdf4f5;
+        }
+      }
+    
+    .AMUI-components_material-button_outlined_:not(:disabled).AMUI-components_material-button_outlined_warning {
+        color: #ffc107;
+        border: #ffc107 solid 1px;
+        background-color: inherit;
+    
+        &:hover {
+          background-color: #fffbf2;
+        }
+      }
+    
+    .AMUI-components_material-button_outlined_:not(:disabled).AMUI-components_material-button_outlined_info {
+        color: #17a2b8;
+        border: #17a2b8 solid 1px;
+        background-color: inherit;
+    
+        &:hover {
+          background-color: #f3fafb;
+        }
+      }
+    
+    .AMUI-components_material-button_outlined_:not(:disabled).AMUI-components_material-button_outlined_light-blue {
+        color: #008BF2;
+        border: #008BF2 solid 1px;
+        background-color: inherit;
+    
+        &:hover {
+          background-color: #f2f9fe;
+        }
+      }
+    
+    .AMUI-components_material-button_outlined_:not(:disabled).AMUI-components_material-button_outlined_blue {
+        color: #3460FB;
+        border: #3460FB solid 1px;
+        background-color: inherit;
+    
+        &:hover {
+          background-color: #f4f7fe;
+        }
+      }
+    
+    .AMUI-components_material-button_outlined_:not(:disabled).AMUI-components_material-button_outlined_cyan {
+        color: #00A3BF;
+        border: #00A3BF solid 1px;
+        background-color: inherit;
+    
+        &:hover {
+          background-color: #f2fafb;
+        }
+      }
+    
+    .AMUI-components_material-button_outlined_:not(:disabled).AMUI-components_material-button_outlined_green {
+        color: #259D63;
+        border: #259D63 solid 1px;
+        background-color: inherit;
+    
+        &:hover {
+          background-color: #f4faf7;
+        }
+      }
+    
+    .AMUI-components_material-button_outlined_:not(:disabled).AMUI-components_material-button_outlined_lime {
+        color: #7EB40D;
+        border: #7EB40D solid 1px;
+        background-color: inherit;
+    
+        &:hover {
+          background-color: #f8fbf2;
+        }
+      }
+    
+    .AMUI-components_material-button_outlined_:not(:disabled).AMUI-components_material-button_outlined_yellow {
+        color: #D2A400;
+        border: #D2A400 solid 1px;
+        background-color: inherit;
+    
+        &:hover {
+          background-color: #fcfaf2;
+        }
+      }
+    
+    .AMUI-components_material-button_outlined_:not(:disabled).AMUI-components_material-button_outlined_orange {
+        color: #FB5B01;
+        border: #FB5B01 solid 1px;
+        background-color: inherit;
+    
+        &:hover {
+          background-color: #fef6f2;
+        }
+      }
+    
+    .AMUI-components_material-button_outlined_:not(:disabled).AMUI-components_material-button_outlined_red {
+        color: #FE3939;
+        border: #FE3939 solid 1px;
+        background-color: inherit;
+    
+        &:hover {
+          background-color: #fef5f5;
+        }
+      }
+    
+    .AMUI-components_material-button_outlined_:not(:disabled).AMUI-components_material-button_outlined_magenta {
+        color: #DB00DB;
+        border: #DB00DB solid 1px;
+        background-color: inherit;
+    
+        &:hover {
+          background-color: #fdf2fd;
+        }
+      }
+    
+    .AMUI-components_material-button_outlined_:not(:disabled).AMUI-components_material-button_outlined_purple {
+        color: #8843E1;
+        border: #8843E1 solid 1px;
+        background-color: inherit;
+    
+        &:hover {
+          background-color: #f9f5fd;
+        }
+      }
+    
+    .AMUI-components_material-button_outlined_:not(:disabled).AMUI-components_material-button_outlined_neutral {
+        color: #7f7f7f;
+        border: #7f7f7f solid 1px;
+        background-color: inherit;
+    
+        &:hover {
+          background-color: #f8f8f8;
+        }
+      }
+    
+    .AMUI-components_material-button_outlined_xs {
+      width: var(--AMUI-material-button-size-xs)
     }
-  }
-  &.AMUI_amatelas-material-button_alert {
-    color: var(--AMUI-color-alert);
-    border: var(--AMUI-color-alert) solid 1px;
-    background-color: inherit;
-
-    &:hover {
-      background-color: var(--AMUI-color-info-lighten10);
+    
+    .AMUI-components_material-button_outlined_sm {
+      width: var(--AMUI-material-button-size-sm)
     }
-  }
-  &.AMUI_amatelas-material-button_warning {
-    color: var(--AMUI-color-warning);
-    border: var(--AMUI-color-warning) solid 1px;
-    background-color: inherit;
-
-    &:hover {
-      background-color: var(--AMUI-color-warning-lighten10);
+    
+    .AMUI-components_material-button_outlined_md {
+      width: var(--AMUI-material-button-size-md)
     }
-  }
-  &.AMUI_amatelas-material-button_success {
-    color: var(--AMUI-color-success);
-    border: var(--AMUI-color-success) solid 1px;
-    background-color: inherit;
-
-    &:hover {
-      background-color: var(--AMUI-color-success-lighten10);
+    
+    .AMUI-components_material-button_outlined_lg {
+      width: var(--AMUI-material-button-size-lg)
     }
-  }
-}
+    
+    .AMUI-components_material-button_outlined_xl {
+      width: var(--AMUI-material-button-size-xl)
+    }
+    
+    .AMUI-components_material-button_outlined_full {
+      width: var(--AMUI-material-button-size-full)
+    }
+    
+    .AMUI-components_material-button_outlined_auto {
+      width: var(--AMUI-material-button-size-auto)
+    }
+    

@@ -128,12 +128,6 @@ importers:
 
   packages/amatelas-lit:
     dependencies:
-      '@okmtyuta/amatelas-css':
-        specifier: workspace:^
-        version: link:../amatelas-css
-      '@okmtyuta/amatelas-theme':
-        specifier: workspace:^
-        version: link:../amatelas-theme
       clsx:
         specifier: ^2.0.0
         version: 2.0.0
@@ -141,6 +135,18 @@ importers:
         specifier: ^3.0.0
         version: 3.0.2
     devDependencies:
+      '@okmtyuta/_amatelas-theme':
+        specifier: workspace:^
+        version: link:../_amatelas-theme
+      '@okmtyuta/amatelas-css':
+        specifier: workspace:^
+        version: link:../amatelas-css
+      '@okmtyuta/amatelas-theme':
+        specifier: workspace:^
+        version: link:../amatelas-theme
+      '@okmtyuta/awesome-css':
+        specifier: ^0.0.2
+        version: 0.0.2(typescript@5.2.2)
       typescript:
         specifier: ^5.0.2
         version: 5.2.2
@@ -2338,7 +2344,7 @@ packages:
     resolution: {integrity: sha512-Jyl184VwFze3GRb23h1tzSD1zd8I7Dq9IHq0it1uKfBySGZAEI8Grwu3OGywzWiTpV6+jxAirbklFKOdC/S+Eg==}
     dependencies:
       '@typescript-eslint/eslint-plugin': 6.7.3(@typescript-eslint/parser@6.7.3)(eslint@8.52.0)(typescript@5.2.2)
-      '@typescript-eslint/parser': 6.7.3(eslint@8.50.0)(typescript@5.2.2)
+      '@typescript-eslint/parser': 6.7.3(eslint@8.52.0)(typescript@5.2.2)
       eslint: 8.52.0
       inquirer: 9.2.11
       prettier: 3.0.3

@@ -10,3 +10,13 @@ export {
   outlinedMaterialTextfieldPrefixed,
   filledMaterialTextfieldPrefixed
 } from '../generator/components/textfield/material/material-textfield-prefixed'
+export {
+  standardMaterialButtonPrefixed,
+  outlinedMaterialButtonPrefixed,
+  filledMaterialButtonPrefixed
+} from '../generator/components/button/material/material-button-prefixed'
+export {
+  standardButtonPrefixed,
+  outlinedButtonPrefixed,
+  filledButtonPrefixed
+} from '../generator/components/button/native/button-prefixed'

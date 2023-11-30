@@ -1,4 +1,5 @@
-.AMUI_amatelas-material-button_.AMUI_amatelas-material-button_standard {
+
+.AMUI-components_material-button_standard_ {
   outline: none;
   position: relative;
   overflow: hidden;
@@ -11,49 +12,203 @@
   box-sizing: border-box;
   cursor: pointer;
 }
-.AMUI_amatelas-material-button_.AMUI_amatelas-material-button_standard:disabled {
-  color: var(--AMUI-color-neutral-darken9);
-  background-color: var(--AMUI-color-neutral-lighten9);
+.AMUI-components_material-button_standard_:disabled {
+  color: #060606;
+  background-color: #f2f2f2;
+  border: solid 1px #f2f2f2;
   cursor: not-allowed;
 }
 
-.AMUI_amatelas-material-button_.AMUI_amatelas-material-button_standard:not(
-    :disabled
-  ) {
-  &.AMUI_amatelas-material-button_info {
-    border: none;
-    color: var(--AMUI-color-info);
-    background-color: inherit;
-
-    &:hover {
-      background-color: var(--AMUI-color-info-lighten10);
+    .AMUI-components_material-button_standard_:not(:disabled).AMUI-components_material-button_standard_success {
+      border: none;
+      color: #28a745;
+      background-color: transparent;
+      border: solid 1px transparent;
+      &:hover {
+        background-color: #f4faf5;
+        border: solid 1px #f4faf5;
+      }
     }
-  }
-  &.AMUI_amatelas-material-button_alert {
-    border: none;
-    color: var(--AMUI-color-alert);
-    background-color: inherit;
-
-    &:hover {
-      background-color: var(--AMUI-color-alert-lighten10);
+    
+    .AMUI-components_material-button_standard_:not(:disabled).AMUI-components_material-button_standard_alert {
+      border: none;
+      color: #dc3545;
+      background-color: transparent;
+      border: solid 1px transparent;
+      &:hover {
+        background-color: #fdf4f5;
+        border: solid 1px #fdf4f5;
+      }
     }
-  }
-  &.AMUI_amatelas-material-button_warning {
-    border: none;
-    color: var(--AMUI-color-warning);
-    background-color: inherit;
-
-    &:hover {
-      background-color: var(--AMUI-color-warning-lighten10);
+    
+    .AMUI-components_material-button_standard_:not(:disabled).AMUI-components_material-button_standard_warning {
+      border: none;
+      color: #ffc107;
+      background-color: transparent;
+      border: solid 1px transparent;
+      &:hover {
+        background-color: #fffbf2;
+        border: solid 1px #fffbf2;
+      }
     }
-  }
-  &.AMUI_amatelas-material-button_success {
-    border: none;
-    color: var(--AMUI-color-success);
-    background-color: inherit;
-
-    &:hover {
-      background-color: var(--AMUI-color-success-lighten10);
+    
+    .AMUI-components_material-button_standard_:not(:disabled).AMUI-components_material-button_standard_info {
+      border: none;
+      color: #17a2b8;
+      background-color: transparent;
+      border: solid 1px transparent;
+      &:hover {
+        background-color: #f3fafb;
+        border: solid 1px #f3fafb;
+      }
     }
-  }
-}
+    
+    .AMUI-components_material-button_standard_:not(:disabled).AMUI-components_material-button_standard_light-blue {
+      border: none;
+      color: #008BF2;
+      background-color: transparent;
+      border: solid 1px transparent;
+      &:hover {
+        background-color: #f2f9fe;
+        border: solid 1px #f2f9fe;
+      }
+    }
+    
+    .AMUI-components_material-button_standard_:not(:disabled).AMUI-components_material-button_standard_blue {
+      border: none;
+      color: #3460FB;
+      background-color: transparent;
+      border: solid 1px transparent;
+      &:hover {
+        background-color: #f4f7fe;
+        border: solid 1px #f4f7fe;
+      }
+    }
+    
+    .AMUI-components_material-button_standard_:not(:disabled).AMUI-components_material-button_standard_cyan {
+      border: none;
+      color: #00A3BF;
+      background-color: transparent;
+      border: solid 1px transparent;
+      &:hover {
+        background-color: #f2fafb;
+        border: solid 1px #f2fafb;
+      }
+    }
+    
+    .AMUI-components_material-button_standard_:not(:disabled).AMUI-components_material-button_standard_green {
+      border: none;
+      color: #259D63;
+      background-color: transparent;
+      border: solid 1px transparent;
+      &:hover {
+        background-color: #f4faf7;
+        border: solid 1px #f4faf7;
+      }
+    }
+    
+    .AMUI-components_material-button_standard_:not(:disabled).AMUI-components_material-button_standard_lime {
+      border: none;
+      color: #7EB40D;
+      background-color: transparent;
+      border: solid 1px transparent;
+      &:hover {
+        background-color: #f8fbf2;
+        border: solid 1px #f8fbf2;
+      }
+    }
+    
+    .AMUI-components_material-button_standard_:not(:disabled).AMUI-components_material-button_standard_yellow {
+      border: none;
+      color: #D2A400;
+      background-color: transparent;
+      border: solid 1px transparent;
+      &:hover {
+        background-color: #fcfaf2;
+        border: solid 1px #fcfaf2;
+      }
+    }
+    
+    .AMUI-components_material-button_standard_:not(:disabled).AMUI-components_material-button_standard_orange {
+      border: none;
+      color: #FB5B01;
+      background-color: transparent;
+      border: solid 1px transparent;
+      &:hover {
+        background-color: #fef6f2;
+        border: solid 1px #fef6f2;
+      }
+    }
+    
+    .AMUI-components_material-button_standard_:not(:disabled).AMUI-components_material-button_standard_red {
+      border: none;
+      color: #FE3939;
+      background-color: transparent;
+      border: solid 1px transparent;
+      &:hover {
+        background-color: #fef5f5;
+        border: solid 1px #fef5f5;
+      }
+    }
+    
+    .AMUI-components_material-button_standard_:not(:disabled).AMUI-components_material-button_standard_magenta {
+      border: none;
+      color: #DB00DB;
+      background-color: transparent;
+      border: solid 1px transparent;
+      &:hover {
+        background-color: #fdf2fd;
+        border: solid 1px #fdf2fd;
+      }
+    }
+    
+    .AMUI-components_material-button_standard_:not(:disabled).AMUI-components_material-button_standard_purple {
+      border: none;
+      color: #8843E1;
+      background-color: transparent;
+      border: solid 1px transparent;
+      &:hover {
+        background-color: #f9f5fd;
+        border: solid 1px #f9f5fd;
+      }
+    }
+    
+    .AMUI-components_material-button_standard_:not(:disabled).AMUI-components_material-button_standard_neutral {
+      border: none;
+      color: #7f7f7f;
+      background-color: transparent;
+      border: solid 1px transparent;
+      &:hover {
+        background-color: #f8f8f8;
+        border: solid 1px #f8f8f8;
+      }
+    }
+    
+    .AMUI-components_material-button_standard_xs {
+      width: var(--AMUI-material-button-size-xs)
+    }
+    
+    .AMUI-components_material-button_standard_sm {
+      width: var(--AMUI-material-button-size-sm)
+    }
+    
+    .AMUI-components_material-button_standard_md {
+      width: var(--AMUI-material-button-size-md)
+    }
+    
+    .AMUI-components_material-button_standard_lg {
+      width: var(--AMUI-material-button-size-lg)
+    }
+    
+    .AMUI-components_material-button_standard_xl {
+      width: var(--AMUI-material-button-size-xl)
+    }
+    
+    .AMUI-components_material-button_standard_full {
+      width: var(--AMUI-material-button-size-full)
+    }
+    
+    .AMUI-components_material-button_standard_auto {
+      width: var(--AMUI-material-button-size-auto)
+    }
+    

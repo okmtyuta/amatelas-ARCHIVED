@@ -2,36 +2,25 @@
 
 import { clsx } from 'clsx'
 import { ComponentPropsWithoutRef, ElementType } from 'react'
-// import { Progress } from '../..'
 
 import '@okmtyuta/amatelas-theme/v2/color.css'
 import '@okmtyuta/amatelas-css/amatelas-button.css'
 import { Color } from '@root/types/color/Color'
+import { type ButtonVariant } from '@okmtyuta/_amatelas-theme/types'
 
-const CLASS_PREFIX = 'AMUI_amatelas-button_'
-const prefixed = (target: string) => {
-  return `${CLASS_PREFIX}${target}`
-}
+import { getButtonPrefixed } from '@okmtyuta/_amatelas-theme/helper'
 
-type Variant = 'standard' | 'outlined' | 'filled'
 type ButtonColor = Color
 type Width = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full' | 'auto'
 
 export type ButtonProps<T extends ElementType> = {
   as?: T
   width?: Width
-  variant?: Variant
+  variant?: ButtonVariant
   color?: ButtonColor
   loading?: boolean
 } & Omit<ComponentPropsWithoutRef<T>, 'tag'>
 
-const getVariant = (variant?: Variant) => {
-  if (variant) {
-    return variant
-  }
-
-  return 'outlined'
-}
 const getColor = (color?: Color) => {
   if (color) {
     return color
@@ -55,19 +44,14 @@ export const Button = <T extends ElementType = 'button'>({
   ...props
 }: ButtonProps<T>) => {
   const _Button = as ?? 'button'
-  const _variant = getVariant(variant)
+  const prefixed = getButtonPrefixed(variant)
   const _color = getColor(color)
   const _width = getWidth(width)
 
   return (
     <_Button
       {...props}
-      className={clsx(
-        prefixed(''),
-        prefixed(_variant),
-        prefixed(_color),
-        prefixed(_width)
-      )}
+      className={clsx(prefixed(''), prefixed(_color), prefixed(_width))}
     >
       {props.children}
     </_Button>

@@ -13,7 +13,8 @@ export default defineConfig({
     lib: {
       entry: {
         prefixed: resolve(__dirname, 'src/prefixed/index.ts'),
-        color: resolve(__dirname, 'src/theme/color/color.ts')
+        color: resolve(__dirname, 'src/theme/color/color.ts'),
+        helper: resolve(__dirname, 'src/helper/index.ts')
       }
     },
     rollupOptions: {}

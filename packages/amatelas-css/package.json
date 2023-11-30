@@ -37,6 +37,9 @@
     },
     "./amatelas-heading.css": {
       "import": "./dist/components/amatelas-heading/index.css"
+    },
+    "./amatelas-material-textfield.css": {
+      "import": "./dist/components/amatelas-material-textfield/index.css"
     }
   },
   "scripts": {

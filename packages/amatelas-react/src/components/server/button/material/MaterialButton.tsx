@@ -7,29 +7,19 @@ import '@okmtyuta/amatelas-theme/v2/color.css'
 import '@okmtyuta/amatelas-css/amatelas-button.css'
 import { Color } from '@root/types'
 
-type Variant = 'standard' | 'outlined' | 'filled'
+import { type MaterialButtonVariant } from '@okmtyuta/_amatelas-theme/types'
+import { getMaterialButtonPrefixed } from '@okmtyuta/_amatelas-theme/helper'
+
 type MaterialButtonColor = Color
 type Width = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full' | 'auto'
-
-const CLASS_PREFIX = 'AMUI_amatelas-material-button_'
-const prefixed = (target: string) => {
-  return `${CLASS_PREFIX}${target}`
-}
 
 export type MaterialButtonProps<T extends ElementType> = {
   as?: T
   width?: Width
-  variant?: Variant
+  variant?: MaterialButtonVariant
   color?: MaterialButtonColor
 } & Omit<ComponentPropsWithoutRef<T>, 'tag'>
 
-const getVariant = (variant?: Variant) => {
-  if (variant) {
-    return variant
-  }
-
-  return 'outlined'
-}
 const getColor = (color?: Color) => {
   if (color) {
     return color
@@ -53,19 +43,15 @@ export const MaterialButton = <T extends ElementType = 'button'>({
   ...props
 }: MaterialButtonProps<T>) => {
   const _Button = as ?? 'button'
-  const _variant = getVariant(variant)
   const _color = getColor(color)
   const _width = getWidth(width)
+
+  const prefixed = getMaterialButtonPrefixed(variant)
 
   return (
     <_Button
       {...props}
-      className={clsx(
-        prefixed(''),
-        prefixed(_variant),
-        prefixed(_color),
-        prefixed(_width)
-      )}
+      className={clsx(prefixed(), prefixed(_color), prefixed(_width))}
     >
       {props.children}
     </_Button>

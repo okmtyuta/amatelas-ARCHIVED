@@ -22,6 +22,14 @@
     "./prefixed": {
       "import": "./dist/prefixed.js",
       "types": "./dist/types/prefixed/index.d.ts"
+    },
+    "./helper": {
+      "import": "./dist/helper.js",
+      "types": "./dist/types/helper/index.d.ts"
+    },
+    "./types": {
+      "import": "./dist/types/types/index.d",
+      "types": "./dist/types/types/index.d.ts"
     }
   },
   "dependencies": {

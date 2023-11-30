@@ -1,9 +1,10 @@
 import fs from 'fs'
 import { color } from '../../../../theme/color/color'
 import { Hex } from '../../../../theme/color/classes/Hex'
+import { standardButtonPrefixed } from './button-prefixed'
 
 const baseCSS = /* css */ `
-.AMUI_amatelas-button_.AMUI_amatelas-button_standard {
+.${standardButtonPrefixed()} {
   outline: none;
   position: relative;
   overflow: hidden;
@@ -16,34 +17,11 @@ const baseCSS = /* css */ `
   box-sizing: border-box;
   cursor: pointer;
 }
-.AMUI_amatelas-button_.AMUI_amatelas-button_standard:disabled {
+.${standardButtonPrefixed()}:disabled {
   color: ${new Hex(color.neutral).getDarken(0.95).getHexString()};
   background-color: ${new Hex(color.neutral).getLighten(0.9).getHexString()};
   border: solid 1px ${new Hex(color.neutral).getLighten(0.9).getHexString()};
   cursor: not-allowed;
-}
-.AMUI_amatelas-button_ {
-  &.AMUI_amatelas-button_xs {
-    width: 64px;
-  }
-  &.AMUI_amatelas-button_sm {
-    width: 128px;
-  }
-  &.AMUI_amatelas-button_md {
-    width: 256px;
-  }
-  &.AMUI_amatelas-button_lg {
-    width: 512px;
-  }
-  &.AMUI_amatelas-button_xl {
-    width: 768px;
-  }
-  &.AMUI_amatelas-button_full {
-    width: 100%;
-  }
-  &.AMUI_amatelas-button_auto {
-    width: auto;
-  }
 }
 `
 const sizeVariations = () => {
@@ -52,7 +30,7 @@ const sizeVariations = () => {
 
   for (const size of sizes) {
     _sizeVariations.push(/* css */ `
-    .AMUI_amatelas-button_.AMUI_amatelas-button_${size} {
+    .${standardButtonPrefixed(size)} {
       width: var(--AMUI-button-size-${size})
     }
     `)
@@ -65,7 +43,9 @@ const colorVariations = () => {
   for (const [_color, _code] of Object.entries(color)) {
     const hex = new Hex(_code)
     _colorVariations.push(/* css */ `
-    .AMUI_amatelas-button_.AMUI_amatelas-button_standard:not(:disabled).AMUI_amatelas-button_${_color} {
+    .${standardButtonPrefixed()}:not(:disabled).${standardButtonPrefixed(
+      _color
+    )} {
       border: none;
       color: ${hex.getHexString()};
       background-color: transparent;

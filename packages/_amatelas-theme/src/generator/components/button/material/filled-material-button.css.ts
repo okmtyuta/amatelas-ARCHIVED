@@ -1,9 +1,10 @@
 import * as fs from 'fs'
 import { color } from '../../../../theme/color/color'
 import { Hex } from '../../../../theme/color/classes/Hex'
+import { filledMaterialButtonPrefixed } from './material-button-prefixed'
 
 const baseCSS = /* css */ `
-.AMUI_amatelas-material-button_.AMUI_amatelas-material-button_filled {
+.${filledMaterialButtonPrefixed()} {
   outline: none;
   position: relative;
   overflow: hidden;
@@ -16,34 +17,11 @@ const baseCSS = /* css */ `
   box-sizing: border-box;
   cursor: pointer;
 }
-.AMUI_amatelas-material-button_.AMUI_amatelas-material-button_filled:disabled {
+.${filledMaterialButtonPrefixed()}:disabled {
   color: ${new Hex(color.neutral).getDarken(0.95).getHexString()};
   background-color: ${new Hex(color.neutral).getLighten(0.9).getHexString()};
   border: solid 1px ${new Hex(color.neutral).getLighten(0.9).getHexString()};
   cursor: not-allowed;
-}
-.AMUI_amatelas-material-button_ {
-  &.AMUI_amatelas-material-button_xs {
-    width: 64px;
-  }
-  &.AMUI_amatelas-material-button_sm {
-    width: 128px;
-  }
-  &.AMUI_amatelas-material-button_md {
-    width: 256px;
-  }
-  &.AMUI_amatelas-material-button_lg {
-    width: 512px;
-  }
-  &.AMUI_amatelas-material-button_xl {
-    width: 768px;
-  }
-  &.AMUI_amatelas-material-button_full {
-    width: 100%;
-  }
-  &.AMUI_amatelas-material-button_auto {
-    width: auto;
-  }
 }
 `
 const sizeVariations = () => {
@@ -52,7 +30,7 @@ const sizeVariations = () => {
 
   for (const size of sizes) {
     _sizeVariations.push(/* css */ `
-    .AMUI_amatelas-material-button_.AMUI_amatelas-material-button_${size} {
+    .${filledMaterialButtonPrefixed(size)} {
       width: var(--AMUI-material-button-size-${size})
     }
     `)
@@ -65,7 +43,9 @@ const colorVariations = () => {
   for (const [_color, _code] of Object.entries(color)) {
     const hex = new Hex(_code)
     _colorVariations.push(/* css */ `
-      .AMUI_amatelas-material-button_.AMUI_amatelas-material-button_filled:not(:disabled).AMUI_amatelas-material-button_${_color} {
+      .${filledMaterialButtonPrefixed()}:not(:disabled).${filledMaterialButtonPrefixed(
+        _color
+      )} {
         border: none;
         color: white;
         background-color: ${hex.getHexString()};

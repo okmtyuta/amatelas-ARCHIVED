@@ -3,16 +3,14 @@ import { property } from 'lit/decorators.js'
 import clsx from 'clsx'
 
 import '@okmtyuta/amatelas-theme/color.css'
+import reset from '@okmtyuta/awesome-css/reset.css?inline'
 import style from '@okmtyuta/amatelas-css/amatelas-button.css?inline'
+import { getButtonPrefixed } from '@okmtyuta/_amatelas-theme/helper'
+import { ButtonVariant } from '@okmtyuta/_amatelas-theme/types'
 
-// type Variant = 'standard' | 'outlined' | 'filled'
-// type Color = 'danger' | 'info' | 'success' | 'warning'
-// type Width = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full' | 'auto'
-
-// @customElement('amatelas-button')
 export class AmatelasButton extends LitElement {
   @property()
-  variant = 'outlined'
+  variant?: ButtonVariant
 
   @property()
   color = 'info'
@@ -24,9 +22,10 @@ export class AmatelasButton extends LitElement {
   disabled = false
 
   render() {
+    const prefixed = getButtonPrefixed(this.variant)
     return html`
       <button
-        class=${clsx('amatelas-button', this.variant, this.color, this.width)}
+        class=${clsx(prefixed(), prefixed(this.color), prefixed(this.width))}
         ?disabled=${this.disabled}
       >
         <slot></slot>
@@ -34,7 +33,7 @@ export class AmatelasButton extends LitElement {
     `
   }
 
-  static styles = unsafeCSS(style)
+  static styles = [unsafeCSS(style), unsafeCSS(reset)]
 }
 
 declare global {
