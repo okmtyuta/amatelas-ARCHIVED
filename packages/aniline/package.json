@@ -33,7 +33,7 @@
     "@vitejs/plugin-react-swc": "^3.4.0",
     "tsc-alias": "^1.8.8",
     "vite": "^4.4.9",
-    "vitest": "^0.34.5"
+    "vitest": "^1.0.0"
   },
   "dependencies": {
     "@okmtyuta/amatelas-react": "workspace:^",
