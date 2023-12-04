@@ -83,7 +83,7 @@
     "storybook": "^7.4.6",
     "tsc-alias": "^1.8.8",
     "vite": "^4.4.9",
-    "vitest": "^0.34.5"
+    "vitest": "^1.0.0"
   },
   "publishConfig": {
     "access": "public"
